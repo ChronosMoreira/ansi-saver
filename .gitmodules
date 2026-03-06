@@ -1,0 +1,3 @@
+[submodule "vendor/libansilove"]
+	path = vendor/libansilove
+	url = https://github.com/ansilove/libansilove.git

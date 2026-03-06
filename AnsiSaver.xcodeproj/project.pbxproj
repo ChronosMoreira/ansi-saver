@@ -1,0 +1,494 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A1000001 /* AnsiSaverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001 /* AnsiSaverView.swift */; };
+		A1000002 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000002 /* Renderer.swift */; };
+		A1000003 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000003 /* Configuration.swift */; };
+		A1000004 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000004 /* Cache.swift */; };
+		A1000005 /* ArtSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000005 /* ArtSource.swift */; };
+		A1000101 /* clean.c in Sources */ = {isa = PBXBuildFile; fileRef = A2000101 /* clean.c */; };
+		A1000102 /* drawchar.c in Sources */ = {isa = PBXBuildFile; fileRef = A2000102 /* drawchar.c */; };
+		A1000103 /* error.c in Sources */ = {isa = PBXBuildFile; fileRef = A2000103 /* error.c */; };
+		A1000104 /* fonts.c in Sources */ = {isa = PBXBuildFile; fileRef = A2000104 /* fonts.c */; };
+		A1000105 /* init.c in Sources */ = {isa = PBXBuildFile; fileRef = A2000105 /* init.c */; };
+		A1000106 /* loadfile.c in Sources */ = {isa = PBXBuildFile; fileRef = A2000106 /* loadfile.c */; };
+		A1000107 /* output.c in Sources */ = {isa = PBXBuildFile; fileRef = A2000107 /* output.c */; };
+		A1000108 /* savefile.c in Sources */ = {isa = PBXBuildFile; fileRef = A2000108 /* savefile.c */; };
+		A1000109 /* ansi.c in Sources */ = {isa = PBXBuildFile; fileRef = A2000109 /* ansi.c */; };
+		A1000110 /* artworx.c in Sources */ = {isa = PBXBuildFile; fileRef = A2000110 /* artworx.c */; };
+		A1000111 /* binary.c in Sources */ = {isa = PBXBuildFile; fileRef = A2000111 /* binary.c */; };
+		A1000112 /* icedraw.c in Sources */ = {isa = PBXBuildFile; fileRef = A2000112 /* icedraw.c */; };
+		A1000113 /* pcboard.c in Sources */ = {isa = PBXBuildFile; fileRef = A2000113 /* pcboard.c */; };
+		A1000114 /* tundra.c in Sources */ = {isa = PBXBuildFile; fileRef = A2000114 /* tundra.c */; };
+		A1000115 /* xbin.c in Sources */ = {isa = PBXBuildFile; fileRef = A2000115 /* xbin.c */; };
+		A1000116 /* reallocarray.c in Sources */ = {isa = PBXBuildFile; fileRef = A2000116 /* reallocarray.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A2000001 /* AnsiSaverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnsiSaverView.swift; sourceTree = "<group>"; };
+		A2000002 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		A2000003 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		A2000004 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		A2000005 /* ArtSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtSource.swift; sourceTree = "<group>"; };
+		A2000010 /* AnsiSaver.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnsiSaver.saver; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2000011 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2000012 /* AnsiSaver-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnsiSaver-Bridging-Header.h"; sourceTree = "<group>"; };
+		A2000050 /* ansilove.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ansilove.h; sourceTree = "<group>"; };
+		A2000101 /* clean.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = clean.c; sourceTree = "<group>"; };
+		A2000102 /* drawchar.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = drawchar.c; sourceTree = "<group>"; };
+		A2000103 /* error.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = error.c; sourceTree = "<group>"; };
+		A2000104 /* fonts.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fonts.c; sourceTree = "<group>"; };
+		A2000105 /* init.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = init.c; sourceTree = "<group>"; };
+		A2000106 /* loadfile.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = loadfile.c; sourceTree = "<group>"; };
+		A2000107 /* output.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = output.c; sourceTree = "<group>"; };
+		A2000108 /* savefile.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = savefile.c; sourceTree = "<group>"; };
+		A2000109 /* ansi.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ansi.c; sourceTree = "<group>"; };
+		A2000110 /* artworx.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = artworx.c; sourceTree = "<group>"; };
+		A2000111 /* binary.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = binary.c; sourceTree = "<group>"; };
+		A2000112 /* icedraw.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = icedraw.c; sourceTree = "<group>"; };
+		A2000113 /* pcboard.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pcboard.c; sourceTree = "<group>"; };
+		A2000114 /* tundra.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tundra.c; sourceTree = "<group>"; };
+		A2000115 /* xbin.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = xbin.c; sourceTree = "<group>"; };
+		A2000120 /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		A2000121 /* drawchar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = drawchar.h; sourceTree = "<group>"; };
+		A2000122 /* fonts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fonts.h; sourceTree = "<group>"; };
+		A2000123 /* output.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = output.h; sourceTree = "<group>"; };
+		A2000116 /* reallocarray.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = reallocarray.c; sourceTree = "<group>"; };
+		A2000124 /* reallocarray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = reallocarray.h; sourceTree = "<group>"; };
+		A2000125 /* strtonum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = strtonum.h; sourceTree = "<group>"; };
+		A2000126 /* strndup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = strndup.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A3000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A4000001 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				A4000002 /* Sources */,
+				A4000004 /* vendor */,
+				A2000012 /* AnsiSaver-Bridging-Header.h */,
+				A2000011 /* Info.plist */,
+				A4000010 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A4000002 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A4000003 /* AnsiSaver */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A4000003 /* AnsiSaver */ = {
+			isa = PBXGroup;
+			children = (
+				A2000001 /* AnsiSaverView.swift */,
+				A2000002 /* Renderer.swift */,
+				A2000003 /* Configuration.swift */,
+				A2000004 /* Cache.swift */,
+				A2000005 /* ArtSource.swift */,
+			);
+			path = AnsiSaver;
+			sourceTree = "<group>";
+		};
+		A4000004 /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				A4000005 /* libansilove */,
+			);
+			path = vendor;
+			sourceTree = "<group>";
+		};
+		A4000005 /* libansilove */ = {
+			isa = PBXGroup;
+			children = (
+				A4000006 /* include */,
+				A4000007 /* src */,
+				A4000009 /* compat */,
+			);
+			path = libansilove;
+			sourceTree = "<group>";
+		};
+		A4000009 /* compat */ = {
+			isa = PBXGroup;
+			children = (
+				A2000116 /* reallocarray.c */,
+				A2000124 /* reallocarray.h */,
+				A2000125 /* strtonum.h */,
+				A2000126 /* strndup.h */,
+			);
+			path = compat;
+			sourceTree = "<group>";
+		};
+		A4000006 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				A2000050 /* ansilove.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		A4000007 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				A2000120 /* config.h */,
+				A2000121 /* drawchar.h */,
+				A2000122 /* fonts.h */,
+				A2000123 /* output.h */,
+				A2000101 /* clean.c */,
+				A2000102 /* drawchar.c */,
+				A2000103 /* error.c */,
+				A2000104 /* fonts.c */,
+				A2000105 /* init.c */,
+				A2000106 /* loadfile.c */,
+				A2000107 /* output.c */,
+				A2000108 /* savefile.c */,
+				A4000008 /* loaders */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		A4000008 /* loaders */ = {
+			isa = PBXGroup;
+			children = (
+				A2000109 /* ansi.c */,
+				A2000110 /* artworx.c */,
+				A2000111 /* binary.c */,
+				A2000112 /* icedraw.c */,
+				A2000113 /* pcboard.c */,
+				A2000114 /* tundra.c */,
+				A2000115 /* xbin.c */,
+			);
+			path = loaders;
+			sourceTree = "<group>";
+		};
+		A4000010 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2000010 /* AnsiSaver.saver */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A5000001 /* AnsiSaver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7000003 /* Build configuration list for PBXNativeTarget "AnsiSaver" */;
+			buildPhases = (
+				A6000001 /* Sources */,
+				A3000001 /* Frameworks */,
+				A8000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnsiSaver;
+			productName = AnsiSaver;
+			productReference = A2000010 /* AnsiSaver.saver */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A9000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = A7000001 /* Build configuration list for PBXProject "AnsiSaver" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A4000001 /* Root */;
+			productRefGroup = A4000010 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5000001 /* AnsiSaver */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A8000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A6000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000001 /* AnsiSaverView.swift in Sources */,
+				A1000002 /* Renderer.swift in Sources */,
+				A1000003 /* Configuration.swift in Sources */,
+				A1000004 /* Cache.swift in Sources */,
+				A1000005 /* ArtSource.swift in Sources */,
+				A1000101 /* clean.c in Sources */,
+				A1000102 /* drawchar.c in Sources */,
+				A1000103 /* error.c in Sources */,
+				A1000104 /* fonts.c in Sources */,
+				A1000105 /* init.c in Sources */,
+				A1000106 /* loadfile.c in Sources */,
+				A1000107 /* output.c in Sources */,
+				A1000108 /* savefile.c in Sources */,
+				A1000109 /* ansi.c in Sources */,
+				A1000110 /* artworx.c in Sources */,
+				A1000111 /* binary.c in Sources */,
+				A1000112 /* icedraw.c in Sources */,
+				A1000113 /* pcboard.c in Sources */,
+				A1000114 /* tundra.c in Sources */,
+				A1000115 /* xbin.c in Sources */,
+				A1000116 /* reallocarray.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A7000011 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"HAVE_STRNDUP=1",
+					"HAVE_STRTONUM=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/vendor/libansilove/include",
+					"$(SRCROOT)/vendor/libansilove/src",
+					"$(SRCROOT)/vendor/libansilove/compat",
+					/opt/homebrew/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/homebrew/lib,
+				);
+				ARCHS = arm64;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lgd",
+					"-lpng",
+					"-ljpeg",
+					"-lz",
+				);
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A7000012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"HAVE_STRNDUP=1",
+					"HAVE_STRTONUM=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/vendor/libansilove/include",
+					"$(SRCROOT)/vendor/libansilove/src",
+					"$(SRCROOT)/vendor/libansilove/compat",
+					/opt/homebrew/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/homebrew/lib,
+				);
+				ARCHS = arm64;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = (
+					"-lgd",
+					"-lpng",
+					"-ljpeg",
+					"-lz",
+				);
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		A7000021 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lardissone.AnsiSaver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AnsiSaver-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Debug;
+		};
+		A7000022 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lardissone.AnsiSaver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AnsiSaver-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A7000001 /* Build configuration list for PBXProject "AnsiSaver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7000011 /* Debug */,
+				A7000012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7000003 /* Build configuration list for PBXNativeTarget "AnsiSaver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7000021 /* Debug */,
+				A7000022 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = A9000001 /* Project object */;
+}
