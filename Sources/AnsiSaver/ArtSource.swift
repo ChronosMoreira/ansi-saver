@@ -31,3 +31,91 @@ class FolderSource: ArtSource {
         completion(paths)
     }
 }
+
+class PackSource: ArtSource {
+
+    private let packURL: String
+
+    init(packURL: String) {
+        self.packURL = packURL
+    }
+
+    func loadArtPaths(completion: @escaping ([String]) -> Void) {
+        let packName = extractPackName(from: packURL)
+
+        PackFetcher.fetchFileList(packURL: packURL) { filenames in
+            guard !filenames.isEmpty else {
+                completion([])
+                return
+            }
+
+            var localPaths: [String] = []
+            let group = DispatchGroup()
+
+            for filename in filenames {
+                let localPath = Cache.ansPath(forPack: packName, file: filename)
+
+                if Cache.exists(localPath) {
+                    localPaths.append(localPath)
+                    continue
+                }
+
+                group.enter()
+                PackFetcher.downloadFile(packURL: self.packURL, filename: filename, to: localPath) { success in
+                    if success {
+                        localPaths.append(localPath)
+                    }
+                    group.leave()
+                }
+            }
+
+            group.notify(queue: .main) {
+                completion(localPaths)
+            }
+        }
+    }
+
+    private func extractPackName(from url: String) -> String {
+        let trimmed = url.hasSuffix("/") ? String(url.dropLast()) : url
+        return (trimmed as NSString).lastPathComponent
+    }
+}
+
+class URLSource: ArtSource {
+
+    private let fileURLs: [String]
+
+    init(fileURLs: [String]) {
+        self.fileURLs = fileURLs
+    }
+
+    func loadArtPaths(completion: @escaping ([String]) -> Void) {
+        var localPaths: [String] = []
+        let group = DispatchGroup()
+
+        for urlString in fileURLs {
+            let localPath = Cache.urlCachePath(for: urlString)
+
+            if Cache.exists(localPath) {
+                localPaths.append(localPath)
+                continue
+            }
+
+            guard let url = URL(string: urlString) else { continue }
+
+            group.enter()
+            let task = URLSession.shared.dataTask(with: url) { data, _, error in
+                if let data = data, error == nil {
+                    Cache.write(data, to: localPath)
+                    localPaths.append(localPath)
+                }
+                group.leave()
+            }
+            task.resume()
+        }
+
+        group.notify(queue: .main) {
+            completion(localPaths)
+        }
+    }
+}

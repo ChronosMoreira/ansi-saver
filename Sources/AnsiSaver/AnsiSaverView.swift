@@ -2,14 +2,26 @@ import ScreenSaver
 
 class AnsiSaverView: ScreenSaverView {
 
-    private var currentImage: NSImage?
+    private var animator: Animator?
     private var artPaths: [String] = []
     private var currentIndex = 0
+    private var config = Configuration.load()
+    private var configSheet: ConfigSheet?
+    private var messageLayer: CATextLayer?
 
     override init?(frame: NSRect, isPreview: Bool) {
         super.init(frame: frame, isPreview: isPreview)
         wantsLayer = true
+        layer?.backgroundColor = NSColor.black.cgColor
         animationTimeInterval = 1.0 / 30.0
+
+        if let layer = self.layer {
+            animator = Animator(containerLayer: layer)
+            animator?.onAnimationComplete = { [weak self] in
+                self?.showNextArt()
+            }
+        }
+
         loadArt()
     }
 
@@ -19,63 +31,129 @@ class AnsiSaverView: ScreenSaverView {
     }
 
     private func loadArt() {
-        let config = Configuration.load()
         var sources: [ArtSource] = []
 
-        if let folderPath = config.localFolderPath, !folderPath.isEmpty {
-            sources.append(FolderSource(folderPath: folderPath))
+        if isPreview {
+            if let folderPath = config.localFolderPath, !folderPath.isEmpty {
+                sources.append(FolderSource(folderPath: folderPath))
+            }
+        } else {
+            for packURL in config.packURLs where !packURL.isEmpty {
+                sources.append(PackSource(packURL: packURL))
+            }
+
+            if !config.fileURLs.isEmpty {
+                sources.append(URLSource(fileURLs: config.fileURLs.filter { !$0.isEmpty }))
+            }
+
+            if let folderPath = config.localFolderPath, !folderPath.isEmpty {
+                sources.append(FolderSource(folderPath: folderPath))
+            }
         }
 
-        guard !sources.isEmpty else { return }
+        guard !sources.isEmpty else {
+            showMessage("No art sources configured.\nOpen Screen Saver Options to add pack URLs or a local folder.")
+            return
+        }
+
+        let group = DispatchGroup()
+        var allPaths: [String] = []
 
         for source in sources {
-            source.loadArtPaths { [weak self] paths in
-                self?.artPaths.append(contentsOf: paths)
-                if self?.currentImage == nil {
-                    self?.showNextArt()
+            group.enter()
+            source.loadArtPaths { paths in
+                DispatchQueue.main.async {
+                    allPaths.append(contentsOf: paths)
+                    group.leave()
                 }
             }
+        }
+
+        group.notify(queue: .main) { [weak self] in
+            guard let self = self else { return }
+            if allPaths.isEmpty {
+                self.showMessage("No art files found.\nCheck your configured sources.")
+                return
+            }
+            self.messageLayer?.removeFromSuperlayer()
+            self.messageLayer = nil
+            self.artPaths = allPaths.shuffled()
+            self.showNextArt()
         }
     }
 
     private func showNextArt() {
         guard !artPaths.isEmpty else { return }
-        let path = artPaths[currentIndex % artPaths.count]
+
+        if currentIndex >= artPaths.count {
+            artPaths.shuffle()
+            currentIndex = 0
+        }
+
+        let path = artPaths[currentIndex]
         currentIndex += 1
 
-        if let image = Renderer.render(ansFileAt: path) {
-            currentImage = image
-            setNeedsDisplay(bounds)
+        let transition = TransitionMode(rawValue: config.transitionMode) ?? .scrollUp
+
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            guard let self = self else { return }
+            guard let image = Renderer.render(ansFileAt: path) else {
+                DispatchQueue.main.async {
+                    self.showNextArt()
+                }
+                return
+            }
+
+            DispatchQueue.main.async {
+                self.animator?.display(
+                    image: image,
+                    transition: transition,
+                    speed: self.config.scrollSpeed,
+                    viewSize: self.bounds.size
+                )
+            }
         }
+    }
+
+    private func showMessage(_ text: String) {
+        guard let layer = self.layer else { return }
+
+        messageLayer?.removeFromSuperlayer()
+
+        let textLayer = CATextLayer()
+        textLayer.string = text
+        textLayer.font = NSFont.systemFont(ofSize: 14) as CTFont
+        textLayer.fontSize = isPreview ? 8 : 14
+        textLayer.foregroundColor = NSColor.gray.cgColor
+        textLayer.alignmentMode = .center
+        textLayer.contentsScale = NSScreen.main?.backingScaleFactor ?? 2.0
+        textLayer.frame = layer.bounds
+        textLayer.isWrapped = true
+
+        layer.addSublayer(textLayer)
+        messageLayer = textLayer
     }
 
     override func draw(_ rect: NSRect) {
         NSColor.black.setFill()
         rect.fill()
-
-        guard let image = currentImage else { return }
-
-        let imageSize = image.size
-        let viewSize = bounds.size
-
-        let scale = min(viewSize.width / imageSize.width, viewSize.height / imageSize.height)
-        let drawSize = NSSize(width: imageSize.width * scale, height: imageSize.height * scale)
-        let origin = NSPoint(
-            x: (viewSize.width - drawSize.width) / 2,
-            y: (viewSize.height - drawSize.height) / 2
-        )
-
-        image.draw(in: NSRect(origin: origin, size: drawSize))
     }
 
     override func animateOneFrame() {
     }
 
+    override func stopAnimation() {
+        super.stopAnimation()
+        animator?.stopAnimations()
+    }
+
     override var hasConfigureSheet: Bool {
-        return false
+        return true
     }
 
     override var configureSheet: NSWindow? {
-        return nil
+        let sheet = ConfigSheet(config: Configuration.load())
+        configSheet = sheet
+        return sheet.configWindow
     }
 }

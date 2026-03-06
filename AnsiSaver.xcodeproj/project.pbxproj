@@ -12,6 +12,9 @@
 		A1000003 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000003 /* Configuration.swift */; };
 		A1000004 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000004 /* Cache.swift */; };
 		A1000005 /* ArtSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000005 /* ArtSource.swift */; };
+		A1000006 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000006 /* Animator.swift */; };
+		A1000007 /* PackFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000007 /* PackFetcher.swift */; };
+		A1000008 /* ConfigSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000008 /* ConfigSheet.swift */; };
 		A1000101 /* clean.c in Sources */ = {isa = PBXBuildFile; fileRef = A2000101 /* clean.c */; };
 		A1000102 /* drawchar.c in Sources */ = {isa = PBXBuildFile; fileRef = A2000102 /* drawchar.c */; };
 		A1000103 /* error.c in Sources */ = {isa = PBXBuildFile; fileRef = A2000103 /* error.c */; };
@@ -36,6 +39,9 @@
 		A2000003 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		A2000004 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		A2000005 /* ArtSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtSource.swift; sourceTree = "<group>"; };
+		A2000006 /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		A2000007 /* PackFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackFetcher.swift; sourceTree = "<group>"; };
+		A2000008 /* ConfigSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigSheet.swift; sourceTree = "<group>"; };
 		A2000010 /* AnsiSaver.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnsiSaver.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2000011 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2000012 /* AnsiSaver-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnsiSaver-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -103,6 +109,9 @@
 				A2000003 /* Configuration.swift */,
 				A2000004 /* Cache.swift */,
 				A2000005 /* ArtSource.swift */,
+				A2000006 /* Animator.swift */,
+				A2000007 /* PackFetcher.swift */,
+				A2000008 /* ConfigSheet.swift */,
 			);
 			path = AnsiSaver;
 			sourceTree = "<group>";
@@ -253,6 +262,9 @@
 				A1000003 /* Configuration.swift in Sources */,
 				A1000004 /* Cache.swift in Sources */,
 				A1000005 /* ArtSource.swift in Sources */,
+				A1000006 /* Animator.swift in Sources */,
+				A1000007 /* PackFetcher.swift in Sources */,
+				A1000008 /* ConfigSheet.swift in Sources */,
 				A1000101 /* clean.c in Sources */,
 				A1000102 /* drawchar.c in Sources */,
 				A1000103 /* error.c in Sources */,
