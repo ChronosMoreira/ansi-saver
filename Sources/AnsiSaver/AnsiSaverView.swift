@@ -5,9 +5,12 @@ class AnsiSaverView: ScreenSaverView {
     private var animator: Animator?
     private var artPaths: [String] = []
     private var currentIndex = 0
+    private var consecutiveFailures = 0
+    private let maxConsecutiveFailures = 10
     private var config = Configuration.load()
     private var configSheet: ConfigSheet?
     private var messageLayer: CATextLayer?
+    private var scopedFolderURL: URL?
 
     override init?(frame: NSRect, isPreview: Bool) {
         super.init(frame: frame, isPreview: isPreview)
@@ -34,21 +37,35 @@ class AnsiSaverView: ScreenSaverView {
     private func loadArt() {
         var sources: [ArtSource] = []
 
-        if isPreview {
-            if let folderPath = config.localFolderPath, !folderPath.isEmpty {
-                sources.append(FolderSource(folderPath: folderPath))
+        if let bookmark = config.localFolderBookmark,
+           let resolved = Configuration.resolveBookmark(bookmark) {
+            scopedFolderURL = resolved.url
+            let folderPath = resolved.path
+
+            if isPreview {
+                if !folderPath.isEmpty {
+                    sources.append(FolderSource(folderPath: folderPath))
+                }
+            } else {
+                for packURL in config.packURLs where !packURL.isEmpty {
+                    sources.append(PackSource(packURL: packURL))
+                }
+
+                if !config.fileURLs.isEmpty {
+                    sources.append(URLSource(fileURLs: config.fileURLs.filter { !$0.isEmpty }))
+                }
+
+                if !folderPath.isEmpty {
+                    sources.append(FolderSource(folderPath: folderPath))
+                }
             }
-        } else {
+        } else if !isPreview {
             for packURL in config.packURLs where !packURL.isEmpty {
                 sources.append(PackSource(packURL: packURL))
             }
 
             if !config.fileURLs.isEmpty {
                 sources.append(URLSource(fileURLs: config.fileURLs.filter { !$0.isEmpty }))
-            }
-
-            if let folderPath = config.localFolderPath, !folderPath.isEmpty {
-                sources.append(FolderSource(folderPath: folderPath))
             }
         }
 
@@ -98,12 +115,20 @@ class AnsiSaverView: ScreenSaverView {
 
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
             guard let self = self else { return }
-            guard let image = Renderer.render(ansFileAt: path, scaleFactor: UInt8(self.config.scaleFactor)) else {
-                DispatchQueue.main.async { self.showNextArt() }
+            guard let image = Renderer.render(ansFileAt: path, scaleFactor: self.config.scaleFactor <= 1 ? 0 : UInt8(self.config.scaleFactor)) else {
+                DispatchQueue.main.async {
+                    self.consecutiveFailures += 1
+                    if self.consecutiveFailures < self.maxConsecutiveFailures {
+                        self.showNextArt()
+                    } else {
+                        self.showMessage("Unable to render art files.")
+                    }
+                }
                 return
             }
 
             DispatchQueue.main.async {
+                self.consecutiveFailures = 0
                 if self.config.continuousScroll {
                     let fileName = (path as NSString).lastPathComponent
                     self.animator?.appendArt(image: image, fileName: fileName, showSeparator: self.config.showSeparator)
@@ -127,12 +152,20 @@ class AnsiSaverView: ScreenSaverView {
 
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
             guard let self = self else { return }
-            guard let image = Renderer.render(ansFileAt: path, scaleFactor: UInt8(self.config.scaleFactor)) else {
-                DispatchQueue.main.async { self.startContinuousMode() }
+            guard let image = Renderer.render(ansFileAt: path, scaleFactor: self.config.scaleFactor <= 1 ? 0 : UInt8(self.config.scaleFactor)) else {
+                DispatchQueue.main.async {
+                    self.consecutiveFailures += 1
+                    if self.consecutiveFailures < self.maxConsecutiveFailures {
+                        self.startContinuousMode()
+                    } else {
+                        self.showMessage("Unable to render art files.")
+                    }
+                }
                 return
             }
 
             DispatchQueue.main.async {
+                self.consecutiveFailures = 0
                 let fileName = (path as NSString).lastPathComponent
                 self.animator?.startContinuousScroll(
                     firstImage: image,
@@ -186,6 +219,8 @@ class AnsiSaverView: ScreenSaverView {
     override func stopAnimation() {
         super.stopAnimation()
         animator?.stopAnimations()
+        scopedFolderURL?.stopAccessingSecurityScopedResource()
+        scopedFolderURL = nil
     }
 
     override var hasConfigureSheet: Bool {

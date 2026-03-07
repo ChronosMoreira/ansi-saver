@@ -10,8 +10,12 @@ enum PackFetcher {
         }
 
         let task = URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data = data, error == nil,
-                  let html = String(data: data, encoding: .utf8) else {
+            guard let data = data, error == nil else {
+                completion([])
+                return
+            }
+            guard let html = String(data: data, encoding: .utf8)
+                    ?? String(data: data, encoding: .isoLatin1) else {
                 completion([])
                 return
             }
@@ -25,7 +29,11 @@ enum PackFetcher {
     static func downloadFile(packURL: String, filename: String, to localPath: String,
                              completion: @escaping (Bool) -> Void) {
         let normalizedURL = packURL.hasSuffix("/") ? packURL : packURL + "/"
-        let rawURL = normalizedURL + "raw/" + filename
+        guard let encodedFilename = filename.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) else {
+            completion(false)
+            return
+        }
+        let rawURL = normalizedURL + "raw/" + encodedFilename
         guard let url = URL(string: rawURL) else {
             completion(false)
             return

@@ -1,331 +1,1444 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="ISO-8859-1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="16colo.rs is an archive of ANSI and ASCII art. Preserving artpacks released through the BBS underground artscene since the early 1990s until the present."/>
-  <meta property="og:description" content="16colo.rs is an archive of ANSI and ASCII art. Preserving artpacks released through the BBS underground artscene since the early 1990s until the present."/>
-  <title>16colo.rs</title>
-  <meta property="og:title" content="16colo.rs"/>
-  <meta property="og:logo" content="/img/16c-logo-square.png" size="512x512" />
-  <link rel="stylesheet" href="/css/16colors.css?v=22040701">
-    <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="manifest" href="/manifest.json">
-  <link rel="preload" href="/static/blockzone-webfont.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/ionicons.woff2?v=4.2.1" as="font" type="font/woff2" crossorigin>
-  <meta name="theme-color" content="#555555">
-  <meta name="msapplication-navbutton-color" content="#555555">
-  <meta name="apple-mobile-web-app-status-bar-style" content="#55555">
-<!-- Hotjar Tracking Code for 16colo.rs -->
-<!--
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:1216417,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
--->
-</head>
-<body bgcolor="#555555">
-<header>
-    <nav id="mainnav" class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand is-hidden-desktop">
-        <a href="https://16colo.rs/" aria-label="16colo.rs"><img src="/16c.svg" class="bclogo" width="82" height="28" alt="16colo.rs"></a>
-        <div id="navbar-burger-id" class="navbar-burger">â–ˆâ–“â–’â–‘  </div>
-      </div>
-      <div id="navbar-menu-id" class="navbar-menu is-hidden-desktop">
-        <div class="navbar-start">
-          <a class="navbar-item">BROWSE</a>
-          <div class="navbar-dropdown has-dropdown">
-            <a class="navbar-item" href="https://16colo.rs/year/1996/">PACKS</a>
-            <a class="navbar-item" href="https://16colo.rs/mags/1996/">E-MAGS</a>
-            <a class="navbar-item" href="https://16colo.rs/artist/">ARTISTS</a>
-            <a class="navbar-item" href="https://16colo.rs/group/">GROUPS</a>
-          </div>
-          <a class="navbar-item" href="/search/">SEARCH</a>
-          <a class="navbar-item" href="/tags/">TAGS</a>
-          <a class="navbar-item" href="/upload/">UPLOAD</a>
-          <a class="navbar-item" href="/faq/">FAQ</a>
-          <a class="navbar-item" href="https://forum.16colo.rs/">FORUM</a>
-                    <a class="navbar-item" href="/login/">LOGIN</a>
-                  </div>
-      </div>
-      <div class="navbar-menu is-hidden-touch">
-        <div class="navbar-start">
-          <a href="https://16colo.rs/"><img src="/16c.svg" class="bclogo" width="82" height="28" alt="16colo.rs"></a>
-        </div>
-        <div class="navbar-end">
-          <div class="dropdown is-center is-hoverable" style="">
-            <div class="dropdown-trigger">
-              <a class="navbar-item" href="/">BROWSE</a>
-              <div class="dropdown-menu" role="menu">
-                <div class="dropdown-content">
-                  <a class="dropdown-item" href="https://16colo.rs/year/1996/">PACKS</a>
-                  <a class="dropdown-item" href="https://16colo.rs/mags/1996/">E-MAGS</a>
-                  <a class="dropdown-item" href="https://16colo.rs/artist/">ARTISTS</a>
-                  <a class="dropdown-item" href="https://16colo.rs/group/">GROUPS</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <a class="navbar-item" href="/faq/">FAQ</a>
-          <a class="navbar-item" href="/upload/">UPLOAD</a>
-          <a class="navbar-item" href="/tags/">TAGS</a>
-          <a class="navbar-item" href="https://forum.16colo.rs/">FORUM</a>
-                    <a class="navbar-item" href="/login/">LOGIN</a>
-                  </div>
-        <div class="dropdown is-right is-hoverable" style="margin-right: 10px;">
-          <div class="dropdown-trigger">
-            <a class="navbar-item" href="/search/">SEARCH</a>
-          </div>
-                    <div class="dropdown-menu" id="dropdown-search" role="menu">
-            <div class="dropdown-content" id="quicksearch">
-              <div class="dropdown-item">
-<!--section class="section" id="search-art"-->
-<!--div class="container"-->
-<form method="post" action="/search/">
-<div style="width: 600px;">
+[0m[1;30m_..,___\_____[0m[10C[1;30m',i,.'.[0m[7C[1;30m.++
+[A[40C''[0m [1;30m'+.[0m [1;30m.[0m[7C[1;30m\,[0my%$
+[A[60C$$$I%[1;30my,[0m[7C.$[1;30m$[0m$[1;30mi[0m
+[1;30m""[0m""[1;30m"[0m"[1;30m"ýýýý+$$IIy,[0m   [1;30m
+[A[21C.',$$$.+[0m [1;30m'.[0m [1;30m. +'.[0my%$$$%y
+[A[45C[1;30m,,_[0m   [1;30m__[0m,y$$\[1;30mýý[0mýýýýý
+[A[65C$$$%[1;30m%yy[0m%$[47m²²[40m$i:
+[1;30m"""""ýýýDiy, ý$$$I$.  y$[0mý[1;30m ý$,ý[0m°,_ ,yI$$
+[A[39C$[1m°²[47m$$[0m$$±±$$$ý ýý[1;30mýý[0;32m __ : .
+[A[64C[1;30m'[0m$$$[47m²[30m±$[37;40m°$$$$[1;30mI'[0m
+[1;30m"ýý$$D%, '$i  i$$i$$y$$[0m'[1;30m,$,ý$y [0mý$$$[1m
+[A[35C°°[0m$*ýý'[1;30m'[0mýýII$$$$ý  [32m+ý"~"[1mý
+[A[60C[0;32m[1m°y[0;32m, [1;30mI$[0m$$$[47m²[40m
+[A[71C[1;30m$[0m$$%ý[1;30m  [0m,
+D%y[32m [1;30m'ý$$$. '  $$$:$$$[0m°'[1;30m,i'$,ý$$[0;32m
+[A[31C [1;30m,~[0m"ý[1;30m" .,[0my[1;30m%[0m°[1;30m5
+[A[44C[0my,[1;30m.::$[37m [0;32m [36m.[32mi [1;37m,
+[A[56C[32mi"[0;32m~ [37m [1;32m²[37m$[32mi[0;32m 
+[A[65C[1;30m[0mýýý[1;30m'~[0m_,y%$±
+'$[1m²[0m$. [1;30m'$$$[0;32m [1;30m y$$'ý $$[0mI'
+[A[22C[1;30m,$.-ý'.$' [0;32m [1;30mý%[0my%i$[1;30mI
+[A[40C[0mý""[1;30mý[0mýI[1;30mIi::[0;32m [36m.[32m$:
+[A[54C [1mý+[0;32m. _[1;37m,[32mý[0;32m'[1;30m__y[0my
+[A[67C[1;30my[0myI[1;30mI$[0m$$±[1m²²[0;30;47m$[40m
+[A[78C[37mD
+,$²$'[32m [1;30m,$ý[0;32m  [1;30m$$ý[0m[4C[1;30mý[0m$
+[A[20C'[32m [1;30m_ ý$\,$'[0;32m   °.[37m [1;30m...[0m
+[A[39C  .[32m.._  [1;30m''[0;32m [36m.[32m$[36m$[32m$
+[A[54C$%y,._  [1;30m --$$[0m$SS[1;30mS[0mIýý'[1;30m' [0m
+$±$[1;30m'[0;32m [1;30mi$[0;32m   [1;30m$$'[0;35m [32m
+[A[14C\,.[35m  [37m'[35m  [32m [1;30m'+[0;32m [1;30mý
+[A[27CI' .'[0;32m [37m [1;32m°[0;32m,   [37m:[32mIýII$
+[A[45C$y  [37m/[32mS$[1m°°[0;32mS[1mSS$[42m$[33my[40m
+[A[60C[0;30;42mÈ[32;40m$y[37m//[32m  [1;30m+&%©[0myyy
+[A[74Cy[1;30m%%Iý[0m
+°[1;30mý[0;32m  [1;30miI[0;32m   [1;30m$$ý[0;32m [35m 
+[A[14C[32m:$$$%ªª%I/'  [1;30m'[0m   _ [32m$$[1m²I
+[A[37C[0;32my  ,[1;33mi[36;42m$$$[40my[32m [0;32m$
+[A[48C[37m  [1;30m..[0m  [32m,y$ ""$[1;33;42mý[36m$$[40m
+[A[64C[32m±$[0;32my. [1;30mý[0m$[30;47m²²[1;40m$Iý  ,[0m
+[1;30m'[0m [1;30m.'[0m [1;30mi:[0;32m   [1;30m$[0m  
+[A[13C[35m [32m:i[1;36m$$[32m±[0;32m$$$[30;42m$[40m
+[A[23C[32m$:  \y[33m%[1m$[0;32m$$y$[1m$²[42m$[40mI
+[A[39C[0;32m. $[1;36m$[37;42m$$[36m$[0;32m$ $  [37m-
+[A[52C[32my[1m6[42m$$[0;30;42m$[32;40m:[1;30m ..
+[A[61C[0;32m'ý$[30;42m²[1;36m$$[0;32m$$. [1;30mý/'
+[A[74C[0;32m [1;30m ,$$[0m
+[1;30m.[0m [1;30m:[0m   [1;30m': [0;32m [37m [1;30mý.
+[A[13C[0;35m [32m I[1;36m$$$[0;32m$$$±[1;42mi[0;32m$i
+[A[26C. ý[30;42mI[1;36m$[40m±[0;32m$[37m:[32m [1;30m.
+[A[36C[0;32m$[1m$$ý' [0;32m$[1;33m$[0;32m$[1;36mý'
+[A[47C[0m.[32mý[37m [1;30m..[0m [32m±$$±i[37m 
+[A[59C[1;30m  .   ,y[0;35m%°[1;30my,.[0;35m  [1;30m-$$
+[A[77C[0;30;47m²[1;40m$[0m
+ [1;30m.[0m [1;30m'y.[32m [0;32m [1;30m'.[0m   [35m 
+[A[14C[32m '±[1;36;42m$[40m$[0;32m$'ý$[1;36;42mII[40m
+[A[25C[0;32m$I. '$[1;42m$$[0;32m$[37m:  [1;32mý   [0m
+[A[41Cý[32m yI$$[37m [1;30m.::' [0;35m.yyy,[37m/[1;30m
+[A[59C :;; [0m [35m [37mI[35mI[36;45m$[1m$$$[0;36m$
+[A[73C[37my-[1;30m '$:[0m
+  [1;30m'+.ýI[0m   [1;30m.[0m  [35m [32m ,±[1;36;42m$[40m
+[A[18C$[0;32m$ [1;30m.[0;32m'$[1;36;42m$$[0;32m$I.  $²
+[A[33C$$[37m: [1;30m..::'[0m  [35m.yy, [1;30m...[0;35m
+[A[52C $[36m$$$[35m$[37mi[1;30m '' ,; [0;35m ²
+[A[68C[1;36;45mI$[0;35m±[37m$[1;30mI'[0;32m  [1;30m |[0m
+[1;30m-..[0m [1;30m '.i[0m   [1;30mi[0m [35m [32m i
+[A[16C[1;36;42m$$[40m$[0;32mI [1;30m''[0;32m'$[1;42m$[40m
+[A[26C[42m$[0;30;42mÈ[32;40m$  [35m,y%y.[37m  [1;30m..
+[A[40C.'[0m  [35mI[1;45m$[36m±$[0;35m$[1;30m ''[0;35m
+[A[52C,$[30;45m$[1;36;40m°°[0;35m$[37m$[1;30m  .+'[0m 
+[A[65C[35my[30;45m$[1;36;40m°[35;45m$[0;35m$[1;30mý\
+[A[72C[0;35m [1;30m,,;;::[0m
+[35m   [1;33m [30m'.[0m [1;30m;:[0;32m [37m [1;30m :
+[A[13C[0;35m [37m:[32m$[30;42m$$$[32;40mI.yþy:[1;30m,
+[A[26Cy[0;35m%%y,y$$$$$y[1myy[36myy[35m%$[0;35m:$
+[A[46C[1;36;45m$[37m$[0;30;45m$È[35;40m%%$$[30;45m$ß$[40m
+[A[57C[35m$[37m$, [35m,,y[36m$[37;45m±[1;35;40m$I
+[A[68C[30mý[0;35m [1;30m,+';:: :I[0m
+[35m  ,[36m_[35m\[37m,[35m  [1;30m:.[0m [1;30m .
+[A[13C[0;35m [1;30m,[0;35my%%[1;30my,[0;35m [32m'ý
+[A[23C[1;33m'[0;32m [1;30mi[0m$[35m$[37;45m$$[30m$$[40m
+[A[32C[35m$[1;36;45m$$[0;35m$[1;45m$$[36m$[40m±[45m$[40m
+[A[41C[45m$[35;40m²I[0;35m$[1mI$[36;45m$[0m$$[1;35m$
+[A[51C[0m°[35m$[1m$$[0;35m$[1m$$$[0m$$[1;35mIi
+[A[63C[0;30;45m$$[35;40m$[1;30mý[0;35m [1;30m,'.:i....
+[A[77C..[0m
+[1;35m-[37mª[36m;[35m$[0;35m$[1;30m$[0my[1;30m [0m 
+[A[9C[1;30m:[0m   [1;30m,[0;35m$[1;45mi[36m$[35;40m°
+[A[18C[0m$[1;30m:[0;35m  [1;30m... [0m$[35mS[1;45m$[40m
+[A[29C[0;35m$$ý $[1;36mI[0;35mI[1;30mI[0mý"~[1;36m~
+[A[41C[30m '+. [0;35m$$$[1;30miý"~$$"ýý$[0m$[35m$$$
+[A[63C[30;45m$[35;40m$[1;30m'[0m
+[1;30mò[35;45m$[40mý[0;35m  [1;30m ý[0mI [1;30m. [0m 
+[A[12C[1;30m,[0;35m$[30;45m$[1;36m$$[0;35m$[37mI
+[A[19C[1;30m'.::'' [0mI$%[1;30m'   '[0m$[1;30mý[0m[7C
+[A[43C[1;30m| :$i'[0m[4C[1;30mI: ,+ý[0mý[1;30mýi[0mI
+[A[63C[1;30mIý : [37max.rmrs[0m
+[35m$[1;45mI[30;40m, +.,[0m'[35m   [1;30m,[0;35m$$
+[A[14C[36;45m$[1;40m$$[0;35m$[37mi[1;30m [0m[5C
+[A[25C[1;30m [0mI[1;30m'[0m[6CI[8C[1;30m:  ý[0m[6C
+[A[53C[1;30m:.'[0m[6Ci[1;30m:  : . ..,.::::'[0m
+[1;30m'I[0;35m$[37m,[5C[1;30my$[0m$[36m°[35m$[36m±±
+[A[16C[35m$[1;30m$[0m:[1;30m [0m[5C[1;30m :[0m[7Ci[8C
+[A[43C[1;30m.  '[0m[6C[1;30m:[0m[8C[1;30m:  :::: :.:
+[A[73C''   .[0m
+[35m   [1;30m'[0mý[1;30m+|[0m+[1;30m$S*ý"$[0;35mý
+[A[15C[1;30mý*$y [0m[14C[1;30m:[0m[8C[1;30m'[0m
+[7C[1;30m :  .+I[0m[4C[1;30m\\[36m [33m [37m [33ma
+[A[24C[0;35m  [1;30m   [33m c[30m   '  [33mi[0m[6C
+[A[44C[1;33md[0m  [1;36m  [0m[3C[1;33m [0;31m1    0 
+[A[60C   0[37m
+[7C[1;30m   '  :[0m[3C[31m   [1;36m [0m [1;30m ---
+[A[26C[0;35m [1;37mAC[0mi[1mD-100 NEW[36mSCHOOL[37m A
+[A[47CNS[0mCII[1;36m CLUSTER[30m ---[0m
+[28C[1;30m [0m
 
-<div class="columns">
-  <div class="column is-12">
-    <label class="label is-small">Content:</label>
-    <div class="control">
-      <input class="input" name="content" type="text" placeholder="" value="">
-    </div>
-    <p class="help">searches text + SAUCE data</p>
-  </div>
-</div>
-<div class="columns">
-  <div class="column is-6">
-    <label class="label is-small">artist prefix:</label>
-    <div class="field-label">
-      <div class="control">
-        <input class="input" name="prefix" type="text" placeholder="eg: tt" value="">
-      </div>
-      <p class="help">search on artist filename prefixes (usually 2 to 3 characters)</p>
-    </div>
-  </div>
-  <div class="column is-6">
-    <label class="label is-small">filename suffix:</label>
-    <div class="control">
-      <input class="input" name="suffix" type="text" placeholder="eg: chan0" value="">
-    </div>
-    <p class="help">search for filename suffix, the non-artist part of the filename</p>
-  </div>
-</div>
-<div class="columns">
-  <div class="column is-6">
-    <label class="label is-small">filetype:</label>
-    <div class="control">
-      <input class="input" name="extension" type="text" placeholder="eg: ANS" value="">
-    </div>
-    <p class="help">search on file extension such as ANS, ICE, RIP, LIT or DRK </p>
-  </div>
-  <div class="column is-3">
-    <label class="label is-small">year:</label>
-    <div class="select">
-      <select name="year">
-        <option>any</option>
-          <option>1990</option>
-  <option>1991</option>
-  <option>1992</option>
-  <option>1993</option>
-  <option>1994</option>
-  <option>1995</option>
-  <option>1996</option>
-  <option>1997</option>
-  <option>1998</option>
-  <option>1999</option>
-  <option>2000</option>
-  <option>2001</option>
-  <option>2002</option>
-  <option>2003</option>
-  <option>2004</option>
-  <option>2005</option>
-  <option>2006</option>
-  <option>2007</option>
-  <option>2008</option>
-  <option>2009</option>
-  <option>2010</option>
-  <option>2011</option>
-  <option>2012</option>
-  <option>2013</option>
-  <option>2014</option>
-  <option>2015</option>
-  <option>2016</option>
-  <option>2017</option>
-  <option>2018</option>
-  <option>2019</option>
-  <option>2020</option>
-  <option>2021</option>
-  <option>2022</option>
-  <option>2023</option>
-  <option>2024</option>
-  <option>2025</option>
-  <option>2026</option>
-      </select>
-    </div>
-    <p class="help">search on release year</p>
-  </div>
-  <div class="column is-3">
-    <label class="label is-small">results:</label>
-    <div class="select">
-      <select name="results">
-        <option>100</option>
-        <option>200</option>
-        <option>300</option>
-        <option>400</option>
-        <option>500</option>
-      </select>
-    </div>
-  </div>
-</div>
+[28C[1;30m [0m
+,[1myII*[0my, [1;30m....[0m [1;30m.[0m [1;30m...[0m 
+[A[19C[1;30m.[0m  [1;30m..... [0m [31mÀÚÙ[37m  
+[A[34C[1;30m..[0m  [1m ,y$[0m [1;30m.[0m   _[1;30m__
+[A[50C [0m [4C[1;30m°[0m  [1;30m..[0m  [1;30m__[0m[4C
+[A[69C[1;30m_[0m__[1;30m_ [0m  [1;30m...[0m
+' [1;30m,[0m%[1;30my,[0m''[1;30m...[0m .I.[1;30m ..
+[A[18C[0m I[1;30m.[0m [1;30m.....[0m [1;30m:[0;31mÀ¿
+[A[31CÙ[37m: [1;30m.[0m ,[1my[0m$[1m$$$[0m,[1my%I$ý~
+[A[49C~"ýý$ý$$y[0m,[1m,y%$$ý"~"ýý$ý$$y[0m,[1m [30m..[0m
+._[1;30m~ý"[0m__.,yy$$$[1m$[0m.[1;30m .[0m $[1m$[0m, 
+[A[23C[1;30m....[0m:I[1;30m [0;31mÚ[1;30m [0mi.
+[A[34C[1;30m° °°[0m$[30;47m$[1;37;40m±[47m$[0;30;47mº[40m
+[A[43C[1;37;47m$[40m±±[30mº...[0m [1m,ý [30m..[0mI
+[A[57C[30;47m$$[37;40m$[1m$±$[0m:[1m [30m..[0m [1m,
+[A[69Cý [30m..[0mI[1m±±[30mº°[0m 
+$[1m²±[0m$$$$$$I\ý'$$[1m²[0m. I$$[1m$y[30m,...[0mi[1m
+[A[28CI[30m [0;31m¿[1;30m [0m$: [1;30m.[0m [1;30m,
+[A[38C[0m$$[1m$$[0mý$$I$,_[1m,[0mý [1;30m_[0m_,y$$$
+[A[59C[1;30mý$[0m$I$,_[1m,[0mý [1;30m_[0m_,y$$$'
+[A[77C[1;30m..[0m
+`ý$$$Iý'[31m  +[1;30m`[0m$$[1m²[0m,$$Q$$[1mIy[0m,_i$
+[A[29C[1;30m [0;31mÚ[1;30m [0m$$:. ýýýýýý "ýýýý"[1;30m
+[A[50C"~[0m~""ýý'[1;30m'[0m  [1;30m"ý[0mý[1;30mýý""~~
+[A[70C[0m""ýý'[1;30m'[0;31max[37m
+[1;30m$y,._   _.t$,[0;31m+[1;30m`[0m$$[1m$[0m$$ ~"ý$$$
+[A[28C$[1;30m [0;31m.[1;30m [0m$$$[1m$Ii[0mIiiiii:;;;;
+[A[49C;;[26C::
+$$[1;30m$$SS$$$$$,[0;31m+[1;30m`[0m$$$I  [1;30m$y   ~$
+[A[29C [0;31m.[1;30m [0m'^~~~~^'ýIiii:::: [1;30mò[0m>
+[A[54C[1;30m [37mabsent spinsister [30m [0m   ::
+[1;30m$ý~[0m[7C[1;30m+yyy.[0;31m+[1;30m`[0m$$:  
+[A[22C[1;30m$yyyyy$ [0;31m:[1;30m :ii$ýýIy,.[0;31m+.
+[A[44C[37m~ý$ii:: [1;30mò[0m> [1;30mò[0m>[1m [30mò
+[A[59C[0m>[1m  [0m[15C::
+[1;30m'[0m .%I$²°Iy.[1;30m ý$$,[0;31m+[1;30m`[0m$   
+[A[22C[1;30m$Iý"`[0;31m. '[1;30m.:::$[0;31m :[1;30mIS
+[A[40Cý[0;31m .; [37m $Iii[26C::
+ :|³º[30;47m$[1m$$[0;30;47m$[37;40m$'[1;30m_,$$`........
+[A[24C....:::;;;;I....[0m.,,yy#Iý'[26C ::
 
-<p class="content">more advanced search options are available on the <a href="/search/">search page</a></p>
+[1;30m--[0m{[1mACiD [0mby[1m absent spinsister[0m}
+[A[29C[1;30m----------------------------------------------
+[A[75C----[0m
+[44C_[1m_[0m_
+[9C[30;46m±²²[37;40m[27C##[1m#[0m#[1;31m [0m$[1m$
+[A[46C[0m$##
+[6C[1mA[0;30;46mCID. ²²[36;40m °[37m[28C$[1m$[0m$
+[A[47C[36m:[37m[9C[33m___[37m
+[6C[1;36m#1[0;30;46m00.[36;40m°[37m[26C::_[1m_[0m_
+[A[43C[1;31m [0m$[1;31m [0m$[36m:[37m[8C[36m:[33m$
+[A[58C[1;31m$$[0m
+[6C[36mNow that's[37m[21C::[1mlll[0m$[1;31m [0m$
+[A[45C[1;31m [0m$[36m:[1;31m [0m[7C[36m:[33m$
+[A[58C[1;31m$$[0m
+[6C[1;36mRESPECT[0;36m.[37m[5C[36m [37m[11C[33m_
+[A[32C[1;31m__[0;33m_[37m[4C[1m:[0m:[1m [0;33m 
+[A[43C[1;31m [0m$[1;31m [0m$[36m:[1;31m [0m[7C[36m
+[A[56C:[33m$[1;31m$$[0m
+[31C[33m$[1;31m$$$QQQQQQQQ[0;33mQ[37m$[1;31m [37m$
+[A[47C[0;33mQQ[1;31mQQQQQQQQ$$[0;33m$[37m
+[23C[36m___[1m___[0;36m__[33m$[1;31m$[0;33m$''"""""""'
+[A[44C[37m$[1;31m [37m$[0;33m''""[1;31m"""[0;33m"''$
+[A[58C[1;31m$[0;33m$[37m
+[23C[36mQ[1mQQ$$$$[0;36m$[33m$[1;31m$[0;33m$[1;31m 
+[A[35C[0m_[1m  [0m[4C  $[1;31m $ [0m$[1m:[0m[5C
+[A[55C[36m°[37m [33m$[1;31m$[0;33m$[37m
+[23C[36m'''`$[1m$$[0;33m$$[1;31m$[0;33m$[1;31m [0m$_
+[A[37C[1m [0m[4C  $[1;31m $ [0m$[1m:[0m[5C[36m°
+[A[56C[37m [33m$[1;31m$[0;33m$[37m
+[27C[36m$[1m$$[0;33m$$[1;31m$[0;33m$[1;31m [0m$[1m$ [0m[4C
+[A[42C  $[1;31m [0;33m$[1;31m [0m$[1m:[0m[5C[36m°
+[A[56C[37m [33m$[1;31m$[0;33ml[37m
+[15C[36m_[1m__[0;36m_ [37m[7C[36m$[1m$$[0;36m$[33m$
+[A[32C[1;31m$[0;33m$[1;31m [0m$[1ml [0m[4C  $[1;31m
+[A[45C [0;33m$[1;31m [0m$[1m:[31m   [0;33m_.,d[1;31m$
+[A[58C[0;33m$:[37m
+[15C[36m$[1m$$[0;36m$:[37m[6C[36m:1[1m$$[0;36m$$
+[A[32C[1;31m$[0;33m$[1;31m [0m$[1m: [0m[6C"[1;31m 
+[A[46C[0;33m"[1;31m  [37m [31m   [0;33ml[1;31m$$$$
+[A[58C[0;33m7[1;31m [0m
+[15C[36m$[1m$$[0;36m$[37m[7C[36ml[1m$$$$[0;33m$
+[A[32C[1;31m$[0;33m$[1;31m [0m$[1m  [0m[6C[33m_
+[A[45C[1;31m_[0;33m_[1;31m [0m_[1m [31m   [0;33m:$
+[A[55C[1;31m$$[0;33m7[1;31m  [0m
+[15C[36m$[1m$$[0;36ml[1m  [0;36m_.,gQ[1m$$$[0;36m$
+[A[31C[33m$[1;31m$[0;33m$[1;31m [0m$[1m  [0m[4C
+[A[42C[36m°[37m [33m$[1;31m$[0;33m$[1;31m [0m$[1m:
+[A[50C[31m   [0;33ml[1;31m³[0;33m7'[37m
+[15C[36m$[1m$$$$$$$$$$$$$[0;36m$[33m$$[1;31m$[0;33m$
+[A[34C[1;31m [0m$[1m  [0m[4C[36m°[37m [33m$[1;31m$
+[A[46C[0;33m$[1;31m [0m$[1m:[31m [0;33m.ú'[37m
+[15C[36m$[1m$[0;36m$[37m  _[1m___[0m_[36m'[1m$
+[A[27C[0;36m7'[1m`[0;36m`[33m$[1;31m$[0;33m$[37m[8C
+[A[42C[36m°[37m [33m$[1;31m$[0;33m$[1;31m [0m$[1m:[0m
+[15C[36m$[1m$[0;36m$:[37m $$[1m$$[0m$ [36m$[37m $
+[A[29C[1m$[0m [33m$[1;31m$[0;33m$[37m[8C[36m°[37m 
+[A[44C[33m$[1;31m$[0;33m$[1;31m [0m$[1m:[0m
+[15C[36m$[1m$$[0;36ml[37m '''[1m'[0m' [36m'[37m [1m
+[A[28C  [0m [33m$[1;31m$[0;33m$__________$[1;31m$
+[A[46C[0;33m$[1;31m [0m$[1m:[0m[11C[1m_a[0;33m(
+[A[64C[1;37m123[0;33m)[37m
+[15C[36m$[1m$$Q[0;36mQb,[37m[6C[1m  [0m [33m$[1;31m
+[A[32C$$[0;33mQQQQ[1;31mQQQ$$$$$[0;33m$[1;31m [0m$[1m:[0m
+[15C[36m`l[1m7[0;36m'```[37m[9C[33m'[1;31m'[0;33m'[37m[6C
+[A[40C[33m`'Ùl$[1;31m$[0;33m$[1;31m [0m$[1m:[0m
+[16C[36m:[37m[27C[33m$[1;31m$[0;33m$[1;31m [0m$[1m:[0m
+[44C[33m$[1;31m$[0;33m$[1;31m [0m$[1m:[0m
+[44C[33m'[1;31m'[0;33m'[1;31m [0m'
+[47C 
+[47C 
+,[1myII*[0my, [1;30m....[0m [1;30m.[0m [1;30m...[0m 
+[A[19C[1;30m.[0m  [1;30m..... [0m [31mÀÚÙ[37m  
+[A[34C[1;30m..[0m  [1m ,y$[0m [1;30m.[0m   _[1;30m__
+[A[50C [0m [4C[1;30m°[0m  [1;30m..[0m  [1;30m__[0m[4C
+[A[69C[1;30m_[0m__[1;30m_ [0m  [1;30m...[0m
+' [1;30m,[0m%[1;30my,[0m''[1;30m...[0m .I.[1;30m ..
+[A[18C[0m I[1;30m.[0m [1;30m.....[0m [1;30m:[0;31mÀ¿
+[A[31CÙ[37m: [1;30m.[0m ,[1my[0m$[1m$$$[0m,[1my%I$ý~
+[A[49C~"ýý$ý$$y[0m,[1m,y%$$ý"~"ýý$ý$$y[0m,[1m [30m..[0m
+._[1;30m~ý"[0m__.,yy$$$[1m$[0m.[1;30m .[0m $[1m$[0m, 
+[A[23C[1;30m....[0m:I[1;30m [0;31mÚ[1;30m [0mi.
+[A[34C[1;30m° °°[0m$[30;47m$[1;37;40m±[47m$[0;30;47mº[40m
+[A[43C[1;37;47m$[40m±±[30mº...[0m [1m,ý [30m..[0mI
+[A[57C[30;47m$$[37;40m$[1m$±$[0m:[1m [30m..[0m [1m,
+[A[69Cý [30m..[0mI[1m±±[30mº°[0m 
+$[1m²±[0m$$$$$$I\ý'$$[1m²[0m. I$$[1m$y[30m,...[0mi[1m
+[A[28CI[30m [0;31m¿[1;30m [0m$: [1;30m.[0m [1;30m,
+[A[38C[0m$$[1m$$[0mý$$I$,_[1m,[0mý [1;30m_[0m_,y$$$
+[A[59C[1;30mý$[0m$I$,_[1m,[0mý [1;30m_[0m_,y$$$'
+[A[77C[1;30m..[0m
+`ý$$$Iý'[31m  +[1;30m`[0m$$[1m²[0m,$$Q$$[1mIy[0m,_i$
+[A[29C[1;30m [0;31mÚ[1;30m [0m$$:. ýýýýýý "ýýýý"[1;30m
+[A[50C"~[0m~""ýý'[1;30m'[0m  [1;30m"ý[0mý[1;30mýý""~~
+[A[70C[0m""ýý'[1;30m'[0;31max[37m
+[1;30m$y,._   _.t$,[0;31m+[1;30m`[0m$$[1m$[0m$$ ~"ý$$$
+[A[28C$[1;30m [0;31m.[1;30m [0m$$$[1m$Ii[0mIiiiii:;;;;
+[A[49C;;[26C::
+$$[1;30m$$SS$$$$$,[0;31m+[1;30m`[0m$$$I  [1;30m$y   ~$
+[A[29C [0;31m.[1;30m [0m'^~~~~^'ýIiii:::: [1;30mò[0m>
+[A[54C[1;30m [37malpha omega       [30m [0m   ::
+[1;30m$ý~[0m[7C[1;30m+yyy.[0;31m+[1;30m`[0m$$:  
+[A[22C[1;30m$yyyyy$ [0;31m:[1;30m :ii$ýýIy,.[0;31m+.
+[A[44C[37m~ý$ii:: [1;30mò[0m> [1;30mò[0m>[1m [30mò
+[A[59C[0m>[1m  [0m[15C::
+[1;30m'[0m .%I$²°Iy.[1;30m ý$$,[0;31m+[1;30m`[0m$   
+[A[22C[1;30m$Iý"`[0;31m. '[1;30m.:::$[0;31m :[1;30mIS
+[A[40Cý[0;31m .; [37m $Iii[26C::
+ :|³º[30;47m$[1m$$[0;30;47m$[37;40m$'[1;30m_,$$`........
+[A[24C....:::;;;;I....[0m.,,yy#Iý'[26C ::
+
+[1;30m--[0m{[1mRemorse [0mby [1malpha omega[0m}[1;30m-
+[A[27C----------------------------------------------------[0m
+
+      `ü$
+        $                                       s
+   øø øø$üøøøøøøøøøøøøøøøøøøøøøøøøøøøøø øø øøøøü$øø ø ø   ø
+        $                                       $
+        $                  ø$$                  $            
+[A[61C    remorse_2k3
+        $                   l$                  $
+  ø$$   ü           ø$$$øøøü$$üøøøü$$$          $    $$$$$b
+   $$ûüøøøüû$$$~~~øøø?$$    $l     $$$    ü$$   ü    ü$   $$$
+[A[61C*üüø$$     ü$$l
+   $$   $   $$$  s.  l$$    $$a    $$$     $$ûüøøøüû$$$      
+[A[61C    $$üøøøøü$$$
+   $$   $   $$$  ~`  l$$           $$$     $$   $   $$$   *$$
+[A[61CP   $l      $$$
+   $$   $   ss s%#Püüü$$        $$ø$$$~øü$$$$   $   $$$øs,_`ø
+[A[61C*$$$$$øøøøøøøøü
+   $$   $   $$ üüøø   $$        $$ $$$ a $$$$   $   ss,   $$s
+[A[61C  `$$$   `ü$$$$
+        $   $$$$SSs-,.$$        $$ üüü ø $$$$   $   $$       
+[A[61C   $$$     `$$$
+        $            $$$        $$øøøøøüüüüü    $   üøøøøSS$$
+[A[61C   $$lüøøøøøü$$
+        $            $$$                        $          üø
+[A[61Cøøøü$$
+        $                                       $  aA!rmrs
+ ø øøø ø$øøøø øøøøøø  øøøøøøøøøøøøøøøøøøøøøøøøøø$øøøøøøøøøøøø
+[A[61Cøø øøøøøøøø øø  ø
+        $                                       ü
+        $l
+       s$$.    
+       `$'                                                   
+[A[61C                
+
+[1;30m--[0m{[1mDark Domain [0mby [1malpha omega[0m}
+[A[30C[1;30m----------------------------------------------
+[A[76C---[0m
+[1m                                        .[0m
+
+[1m                                        .[0m
+[1m                                        :[0m
+[1m                                        .[0m
+[1m                               $$üø     :   øü$$     S$[0m
+[1m                               $$       :     $$üøøøøüü[0m
+[1m                     $$$$üøøøüû$$       $     $$üøøøüû$$$
+[A[57C$[0m
+[1m                     $$$$      `$ üøøøüT$ûüøøü$$$     $$$
+[A[57C$[0m
+[1m                     $$$$   .:. $$$üøøüû$     $$$     $$$
+[A[57C$[0m
+[1m                     $$$$    :  $$$     $     $$$     $$$
+[A[57C$[0m
+[1m                     $$$$       $$$   .s$    üüüü     $$$
+[A[57C$[0m
+[1m                     $$$$      ,$$$_.,sS$s.   $,      $$$
+[A[57C$[0m
+[1m     <- --2k3        $$$$_.,sS$$üüü     .     $$$Ss,  $$$
+[A[57C$         2k4-- ->[0m
+[1m  .    .  . . ... ...$$$$   ... ..dark+domain. ... .. $$$
+[A[57C$.. ...  ... .   .  .[0m
+[1m                    $$üøøüû$            :            düøø
+[A[57CTb[0m
+[1m         $$$$üøøøüû$$$    $$$$ûüøøø$øøøüû$$$  üøøøüT$üs.,
+[A[57Cd$$üøøøüû$$$$[0m
+[1m         $$$$      `$$    $$$P     $     $$$$$$üøøüû$ $$$
+[A[57C $$$     $$$$[0m
+[1m         $$$$      ,$$    $$$l     $     l$$$$$     $ $$$
+[A[57C $$$ .:. $$$$[0m
+[1m         $$$$_.,sS$$ü$    $$$$.    $     l$$$$$     $ $$$
+[A[57C $$$  :  $$$$[0m
+[1m                    $$sssss$       $     $$$$$$_.,sS$s$$$
+[A[57C üüü     $$$$[0m
+[1m                    üü             ü ..sd$$$üüü       `;'
+[A[57C  aA!rmrs[0m
+[1m                    ;                   .$$$[0m
+[1m                    .                   :              .[0m
+[1m                   ,$,                  :[0m
+[1m                   s%s                  :              i[0m
+[1m                   `ü'                  :             ,$,[0m
+[1m                                        .             s%s[0m
+[1m                                        :             `ü'[0m
+
+[1m                                        .[0m
+[1m                                        :[0m
+[1m                                        :[0m
+
+[1m                                        .[0m
+[1m                                        .[0m
 
 
-<div class="columns">
-  <div class="column is-6">
-  </div>
-  <div class="column is-4">
-    <div class="field is-grouped">
-      <p class="control is-right">
-        <input type="hidden" name="search" value="art">
-        <input type="submit" value="Search" class="button is-primary">
-        <input type="reset" value="Reset" class="button is-white">
-      </p>
-    </div>
-  </div>
-</div>
-</div>
+,[1myII*[0my, [1;30m....[0m [1;30m.[0m [1;30m...[0m 
+[A[19C[1;30m.[0m  [1;30m..... [0m [31mÀÚÙ[37m  
+[A[34C[1;30m..[0m  [1m ,y$[0m [1;30m.[0m   _[1;30m__
+[A[50C [0m [4C[1;30m°[0m  [1;30m..[0m  [1;30m__[0m[4C
+[A[69C[1;30m_[0m__[1;30m_ [0m  [1;30m...[0m
+' [1;30m,[0m%[1;30my,[0m''[1;30m...[0m .I.[1;30m ..
+[A[18C[0m I[1;30m.[0m [1;30m.....[0m [1;30m:[0;31mÀ¿
+[A[31CÙ[37m: [1;30m.[0m ,[1my[0m$[1m$$$[0m,[1my%I$ý~
+[A[49C~"ýý$ý$$y[0m,[1m,y%$$ý"~"ýý$ý$$y[0m,[1m [30m..[0m
+._[1;30m~ý"[0m__.,yy$$$[1m$[0m.[1;30m .[0m $[1m$[0m, 
+[A[23C[1;30m....[0m:I[1;30m [0;31mÚ[1;30m [0mi.
+[A[34C[1;30m° °°[0m$[30;47m$[1;37;40m±[47m$[0;30;47mº[40m
+[A[43C[1;37;47m$[40m±±[30mº...[0m [1m,ý [30m..[0mI
+[A[57C[30;47m$$[37;40m$[1m$±$[0m:[1m [30m..[0m [1m,
+[A[69Cý [30m..[0mI[1m±±[30mº°[0m 
+$[1m²±[0m$$$$$$I\ý'$$[1m²[0m. I$$[1m$y[30m,...[0mi[1m
+[A[28CI[30m [0;31m¿[1;30m [0m$: [1;30m.[0m [1;30m,
+[A[38C[0m$$[1m$$[0mý$$I$,_[1m,[0mý [1;30m_[0m_,y$$$
+[A[59C[1;30mý$[0m$I$,_[1m,[0mý [1;30m_[0m_,y$$$'
+[A[77C[1;30m..[0m
+`ý$$$Iý'[31m  +[1;30m`[0m$$[1m²[0m,$$Q$$[1mIy[0m,_i$
+[A[29C[1;30m [0;31mÚ[1;30m [0m$$:. ýýýýýý "ýýýý"[1;30m
+[A[50C"~[0m~""ýý'[1;30m'[0m  [1;30m"ý[0mý[1;30mýý""~~
+[A[70C[0m""ýý'[1;30m'[0;31max[37m
+[1;30m$y,._   _.t$,[0;31m+[1;30m`[0m$$[1m$[0m$$ ~"ý$$$
+[A[28C$[1;30m [0;31m.[1;30m [0m$$$[1m$Ii[0mIiiiii:;;;;
+[A[49C;;[26C::
+$$[1;30m$$SS$$$$$,[0;31m+[1;30m`[0m$$$I  [1;30m$y   ~$
+[A[29C [0;31m.[1;30m [0m'^~~~~^'ýIiii:::: [1;30mò[0m>
+[A[54C[1;30m [37mansichrist        [30m [0m   ::
+[1;30m$ý~[0m[7C[1;30m+yyy.[0;31m+[1;30m`[0m$$:  
+[A[22C[1;30m$yyyyy$ [0;31m:[1;30m :ii$ýýIy,.[0;31m+.
+[A[44C[37m~ý$ii:: [1;30mò[0m> [1;30mò[0m>[1m [30mò
+[A[59C[0m>[1m  [0m[15C::
+[1;30m'[0m .%I$²°Iy.[1;30m ý$$,[0;31m+[1;30m`[0m$   
+[A[22C[1;30m$Iý"`[0;31m. '[1;30m.:::$[0;31m :[1;30mIS
+[A[40Cý[0;31m .; [37m $Iii[26C::
+ :|³º[30;47m$[1m$$[0;30;47m$[37;40m$'[1;30m_,$$`........
+[A[24C....:::;;;;I....[0m.,,yy#Iý'[26C ::
 
-</form>
-<!--/div-->
-<!--/section-->
-</div>
-            </div>
-          </div>
-                  </div>
-      </div>
-    </nav>
-</header>
-<main>
-<section class="section msection">
-<div class="container">
-<div class="err-dos is-inline-block">
-C:\&gt;dir
+[1;30m--[0m{[1mDark Domain [0mby [1mansichrist[0m}
+[A[29C[1;30m----------------------------------------------
+[A[75C----[0m
 
-  Volume in drive C has no label
-  Volume Serial Number is 16C-01-075
-  Directory of C:\
+[1m                   $$$$$$$$$$[0m
+[1m        ÎÎÎÎÎÎÎÎÎÎ ÎÎÎÎÎÎÎÎÎÎ ÎÎÎÎÎÎÎÎÎÎ[0m
+[1m        ÎÎÎÎ'_______ _`7ÎÎÎÎÎ ÎÎÎÎÎÎÎÎÎÎ ÎÎÎÎÎÎÎÎÎÎ[0m
+[1m        ÎÎÎÎb`7³ ¿¿dÎÎÎ7'_ __________ÀÎÎÎÎÎÎÎÎÎ[0m
+[1m        ÎÎÎÎÎ l³ ÎÎÎÎÎÎÎ_ ns.,³l ÎÎÎÎÎÎÎÎÎ     .[0m
+[1m       __`À7Î ³: ÎÎÎ'_ ___,¿d³³ ÎÎÎÎÎÎÎÎÎ  _ _:
+[A[57C_[0m
+[1m    .db¿,_:l. À'____  `7lb,`7ÎÎÎÎÎÎÎ  ,¿d³
+[A[57C³        __[0m
+[1m   :b´.¿d7"?*¿,7b,`7ÎÎÎÎ'Úd
+[A[57C³     ,¿dÎ'[0m
+[1m    77'³`7³³ ³`À7'`)) ÎÎÀ'.´
+[A[57C³  ,*7³[0m
+[1m     7b ³ ³: ³::_,d7'-'. ',³
+[A[57C³    ::[0m
+[1m      `7b³ :7b,³  l`'À7by¿,`ÎÎ:
+[A[57C³    l'[0m
+[1m        `À7!,d:`À7!¿,_³. .:b, .
+[A[57C:  ,d7'[0m
+[1m        Îb,`À7Î¿"""³ b,`øÀ7³: Î b 
+[A[57C,¿dÎ7À'[0m
+[1m        ÎÎÎb¿,`À---Ù.ÎÎÎÎb¿,``'øüÙ:³ Î.:
+[A[57C³`'øÙ7b¿,[0m
+[1m        ÎÎÎÎÎÎÎÎÎÎ ÎÎÎÎÎÎÎÎÎÎ Îb¿ .³ _:³
+[A[57C:    ³b,[0m
+[1m        ÎÎÎÎÎÎÎÎÎÎ ÎÎÎÎÎÎÎÎÎÎ ÎÎ'--³³³-ÄÙ¿ `'øüÙ7l
+[A[57C     :b[0m
+[1m        ÎÎÎÎÎÎÎÎÎÎ ÎÎÎÎÎÎÎÎÎÎ ÎÎÎÎÎ:::ÎÎ ÎÎÎÎÎÎb¿```'øüÙ7
+[A[57C,   _³:[0m
+[1m        ÎÎÎÎÎÎÎÎÎÎ            ÎÎÎÎÎÎÎÎÎÎ ÎÎÎÎÎÎÎÎÎÎ      
+[A[57C     `À7³[0m
+[1m- ---------------------------------------ÎÎÎÎÎÎÎÎÎÎ-d o m
+[A[57C a i n .`'Ù7b,[0m
+[1m                                                         
+[A[57C           ``'Ù*,_[0m
+[74C 
+,[1myII*[0my, [1;30m....[0m [1;30m.[0m [1;30m...[0m 
+[A[19C[1;30m.[0m  [1;30m..... [0m [31mÀÚÙ[37m  
+[A[34C[1;30m..[0m  [1m ,y$[0m [1;30m.[0m   _[1;30m__
+[A[50C [0m [4C[1;30m°[0m  [1;30m..[0m  [1;30m__[0m[4C
+[A[69C[1;30m_[0m__[1;30m_ [0m  [1;30m...[0m
+' [1;30m,[0m%[1;30my,[0m''[1;30m...[0m .I.[1;30m ..
+[A[18C[0m I[1;30m.[0m [1;30m.....[0m [1;30m:[0;31mÀ¿
+[A[31CÙ[37m: [1;30m.[0m ,[1my[0m$[1m$$$[0m,[1my%I$ý~
+[A[49C~"ýý$ý$$y[0m,[1m,y%$$ý"~"ýý$ý$$y[0m,[1m [30m..[0m
+._[1;30m~ý"[0m__.,yy$$$[1m$[0m.[1;30m .[0m $[1m$[0m, 
+[A[23C[1;30m....[0m:I[1;30m [0;31mÚ[1;30m [0mi.
+[A[34C[1;30m° °°[0m$[30;47m$[1;37;40m±[47m$[0;30;47mº[40m
+[A[43C[1;37;47m$[40m±±[30mº...[0m [1m,ý [30m..[0mI
+[A[57C[30;47m$$[37;40m$[1m$±$[0m:[1m [30m..[0m [1m,
+[A[69Cý [30m..[0mI[1m±±[30mº°[0m 
+$[1m²±[0m$$$$$$I\ý'$$[1m²[0m. I$$[1m$y[30m,...[0mi[1m
+[A[28CI[30m [0;31m¿[1;30m [0m$: [1;30m.[0m [1;30m,
+[A[38C[0m$$[1m$$[0mý$$I$,_[1m,[0mý [1;30m_[0m_,y$$$
+[A[59C[1;30mý$[0m$I$,_[1m,[0mý [1;30m_[0m_,y$$$'
+[A[77C[1;30m..[0m
+`ý$$$Iý'[31m  +[1;30m`[0m$$[1m²[0m,$$Q$$[1mIy[0m,_i$
+[A[29C[1;30m [0;31mÚ[1;30m [0m$$:. ýýýýýý "ýýýý"[1;30m
+[A[50C"~[0m~""ýý'[1;30m'[0m  [1;30m"ý[0mý[1;30mýý""~~
+[A[70C[0m""ýý'[1;30m'[0;31max[37m
+[1;30m$y,._   _.t$,[0;31m+[1;30m`[0m$$[1m$[0m$$ ~"ý$$$
+[A[28C$[1;30m [0;31m.[1;30m [0m$$$[1m$Ii[0mIiiiii:;;;;
+[A[49C;;[26C::
+$$[1;30m$$SS$$$$$,[0;31m+[1;30m`[0m$$$I  [1;30m$y   ~$
+[A[29C [0;31m.[1;30m [0m'^~~~~^'ýIiii:::: [1;30mò[0m>
+[A[54C[1;30m [37mavg               [30m [0m   ::
+[1;30m$ý~[0m[7C[1;30m+yyy.[0;31m+[1;30m`[0m$$:  
+[A[22C[1;30m$yyyyy$ [0;31m:[1;30m :ii$ýýIy,.[0;31m+.
+[A[44C[37m~ý$ii:: [1;30mò[0m> [1;30mò[0m>[1m [30mò
+[A[59C[0m>[1m  [0m[15C::
+[1;30m'[0m .%I$²°Iy.[1;30m ý$$,[0;31m+[1;30m`[0m$   
+[A[22C[1;30m$Iý"`[0;31m. '[1;30m.:::$[0;31m :[1;30mIS
+[A[40Cý[0;31m .; [37m $Iii[26C::
+ :|³º[30;47m$[1m$$[0;30;47m$[37;40m$'[1;30m_,$$`........
+[A[24C....:::;;;;I....[0m.,,yy#Iý'[26C ::
 
-<span class="has-text-danger">File not found</span>
+[1;30m--[0m{[1mKZ [0mby [1mavg[0m}[1;30m--------------
+[A[27C----------------------------------------------------[0m
+[41C[1;30m,[0m
+¬¬¬¬¬¬¬¬¬¬    [1;30m,  [0m¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬  [1;30m«
+[A[43C,,[0m[3C¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬
+¬¬¬¬¬¬¬¬«ý    [1;30m,«,[0m ý¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬ [1;30m 
+[A[43Cý«öö,[0m  ý¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬
+¬¬¬¬¬¬¬ý[1;30m ,«[0m  ¬[1;30m ý««, [0mý¬    ¬¬¬¬¬¬¬¬¬¬¬¬¬
+[A[39C¬¬¬[1;30m  ý««««,.[0m ý¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬
+¬¬¬¬¬¬ [1;30m,«« [0m ¬¬[1;30m  ¬«««,[0m [1;30m «ý[0m  ¬
+[A[28C¬¬ý [1;30m [0m  ¬¬¬¬¬¬¬¬  [1;30mý««««««, [0mý¬¬¬¬¬
+[A[60C¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬
+¬¬¬¬¬ý [1;30m¬«' [0m¬¬¬ [1;30m,¬««««««ý [0m ¬¬¬ý [1;30m 
+[A[32Cý[0m  ¬¬¬¬¬¬¬¬¬ [1;30m ý«««««««,[0m ý¬¬¬¬¬¬¬¬¬¬¬¬¬¬
+[A[71C¬¬¬¬¬¬¬¬
+¬¬¬¬¬  [1;30m¬«  [0m¬  [1;30m,«««««««ý[0m  ¬¬ý [1;30m,«ý
+[A[32C[0m  ¬¬¬¬¬¬¬¬¬ý [1;30m,«««««¬«««« [0m ¬¬¬¬¬¬¬¬¬¬¬¬
+[A[70C¬¬¬¬¬¬¬¬¬
+¬¬¬¬¬¬  [1;30m«««,,«««ý««««ý [0m ý[1;30m  ,««ý[0m  ¬¬¬¬¬¬
+[A[39C¬ý [1;30m,,««««««ý ,««««[0m  ¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬
+¬¬¬¬¬¬¬,[1;30m ý««««ý[0m [1;30m «««ý[0m[4C[1;30m,«««ý 
+[A[31C[0m ¬¬¬¬ýý [1;30m,,«««««««ý   «««««[0m  ý¬¬¬¬¬¬¬¬¬
+[A[69C¬¬¬¬¬¬¬¬¬¬
+ý¬¬¬¬¬¬¬¬,      [1;30m««««   ,««««ý  [0mýý [1;30m ,,««««««
+[A[43C««ýý[0m[3C[1;30m,«««««ý [0m ¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬
+ ý¬¬¬¬¬¬¬¬¬¬¬¬  [1;30m«««ý,;«««««ý [0m[4C[1;30m «««««««ýý
+[A[43Cý[0m[3C[1;30m,,«««««ý[0m[3Cýý  ýýý¬¬¬¬¬¬¬¬¬¬¬¬¬¬
+,  ý¬¬¬¬¬¬¬¬¬¬  [1;30m«««««««ýýý[0m[7C[1;30m [0m[10C
+[A[44C[1;30m,,««««««ý ,,,««««««,,  [0mýý¬¬¬¬¬¬¬¬¬¬
+¬¬,   ýý¬¬¬¬¬¬  [1;30m«««««««¬«««««ö,          ,,««««««ýý,,«
+[A[54C«««««««««««««,[0m[3Cý¬¬¬¬¬¬¬
+¬¬¬¬,      ýýý  [1;30m«««ýýýý««««««««««ö,   .,«««««««ý ,««««
+[A[54C««ýýý  ýýý««««««,  [0mý¬¬¬¬¬
+¬¬¬¬¬¬¬,       [1;30m««««[0m[6C[1;30m ý««««««««««ö«««««««
+[A[45Cý ,«««««ýý [0m,,¬¬¬¬¬,  [1;30mý«««««,[0m  ¬¬¬¬
+¬¬¬¬¬¬¬¬¬  ,,  [1;30m«««««[0m[3C¬¬¬[3C[1;30mý«««««««««««
+[A[41C«««««ý««««ý[0m  ,¬¬¬¬¬¬¬¬¬¬,[1;30m  ý««««,[0m  ¬¬¬
+¬¬¬¬¬¬ýý,,¬¬¬  [1;30m««««««« [0m ýý¬¬[3C[1;30mý««««««««««
+[A[42C««««««««ý [0m ¬¬¬¬¬¬¬¬¬¬¬¬¬¬ [1;30m ý««««[0m  ¬¬¬
+¬¬¬¬ý ,¬¬¬¬¬ý  [1;30m««««««««[0m««« ý¬[4C[1;30m«««««ýýý[0m[3C
+[A[44C[1;30mýýý«««« [0m ¬        ¬¬¬¬¬ [1;30m ««««ý[0m 
+[A[75C ¬¬¬
+¬¬ý ,¬¬¬¬¬¬ý[1;30m  «««««««ýý[0mý [3C ý[1;30m  «««ýý[0m 
+[A[38C,,¬¬¬¬¬,,  [1;30mý««[0m[3C[1;30m««««ý[0m  ¬¬¬ý ,
+[A[68C[1;30m««««ý [0m ¬¬¬¬
+¬ý,¬¬¬¬¬¬¬ý [1;30m ««««ýý[0m .,,¬¬¬¬¬[3C[1;30m««ý [0m ,¬
+[A[38C¬¬¬¬¬¬¬¬¬¬¬,[1;30m ý«  ý«««««,  .,«««««ý  [0m¬¬¬¬¬
+ý,¬¬¬¬¬¬¬ý [1;30m ««ýý[0m .,¬¬¬¬¬¬¬¬¬  [1;30m«ý  [0m ¬¬¬¬
+[A[39C¬¬¬¬¬¬¬¬¬¬¬¬, [1;30mý[0m[3C[1;30mý«««««««««««ý[0m
+[A[70C  ¬¬¬¬¬¬¬
+,¬¬¬¬¬¬¬ý[1;30m  «ý  [0m,¬¬¬¬¬¬¬¬¬¬¬¬  [1;30mý[0m  ,¬¬¬¬¬
+[A[39C¬¬¬¬¬¬¬¬¬¬¬¬¬, [1;30mý     ý«««««ýý  [0m¬¬¬¬¬¬¬¬¬
+¬¬¬¬¬¬¬ý [1;30m ý [0m .¬¬¬¬¬¬¬¬¬¬¬¬¬¬[3C ,¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬
+[A[49C¬¬¬¬,[4C¬¬[8C¬¬¬¬¬¬¬¬¬¬¬
 
-                          <span class="has-text-danger">404</span> MB free
-C:\&gt;<span class="blink">_</span>
-</div>
-</div>
-</section>
-</main>
-<footer class="footer" >
-  <div class="content has-text-centered">
-    <p>
-      <img src="/16c.svg" id="footerlogo" width="120" height="41" style="vertical-align:middle" alt="16colo.rs"> ASCII and ANSI art archive - <a href="/privacy-policy/">privacy & cookie policy</a>
-    </p>
-  </div>
-  <div class="tagline tags is-hidden-mobile" style="margin-bottom: 0;">
-    <div class="tags has-addons">
-      <span class="tag">
-        <span class="icon">
-          <i class="icon ion-logo-facebook" style="color: #3B5998; margin-left: .4em; margin-right: .2em;"></i>
-        </span>
-      </span>
-      <a class="tag tag-social-text" href="https://www.facebook.com/sixteencolors/">facebook</a>
-    </div>
-    <div class="tags has-addons">
-      <span class="tag">
-        <span class="icon">
-          <i class="icon ion-logo-twitter" style="color: #00ACEE; margin-left: .4em; margin-right: .2em;"></i>
-        </span>
-      </span>
-      <a class="tag tag-social-text" href="https://twitter.com/sixteencolors">twitter</a>
-    </div>
-    <div class="tags has-addons">
-      <span class="tag">
-        <span class="icon">
-          <i class="icon ion-logo-instagram" style="color: #8134AF; margin-left: .4em; margin-right: .2em;"></i>
-        </span>
-      </span>
-      <a class="tag tag-social-text" href="https://www.instagram.com/sixteen_colors/">instagram</a>
-    </div>
-    <div class="tags has-addons">
-      <span class="tag">
-        <span class="icon">
-          <i class="icon ion-logo-rss" style="color: #ee802f; margin-left: .4em; margin-right: .2em;"></i>
-        </span>
-      </span>
-      <a class="tag tag-social-text" href="/rss/">rss</a>
-    </div>
-  </div>
-  <div class="tagline tags">
-    <div class="tags has-addons is-hidden-mobile">
-      <span class="tag">built with</span>
-      <a class="tag is-success" href="https://www.ansilove.org/">ansilove</a>
-    </div>
-    <div class="tags has-addons is-hidden-mobile">
-      <span class="tag">built with</span>
-      <a class="tag is-danger" href="http://picoe.ca/products/pablodraw/">pablodraw</a>
-    </div>
-    <div class="tags has-addons is-hidden-mobile">
-      <span class="tag">integrated with</span>
-      <a class="tag is-primary" href="https://blocktronics.github.io/moebius/">moebius</a>
-    </div>
-    <div class="control">
-      <div id="reportlink"></div>
-    </div>
-  </div>
-  <script>
-    window.onload = function() {
-      if (window.jQuery) {  
-        $("#reportlink").append('<a class="button is-small is-link report" id="report">report a problem</a>');
-        $(".report").click(function() {
-          $("#msg").load("/inc/report.php");
-        });
-      }
-    }
-  </script>
-</footer>
-<div id="msg">
-<link href="/css/ionicons.min.css" rel="stylesheet">
-<script>
-  $('.navbar-item').each(function(e) {
-    $(this).click(function(){
-      if($('#navbar-burger-id').hasClass('is-active')){
-        $('#navbar-burger-id').removeClass('is-active');
-        $('#navbar-menu-id').removeClass('is-active');
-      }
-    });
-  });
 
-  $('#navbar-burger-id').click(function () {
-    if($('#navbar-burger-id').hasClass('is-active')){
-      $('#navbar-burger-id').removeClass('is-active');
-      $('#navbar-menu-id').removeClass('is-active');
-    }else {
-      $('#navbar-burger-id').addClass('is-active');
-      $('#navbar-menu-id').addClass('is-active');
-    }
-  });
-</script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-129026834-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-129026834-1');
-</script>
-</body>
-</html>
+,[1myII*[0my, [1;30m....[0m [1;30m.[0m [1;30m...[0m 
+[A[19C[1;30m.[0m  [1;30m..... [0m [31mÀÚÙ[37m  
+[A[34C[1;30m..[0m  [1m ,y$[0m [1;30m.[0m   _[1;30m__
+[A[50C [0m [4C[1;30m°[0m  [1;30m..[0m  [1;30m__[0m[4C
+[A[69C[1;30m_[0m__[1;30m_ [0m  [1;30m...[0m
+' [1;30m,[0m%[1;30my,[0m''[1;30m...[0m .I.[1;30m ..
+[A[18C[0m I[1;30m.[0m [1;30m.....[0m [1;30m:[0;31mÀ¿
+[A[31CÙ[37m: [1;30m.[0m ,[1my[0m$[1m$$$[0m,[1my%I$ý~
+[A[49C~"ýý$ý$$y[0m,[1m,y%$$ý"~"ýý$ý$$y[0m,[1m [30m..[0m
+._[1;30m~ý"[0m__.,yy$$$[1m$[0m.[1;30m .[0m $[1m$[0m, 
+[A[23C[1;30m....[0m:I[1;30m [0;31mÚ[1;30m [0mi.
+[A[34C[1;30m° °°[0m$[30;47m$[1;37;40m±[47m$[0;30;47mº[40m
+[A[43C[1;37;47m$[40m±±[30mº...[0m [1m,ý [30m..[0mI
+[A[57C[30;47m$$[37;40m$[1m$±$[0m:[1m [30m..[0m [1m,
+[A[69Cý [30m..[0mI[1m±±[30mº°[0m 
+$[1m²±[0m$$$$$$I\ý'$$[1m²[0m. I$$[1m$y[30m,...[0mi[1m
+[A[28CI[30m [0;31m¿[1;30m [0m$: [1;30m.[0m [1;30m,
+[A[38C[0m$$[1m$$[0mý$$I$,_[1m,[0mý [1;30m_[0m_,y$$$
+[A[59C[1;30mý$[0m$I$,_[1m,[0mý [1;30m_[0m_,y$$$'
+[A[77C[1;30m..[0m
+`ý$$$Iý'[31m  +[1;30m`[0m$$[1m²[0m,$$Q$$[1mIy[0m,_i$
+[A[29C[1;30m [0;31mÚ[1;30m [0m$$:. ýýýýýý "ýýýý"[1;30m
+[A[50C"~[0m~""ýý'[1;30m'[0m  [1;30m"ý[0mý[1;30mýý""~~
+[A[70C[0m""ýý'[1;30m'[0;31max[37m
+[1;30m$y,._   _.t$,[0;31m+[1;30m`[0m$$[1m$[0m$$ ~"ý$$$
+[A[28C$[1;30m [0;31m.[1;30m [0m$$$[1m$Ii[0mIiiiii:;;;;
+[A[49C;;[26C::
+$$[1;30m$$SS$$$$$,[0;31m+[1;30m`[0m$$$I  [1;30m$y   ~$
+[A[29C [0;31m.[1;30m [0m'^~~~~^'ýIiii:::: [1;30mò[0m>
+[A[54C[1;30m [37mcrasher           [30m [0m   ::
+[1;30m$ý~[0m[7C[1;30m+yyy.[0;31m+[1;30m`[0m$$:  
+[A[22C[1;30m$yyyyy$ [0;31m:[1;30m :ii$ýýIy,.[0;31m+.
+[A[44C[37m~ý$ii:: [1;30mò[0m> [1;30mò[0m>[1m [30mò
+[A[59C[0m>[1m  [0m[15C::
+[1;30m'[0m .%I$²°Iy.[1;30m ý$$,[0;31m+[1;30m`[0m$   
+[A[22C[1;30m$Iý"`[0;31m. '[1;30m.:::$[0;31m :[1;30mIS
+[A[40Cý[0;31m .; [37m $Iii[26C::
+ :|³º[30;47m$[1m$$[0;30;47m$[37;40m$'[1;30m_,$$`........
+[A[24C....:::;;;;I....[0m.,,yy#Iý'[26C ::
+
+[1;30m--[0m{[1mACiD [0mby [1mcrasher[0m}[1;30m--------
+[A[27C----------------------------------------------------[0m
+
+[3C[34m:[1m::::[0;34m:::::::::::::::.[37m
+[3C[34m`:[1m:::[0;34m::::::::::::::::  [37m
+[4C[34m`:[1m:::[0;34m:::::::::::::::.[37m
+[5C[34m`::[1m::[0;34m:::::::::::::::  [37m
+[1m      [0;34m`::[1m::[0;34m::::::[1;37m  .  [0;34m:::
+[A[25C. [37m
+[1m       [0;34m ::[1m::[0;34m:::[1;37m .d$$b:. [0;34m:
+[A[25C:  [37m
+[1m         [0;34m`::[1m:[37m .d$$$$$$b` [0;34m::    
+[A[31C[1;37m                 j$`[0m
+[1m           [0;34m`::[1;37m ?$$$$$$$b`  _. [0;34m   
+[A[33C[1;37m               À` . :[0m
+[1m    Ú. ` .  [0;34m `:[1;37m ?$$b?$$$;` $ `    [0;34m 
+[A[35C[1;37m            .d³`+.' Ú.[0m[14C[1m       [0m
+[1m    _"?.  _.  [0;34m [1;37m :$$$`l$$$:.:i  `+.         
+[A[43C .sT8$l   : :$    .[0m[9C[1m       [0m
+[1m   Àb. `?: '     ?$$ ,$$$i. $      ' .  ..::ilT84$   )  l
+[A[57C:     `   [0m[4C[1m       [0m
+[1m     À?'         i$i_Ú$$$$. l:   Ù+¿.    .::iÙ`/jf  _'  :
+[A[57C$    .  '  [0m[3C[1m       [0m
+[1m                j$$7Ù":$$$i.:l   :[0;34m .[1;37m`"ÀÀ".'
+[A[43C+ ` À" '`     $     ?.  '          [0m
+[1m              .dÙ'\.+ `$$$l. $.  . ,Úq  [0;32m..........
+[A[50C..__[1;37m  :$    .j.   '         [0m
+[1m            +Ù`. '     7Ù"`. $. ,Ú7Ù` ``\[0;32m:::::::::
+[A[50C:::::[1;37m ll    À`[0m[3C[1m/[0m
+[1m           f' :      [0;32m_...:;;[1;37m $7Ù`      
+[A[39C[0;32m_[1;37m`[0;32m:::::::::::::[1;37m :$' _ ,  
+[A[64C+ `[0;32m.. [37m
+[1m          :(  `. [0;32m.,;:+Ù''`   [1;37m`      '
+[A[37C[0;32m [1;37m  [0;32m [1;37m [0;32m```''Ù+:;[1m
+[A[51C:[0;32m::::::::::::::::::::..[1;37m  [0m
+[1m           ?,   `.[0;32m` [1;37m [0;32m [1;37m 
+[A[23C[0;32m    [1;37m                  [0;34m [1;37m 
+[A[47C[0;34m.[1;37m [0;32m [34m [32m `'+:[1m:[0;32m:
+[A[58C:::::::::[1;37mcrasher[0;32m::.[37m
+[1m      [0;32m_,:+'[1;37m `Ù¿.`' [0;32m   [37m[4C[1m [0m[21C
+[A[48C[34m '+.    [32m `À+[1m::[0;32m::::::::::::::::.[37m
+[32m.  + `  [1;37m    [0;32m [1;37m `  [0m[34C[34m`À;,
+[A[55C_  [1;37m  [0;32m `+;[1m::[0;32m:::::::::::::[37m
+[1m    [0m[49C[34m`:::. [37m[5C[32m`:[1m:::[0;32m:::
+[A[72C:::::::[37m
+[54C[34m ::::. [1;37m  [0m[3C[32m`:[1m::::[0;32m:::::
+[A[77C::[37m
+[55C[34m ::::: [37m[4C[1m  [0;32m::[1m::::[0;32m:::::[37m
+[56C[34m:::::: [37m[5C[32m :[1m:::::[0;32m::::[37m
+
+[76C[1m [0m
+,[1myII*[0my, [1;30m....[0m [1;30m.[0m [1;30m...[0m 
+[A[19C[1;30m.[0m  [1;30m..... [0m [31mÀÚÙ[37m  
+[A[34C[1;30m..[0m  [1m ,y$[0m [1;30m.[0m   _[1;30m__
+[A[50C [0m [4C[1;30m°[0m  [1;30m..[0m  [1;30m__[0m[4C
+[A[69C[1;30m_[0m__[1;30m_ [0m  [1;30m...[0m
+' [1;30m,[0m%[1;30my,[0m''[1;30m...[0m .I.[1;30m ..
+[A[18C[0m I[1;30m.[0m [1;30m.....[0m [1;30m:[0;31mÀ¿
+[A[31CÙ[37m: [1;30m.[0m ,[1my[0m$[1m$$$[0m,[1my%I$ý~
+[A[49C~"ýý$ý$$y[0m,[1m,y%$$ý"~"ýý$ý$$y[0m,[1m [30m..[0m
+._[1;30m~ý"[0m__.,yy$$$[1m$[0m.[1;30m .[0m $[1m$[0m, 
+[A[23C[1;30m....[0m:I[1;30m [0;31mÚ[1;30m [0mi.
+[A[34C[1;30m° °°[0m$[30;47m$[1;37;40m±[47m$[0;30;47mº[40m
+[A[43C[1;37;47m$[40m±±[30mº...[0m [1m,ý [30m..[0mI
+[A[57C[30;47m$$[37;40m$[1m$±$[0m:[1m [30m..[0m [1m,
+[A[69Cý [30m..[0mI[1m±±[30mº°[0m 
+$[1m²±[0m$$$$$$I\ý'$$[1m²[0m. I$$[1m$y[30m,...[0mi[1m
+[A[28CI[30m [0;31m¿[1;30m [0m$: [1;30m.[0m [1;30m,
+[A[38C[0m$$[1m$$[0mý$$I$,_[1m,[0mý [1;30m_[0m_,y$$$
+[A[59C[1;30mý$[0m$I$,_[1m,[0mý [1;30m_[0m_,y$$$'
+[A[77C[1;30m..[0m
+`ý$$$Iý'[31m  +[1;30m`[0m$$[1m²[0m,$$Q$$[1mIy[0m,_i$
+[A[29C[1;30m [0;31mÚ[1;30m [0m$$:. ýýýýýý "ýýýý"[1;30m
+[A[50C"~[0m~""ýý'[1;30m'[0m  [1;30m"ý[0mý[1;30mýý""~~
+[A[70C[0m""ýý'[1;30m'[0;31max[37m
+[1;30m$y,._   _.t$,[0;31m+[1;30m`[0m$$[1m$[0m$$ ~"ý$$$
+[A[28C$[1;30m [0;31m.[1;30m [0m$$$[1m$Ii[0mIiiiii:;;;;
+[A[49C;;[26C::
+$$[1;30m$$SS$$$$$,[0;31m+[1;30m`[0m$$$I  [1;30m$y   ~$
+[A[29C [0;31m.[1;30m [0m'^~~~~^'ýIiii:::: [1;30mò[0m>
+[A[54C[1;30m [37mgravedancer       [30m [0m   ::
+[1;30m$ý~[0m[7C[1;30m+yyy.[0;31m+[1;30m`[0m$$:  
+[A[22C[1;30m$yyyyy$ [0;31m:[1;30m :ii$ýýIy,.[0;31m+.
+[A[44C[37m~ý$ii:: [1;30mò[0m> [1;30mò[0m>[1m [30mò
+[A[59C[0m>[1m  [0m[15C::
+[1;30m'[0m .%I$²°Iy.[1;30m ý$$,[0;31m+[1;30m`[0m$   
+[A[22C[1;30m$Iý"`[0;31m. '[1;30m.:::$[0;31m :[1;30mIS
+[A[40Cý[0;31m .; [37m $Iii[26C::
+ :|³º[30;47m$[1m$$[0;30;47m$[37;40m$'[1;30m_,$$`........
+[A[24C....:::;;;;I....[0m.,,yy#Iý'[26C ::
+[1m [0m
+[1;30m--[0m{[1mACiD [0mby [1mgravedancer[0m}[1;30m----
+[A[27C----------------------------------------------------[0m
+
+ [34m__[37m [34m  ___;;;;$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+[A[46C$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$GDR[37m
+[3C[34m;$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$''ý    [37m[6C
+[A[49C[34m```7Q$$$$$$$$$$$$$$$$$$$$$$$$$[37m
+[3C[34m;$$$$$$$$$$$$$$$$$$$$$$$Fý'```             [1;30m__
+[A[48C__[0;34m    ``''ý7$$$$$$$$$$$$$$$$$$$[37m
+[4C[34m$$$$$$$$$$$$$$$$$$b,'''            [1;30m;;'''
+[A[44C[0;34m                 `7$$$$$$$$$$$_____[37m
+[3C[34m;$$$$$$$$$$$$$$bý"``   [1;30m;;[0;34m             
+[A[41C                      ;$$$$$$$$$$$$$$$[37m
+[34m    [1mIIIIIIIIIIII[0;34m$$$;; [37m    [1;30m;;;;;;'
+[A[33C'[0m       [1;30m;;;;;;[0m  [1;30m;;;[0m  [1;30m
+[A[54C;;;[0m  [1m     [0;34m;;$$$$$$$$$$$$$[37m
+[11C[34m$$$$$$$I*' [37m    [1;30m;;;;,,...[0m           
+[A[46C[1;30m,,..___[0m[5C [34m  [1;37m    [0;34m ;$$$
+[A[70C$$$$$$$$$[37m
+[11C[34m$$$$$$$;  [1;30m;;[31m   [0;33m_____[1;30m``
+[A[33C[31m _II&&aa,,._[0;33m [1;31m   [30m;;;;;,,,[0m[3C
+[A[60C[34m    [1;37m [0;34m  i$$$$$~~~~~~[37m
+[10C[34m``~~~~~    [1;30m';;[0;33m&&&&[1;31mIIIII88888$$
+[A[40C$888I.[0;33m_ [1;31m [30m,,;;;[0m;;;[1;30m;[31m 
+[A[59C[30m;;'[0m  [1;30m;[0;34m   ;;$$$$$$$$$[37m
+[11C[34mII$$$$$;[37m [1;31m  [0;33m_;iI[1;31mII888888$$
+[A[36C$$$$$$$88[0mI[1;31mI[0;33m_[37m[5C[1;30m;;;[0m;
+[A[57C[1;30m;;;;[0m    [34m  ;;;$$$$$$$$$[37m
+[8C[34m;;;;;IIII$i[37m [1;31m [0;33m iI[1;31mII88888$$$
+[A[34C$$$$$$$$$$88[0mI[33mI,_ [1;31m [30m```;;;;;;[0m  
+[A[63C `[34m   ;$$$$$$$$$$[37m
+[3C[34m,,...______$$$$i[37m [33m  I[1;31mII8888$$$$$$$$$
+[A[38C$$$$$$$8IIII[0;33m,_ [1;31m [30m,;;;;;;;;[0m  
+[A[65C[34m  `7$$$$$$$$$$[37m
+[3C[34m$$$$$$$$$$$$$$$;[37m [33m ;[1;31mIII888$$$$$$$$$$
+[A[38C$$F***ý788II[0;33mII;[1;31m [30m;''``[0m[4C  
+[A[65C[34m   ;III$$$$$$$[37m
+[3C[34m$$$$$$$$$$$$$$$ [33m  I[1;31mIIII88[0m$$[1m$$
+[A[32C[0m$$[1;31m$$b``   _,,__7III[0;33mIi[1;31m [30m 
+[A[55C[37m [0;33m a&&&a,[37m [1;30m`[0m [34m   $$$$$$
+[A[75C$$$$[37m
+[3C[34m$$$$$$$$$$$$$$$;[37m [1;31m ý"''``ýQ$$$[0m$
+[A[33C[1;31m$$$I[0;33m&aa&[1;31mII[0;33mIIIII[1;31mIII
+[A[51C[0;33mII[1;31m [37m [30m;[0;33m;I[1;31mIII$$;,
+[A[65C[0m [34m  ;$$$$$$$$$$[37m
+[3C[34m$$$$$$$$$$$$$$$;[37m [33m [1;31maaIII[0;33m&a&
+[A[29C[1;31m$$$$$II[0;33mIi;ý'[1;32m_[0;33m`"ý;;iII
+[A[50C[1;31mII[0;33mI  i[1;31mI[0;33mF'''I[1;31mi$I
+[A[65C[0;34m  i$$$$$$$$$$$[37m
+  [34m_```$$$$$$$$$$$$$[37m [33m ;$b```ý7$[1;31m$$$II
+[A[35C[0;33mIii;[37m [1;32m*[0m [32ma[1;37m&[0m&b 
+[A[47C[33m`7iI[1;31mI[0;33m;;;;[1;31mI[0;33mI``;I[37m
+[A[62C [1;31m$i[0;34m ;I$$$$$$$$$$$[37m
+  [34m~$$$$$$$$$$[1m;;;;;;;;[0;33m;IF[32m'[1m*'[37mI
+[A[28C[0mI[1;31m`7$$$II[0;33mIIIIII[1;31mIII88888IIII;I
+[A[56CI[0;33mI;;,.[37m [1;31m$;[0;34m ;$$$$$$$$$$$$[37m
+[3C[34m$$$$$$$$$$$$$$$$i;[33m;IIIIIIIIb[1;31m`7II8888$III
+[A[43CI88888888888II[0;33mI;;,d[1;31m;;[0;34m   $$$$$$$$$
+[A[76C$$$[37m
+[3C[34m$$$$$$$$$$$$$$$$$ [33m [1;31mIIIIIII[0;33mIIII
+[A[33C[1;31mII$$$$888II[0;33mII[1;31mIIII[0;33mIIII
+[A[54C[1;31mIIIIII$F[0;33m;[37m [34m ;;$$$$$$$$$$$$[37m
+[3C[34m`````''''''''     [33m [1;31mI888I[0;33mF',dI
+[A[32C[1;31mI[37mI[0mI[1;31mIII$$$88I[0;33mIIIIIIIII
+[A[53C[1;31mIIb,```` [0;33m;[37m [34m i$$$$$$$$$$$$$[37m
+[34m&&$$$$$$$$$$$________[1;31m ;8[37m$[0m;[33m;[1;31m 
+[A[28C[0;33mIII[1;31mIIF**[0;33mII[1;31mI$$$88I[0;33mI
+[A[46CIIIII[1;31mIIII[0;33m;;ii$;[37m  [34m;i$$$$$$$$$$$
+[A[76C$$$[37m
+[34m$$$$$$$$$$$$$$$$$$$$$; [1;31m;8$$b,[0;33m`ý7II,,aII
+[A[39C[1;31mI$$$8IIII[0;33mIIIII[1;31mI[0;33mIi; ii;;
+[A[62C[1;31m [0;34m;;$$$$$$$$$$$$$$[37m
+[34m$$$$$$$$$$$$$$$$$$$$$$$ [1;31m"I$[0;33mIII;;IIIII
+[A[37C[1;31mIII$$$8I[0;33mIIIIIIIIIi; ;;;I[1;31mii[0m 
+[A[64C[34m$$$$$$$$$$$$$$$[37m
+[34m$$$$$$$$$$$$$$$$$$$$$$$  [1;31mi$$[0;33mIII;;I[1;31mI
+[A[35CII$$$$$888I[0;33mIIIIIIIIIi; ;;;I[1;31mi[0;34m ;i$$
+[A[68C$$$$$$$$$$$[37m
+[34m$$$$$$$$$$$$$$$$$$$$$$$$ [1;31m;$$$F' [0;31m""[1m   `
+[A[38C`ý77888II[0;33mIIIIIIi;' ;;iIII[34m ;I$$$$$$$$$$$$$[37m
+[34m$$$$$$$$$$$$$$$$$$$$$$$$;[1;31m i$[0;33mIa[1;31m  
+[A[32C[37m''[0m';[31m;[1m; __IIIIII[0;33mIIiii;;; ;;;I
+[A[60CI[1;31mII;[0m [34mi$$$$$$$$$$$$$[37m
+[34m$$$$$$$$$$$$$$$$$$$$$$$$$; [1;31m;$$[0;33mb,.__,,aa&&
+[A[41C[1;31mIIIII[0;33mIIIii;;'  ;iII[1;31mII[0mII
+[A[64C[1;31mi[0;34m i$$$$$$$$$$$$[37m
+[34m$$$$$$$$$$$$$$$$$$$$$$$$$$;[1;31m ;[0;33mIIIIIIIIIIIII
+[A[42C[1;31mII[0;33mII;;;'[1;31m [0;33m    i;I[1;31mII
+[A[60CI[0mIII[1;31m [0;34m ;$$$$$$$$$$$$[37m
+[34m$$$$$$$$IIIIIIIIIII$$$$$$$$; [33m;I[1;31mIII[0;33mI
+[A[35C[1;31mIIIII;,  [0;33m`` [1;31m    [0;33m _..,;iI
+[A[59C[1;31mII888$;[0m [34mI$$$$$$$$$$$[37m
+[34m$$$$$$$$$;;;;;;  [1m;;;;;;;[0;34m$$$$;[1;31m [0;33m7
+[A[31CIiii;;;iiiFý'[1;31m   [0;33m 'ý;;iiiII[1;31mII8888$
+[A[64C$i[0m [34mi$$$$$$$$$$$[37m
+[34m````'''''ýýý*  `````$$$$$$$$$$b,[33m``` [37m    [33m 
+[A[41C  ,,..____`7[1;31mIIII8888$$$$I[0m [34m;$$$$$$$$$$$[37m
+[22C[34m```````````[37m [33m;,,...__[37m [33m;;;iiiiIII
+[A[53C[1;31mIIIIII8888$$;[0m [34m $$$$$$$$$$$[37m
+[33C [33m`ý;;;;;;;iiiI[1;31mII[0;33mIII[1;31mI888888$$$I
+[A[63CIi[0;33m__[34m `ý7$$$$$$$$[37m
+[33C [1;31m    [0;33m``'';;;iiiII[1;31mII[0;33mIII
+[A[55C[1;31mI[0mIIII[1;31mII[0;33mIII``[34m    [1mIII
+[A[74CIII;;[0m
+[48C[33m````'''``[37m[18C[34m1[37m [34m``[37m
+[14C [1;33m ____I$$$$____  ~~IIII&&&aa,,_ &a,,._       IIII
+[A[63CI$$$$ [0m
+[14C [1;33m;;;;;;$$$$$$$$III$$$$$$$$$$$$$ [0;32mII88
+[A[50C[1;33m$$$     ____$$$$$$ [0m
+[14C[1;30m [33m ~~~~ ``````$$$$$$$$F'    ***  [0;32m``
+[A[48C[1;33m_$$$$ [37m [33m___$$$$$$$$$$ [0m
+  [1;30m;;;[0m [1;30m;;[0m  [1;30m;[0m [1;33m; ;;&&&&&
+[A[21C&aaaa[0;32mII;;;;[1;33m$$Q   [30m;;;[33m     i
+[A[47C[42m°°[32m±±[33;40m$~__$$$$$$F;;$$;;;[0m [1;33m;
+[A[71C[0m [1;30m;;[0m  [1;30m;[0m [1;30m;[0m
+[14C[32m;[1;33;42m$$°°[0;32m~```"7$$$$$$$$$&a,._   III ;I
+[A[48CIIIIIIII[1;33m88888b,[0;32m ;;;___ [1;30m   [0m
+[14C[32mi$$$&`____I$$$$`~7$$$$$$$$$$$$$$888888$~~``7$$$$$$$
+[A[65C$$$IIII_[37m 
+[14C[32mI$$$$$$$$$$$$$$__~~~~I$$$$$$$~~~~$$$$$__    `*7$$$$
+[A[65C$~~~````[37m 
+--[11C[32m''`****````````[37m[33C[32m   [37m
+man.. it's been a long time since I've drawn. go acid!
+
+
+,[1myII*[0my, [1;30m....[0m [1;30m.[0m [1;30m...[0m 
+[A[19C[1;30m.[0m  [1;30m..... [0m [31mÀÚÙ[37m  
+[A[34C[1;30m..[0m  [1m ,y$[0m [1;30m.[0m   _[1;30m__
+[A[50C [0m [4C[1;30m°[0m  [1;30m..[0m  [1;30m__[0m[4C
+[A[69C[1;30m_[0m__[1;30m_ [0m  [1;30m...[0m
+' [1;30m,[0m%[1;30my,[0m''[1;30m...[0m .I.[1;30m ..
+[A[18C[0m I[1;30m.[0m [1;30m.....[0m [1;30m:[0;31mÀ¿
+[A[31CÙ[37m: [1;30m.[0m ,[1my[0m$[1m$$$[0m,[1my%I$ý~
+[A[49C~"ýý$ý$$y[0m,[1m,y%$$ý"~"ýý$ý$$y[0m,[1m [30m..[0m
+._[1;30m~ý"[0m__.,yy$$$[1m$[0m.[1;30m .[0m $[1m$[0m, 
+[A[23C[1;30m....[0m:I[1;30m [0;31mÚ[1;30m [0mi.
+[A[34C[1;30m° °°[0m$[30;47m$[1;37;40m±[47m$[0;30;47mº[40m
+[A[43C[1;37;47m$[40m±±[30mº...[0m [1m,ý [30m..[0mI
+[A[57C[30;47m$$[37;40m$[1m$±$[0m:[1m [30m..[0m [1m,
+[A[69Cý [30m..[0mI[1m±±[30mº°[0m 
+$[1m²±[0m$$$$$$I\ý'$$[1m²[0m. I$$[1m$y[30m,...[0mi[1m
+[A[28CI[30m [0;31m¿[1;30m [0m$: [1;30m.[0m [1;30m,
+[A[38C[0m$$[1m$$[0mý$$I$,_[1m,[0mý [1;30m_[0m_,y$$$
+[A[59C[1;30mý$[0m$I$,_[1m,[0mý [1;30m_[0m_,y$$$'
+[A[77C[1;30m..[0m
+`ý$$$Iý'[31m  +[1;30m`[0m$$[1m²[0m,$$Q$$[1mIy[0m,_i$
+[A[29C[1;30m [0;31mÚ[1;30m [0m$$:. ýýýýýý "ýýýý"[1;30m
+[A[50C"~[0m~""ýý'[1;30m'[0m  [1;30m"ý[0mý[1;30mýý""~~
+[A[70C[0m""ýý'[1;30m'[0;31max[37m
+[1;30m$y,._   _.t$,[0;31m+[1;30m`[0m$$[1m$[0m$$ ~"ý$$$
+[A[28C$[1;30m [0;31m.[1;30m [0m$$$[1m$Ii[0mIiiiii:;;;;
+[A[49C;;[26C::
+$$[1;30m$$SS$$$$$,[0;31m+[1;30m`[0m$$$I  [1;30m$y   ~$
+[A[29C [0;31m.[1;30m [0m'^~~~~^'ýIiii:::: [1;30mò[0m>
+[A[54C[1;30m [37mmrviolent           [0m  ::
+[1;30m$ý~[0m[7C[1;30m+yyy.[0;31m+[1;30m`[0m$$:  
+[A[22C[1;30m$yyyyy$ [0;31m:[1;30m :ii$ýýIy,.[0;31m+.
+[A[44C[37m~ý$ii:: [1;30mò[0m> [1;30mò[0m>[1m [30mò
+[A[59C[0m>[1m  [0m[15C::
+[1;30m'[0m .%I$²°Iy.[1;30m ý$$,[0;31m+[1;30m`[0m$   
+[A[22C[1;30m$Iý"`[0;31m. '[1;30m.:::$[0;31m :[1;30mIS
+[A[40Cý[0;31m .; [37m $Iii[26C::
+ :|³º[30;47m$[1m$$[0;30;47m$[37;40m$'[1;30m_,$$`........
+[A[24C....:::;;;;I....[0m.,,yy#Iý'[26C ::
+[24C[1;30m          [0m
+[1;30m--[0m{[1mGum Fuck [0mby [1mmrviolent[0m}[1;30m--
+[A[27C----------------------------------------------------[0m
+
+[1m .ggS$$SSýýýSSSSgg$$$$$lý[0m[6C[1mggS$$SggS$$SSý$SSgSS
+[A[51C$ýýSSggg.[0m
+[1m $$$$$$l'   l$$$$$$$$$S:[0m[7C[1m$$$$$$$$$$$l' `$$$$$'
+[A[52C  $$$$$1[0m
+[1m $$$$$$:   .$$$$$$$$$$$.[0m[6C[1m.$$$$$$$$$$$:   $$$$$
+[A[51C  .$$$$$l  gumfuck[0m
+[1m $$$$$$    s$$$$$$$$$$$:[0m[6C[1m:$$$$$$$$$$$    i$$$$
+[A[51C  :$$$$$i  +o deeaye[0m
+[1m $$$$$$    `$$$$S'$$$$$i[0m[6C[1mi$$$$$$$$$$$    $$$$$
+[A[51C  i$$$$$:[0m
+[1m $$$$$$[0m[11C[1m$$$$$l[0m[6C[1ml$$$$$$$$$$$    $$$
+[A[49C$$  l$$$$$   check it, i[0m
+[1m $$$$$l gggggggg  $$$$$$[0m[6C[1m$$$$$$$$$$$l   .$$$$$
+[A[51C  $$$$$l   can't do ascii[0m
+[1m $$$$$i   $$$$$$  S$$$$$[0m[5C[1m:$$$$$$$$$$$i   :$$$$
+[A[50C$  $$$$$i   at all, this[0m
+[1m $$$$$:   $$$$$S  $$$$$$.    i$$$$$:$$$$$:   i$$$$l  $$$$
+[A[57C$$   proves it.[0m
+[1m $$$$$. .dS$$$$S  `$$$$$i.   S$$$$$$$$$$$.[0m[11C[1m$$
+[A[55C$$$$[0m
+[1m $$$$$ò*SS$$$PP'   `\S$$l$Sgg$$$$$$$$$$ttò[0m[11C[1m$$
+[A[55C$tt$[0m
+[1m $$$$$$SSýýýSSSSgggggggg[0m[7C[1m$$$$$$$$$$$SSýýýSSSSg
+[A[52Cg$$$$$$    gggggg[0m
+[1m $$$$$$l'   l$$$$$$$$$S:[0m[7C[1m$$$$$$$$$$$l'   l$$$$
+[A[52C$$$$$$$    l$$$$$[0m
+[1m $$$$$$:   .$$$$$$$$$$$.[0m[6C[1m.$$$$$$$$$$$:   ,$$$$
+[A[51C$$$$$$$$   .$$$$$$[0m
+[1m $$$$$$    s$$$$$$$$$$$:[0m[6C[1m:$$$$$$$$$$$    s$$$$
+[A[51C$$$$$$$$   s$$$$$$[0m
+[1m $$$$$$    `$$$$S'$$$$$i[0m[6C[1mi$$$$$$$$$$$    `$$$$
+[A[51CS'$$$$$$ggS$$$$$S'[0m
+[1m $$$$$$[0m[11C[1m$$$$$l[0m[6C[1ml$$$$$$$$$$$[0m[11C
+[A[53C[1m$$$$$$S$$$$$P"'[0m
+[1m $$$$$lgggg[0m[7C[1m$$$$$$[0m[6C[1m$$$$$$$$$$$l   .
+[A[46Cgggg.  $$$$$$ `"QS$Sga.[0m
+[1m $$$$$i[0m[11C[1mS$$$$$[0m[5C[1m:$$$$$l$$$$$i   $$$
+[A[48C$$$  $$$$$l    $$$$$S[0m
+[1m $$$$$:[0m[11C[1m$$$$$$.    i$$$$$:$$$$$:   $$$$$S  $$
+[A[55C$$$:    $$$$$S[0m
+[1m $$$$$$[0m[11C[1m`$$$$$i.   S$$$$$.$$$$$. .dS$$$$S  $$
+[A[55C$$$.    S$$$$l[0m
+[1m $$$ttò[0m[12C[1m`\S$$l$Sgg$$$$tt `"S$Sò*SS$$$SP'  $$$
+[A[56Cttò    S$$$$S[0m
+[29C[1mýýýýýý[0m[28C[1m$$$$$$ mv[0m
+[62C[1m """"""[0m
+[62C[1m [0m[5C 
+[62C[1m [0m
+,[1myII*[0my, [1;30m....[0m [1;30m.[0m [1;30m...[0m 
+[A[19C[1;30m.[0m  [1;30m..... [0m [31mÀÚÙ[37m  
+[A[34C[1;30m..[0m  [1m ,y$[0m [1;30m.[0m   _[1;30m__
+[A[50C [0m [4C[1;30m°[0m  [1;30m..[0m  [1;30m__[0m[4C
+[A[69C[1;30m_[0m__[1;30m_ [0m  [1;30m...[0m
+' [1;30m,[0m%[1;30my,[0m''[1;30m...[0m .I.[1;30m ..
+[A[18C[0m I[1;30m.[0m [1;30m.....[0m [1;30m:[0;31mÀ¿
+[A[31CÙ[37m: [1;30m.[0m ,[1my[0m$[1m$$$[0m,[1my%I$ý~
+[A[49C~"ýý$ý$$y[0m,[1m,y%$$ý"~"ýý$ý$$y[0m,[1m [30m..[0m
+._[1;30m~ý"[0m__.,yy$$$[1m$[0m.[1;30m .[0m $[1m$[0m, 
+[A[23C[1;30m....[0m:I[1;30m [0;31mÚ[1;30m [0mi.
+[A[34C[1;30m° °°[0m$[30;47m$[1;37;40m±[47m$[0;30;47mº[40m
+[A[43C[1;37;47m$[40m±±[30mº...[0m [1m,ý [30m..[0mI
+[A[57C[30;47m$$[37;40m$[1m$±$[0m:[1m [30m..[0m [1m,
+[A[69Cý [30m..[0mI[1m±±[30mº°[0m 
+$[1m²±[0m$$$$$$I\ý'$$[1m²[0m. I$$[1m$y[30m,...[0mi[1m
+[A[28CI[30m [0;31m¿[1;30m [0m$: [1;30m.[0m [1;30m,
+[A[38C[0m$$[1m$$[0mý$$I$,_[1m,[0mý [1;30m_[0m_,y$$$
+[A[59C[1;30mý$[0m$I$,_[1m,[0mý [1;30m_[0m_,y$$$'
+[A[77C[1;30m..[0m
+`ý$$$Iý'[31m  +[1;30m`[0m$$[1m²[0m,$$Q$$[1mIy[0m,_i$
+[A[29C[1;30m [0;31mÚ[1;30m [0m$$:. ýýýýýý "ýýýý"[1;30m
+[A[50C"~[0m~""ýý'[1;30m'[0m  [1;30m"ý[0mý[1;30mýý""~~
+[A[70C[0m""ýý'[1;30m'[0;31max[37m
+[1;30m$y,._   _.t$,[0;31m+[1;30m`[0m$$[1m$[0m$$ ~"ý$$$
+[A[28C$[1;30m [0;31m.[1;30m [0m$$$[1m$Ii[0mIiiiii:;;;;
+[A[49C;;[26C::
+$$[1;30m$$SS$$$$$,[0;31m+[1;30m`[0m$$$I  [1;30m$y   ~$
+[A[29C [0;31m.[1;30m [0m'^~~~~^'ýIiii:::: [1;30mò[0m>
+[A[54C[1;30m [37mpix                 [0m  ::
+[1;30m$ý~[0m[7C[1;30m+yyy.[0;31m+[1;30m`[0m$$:  
+[A[22C[1;30m$yyyyy$ [0;31m:[1;30m :ii$ýýIy,.[0;31m+.
+[A[44C[37m~ý$ii:: [1;30mò[0m> [1;30mò[0m>[1m [30mò
+[A[59C[0m>[1m  [0m[15C::
+[1;30m'[0m .%I$²°Iy.[1;30m ý$$,[0;31m+[1;30m`[0m$   
+[A[22C[1;30m$Iý"`[0;31m. '[1;30m.:::$[0;31m :[1;30mIS
+[A[40Cý[0;31m .; [37m $Iii[26C::
+ :|³º[30;47m$[1m$$[0;30;47m$[37;40m$'[1;30m_,$$`........
+[A[24C....:::;;;;I....[0m.,,yy#Iý'[26C ::
+
+[1;30m--[0m{[1mlUDWiG [0mby [1mpix[0m}[1;30m----------
+[A[27C----------------------------------------------------[0m
+
+[1m                                .. .[0m
+[1m                            ,si:;::;iI+[0m
+[1m                           +Iii;. .;iIM.[0m
+[1m                          `QiiI;. (MMM¿ý[0m
+[1m                           +mmMm.  ``` .[0m
+[1m                          ,;iIiiiiISs.  `..[0m
+[1m                       .;iMMM,`'.;iIMM/. .;i.[0m
+[1m                 `  ` ':;iMMMM)..;:iIMMM .:;ii.[0m
+[1m                  ;` .:;;ýÈ*Èý.;;iIIMMMM ' .  +[0m
+[1m                  `  `Qi.`   `.;;;iiIMQ'`.   .[0m
+[1m                       `ý/.,;iIiiIIMý':;iI'À[0m
+[1m                        ' ~`ý*MMSÈ` .::iIý `[0m
+[1m                            `;:::.`.::iI' `[0m
+[1m                             .;;;;;;;;iiI.[0m
+[1m                              ;::::iiMMiII.[0m
+[1m                          ,  :iiIMMMMMMIIII,[0m
+[1m                             +iMMjSý"``:;``    .[0m
+[1m                        `.; '.`M'.;.     ` `  `;[0m
+[1m                       `, ,i;,`+ii;;:..`  i.    .[0m
+[1m                         ,Iiii;+Iii;:.   iii; :`..[0m
+[1m                         QIiii+``'iIiiiiiis' `;iIM[0m
+[1m                          `i'  , ` `ýÈÈÈý'  `,iMMM[0m
+[1m                           /; `;;' ,;`,' ; ,;iIMM'[0m
+[1m                          ,.;`,,` ,     `;;iIIMS'[0m
+[1m                          ý;++;;,   ; `  .;iIS'[0m
+[1m                          `.   ;, ,;i.` `;iI'[0m
+[1m                           ; `;i;,;iiQ  ,;'`[0m
+[1m                           `"i,`;iiii' `,`[0m
+[1m                             ýsii+'  `,;II.[0m
+[1m                                    `  ;IMM.  .[0m
+[1m                                  `, ;;iIM.'  .`[0m
+[1m                                     ;iiÀ` .Ú.  `[0m
+[1m                         `    `  ;    À ,Ú.   +[0m
+[1m                             ; .  ;,  `.| .'  .'`.[0m
+[1m                              ,;        |`    `ÀÀ'[0m
+[1m                                   `    :[0m
+[1m                  _        `  ` ;.        ` `[0m
+[1m             _   _/_       `     ` ,;`       _        _[0m
+[1m             /   /____ _____     _    _______/________\_[0m
+[1m            /   /(   /     /_____/_  (      /   /      \ 
+[A[57C  ..lUDWiG,[0m
+[1m            \_______/_____/(_  _/__)/\______\___\ \     \[0m
+[1m                              _/_     \       _  \______ 
+[A[57C\[0m
+[1m                              /        \     _/_______/)_
+[A[57C/[0m
+[1m                           `                 /[0m
+[1m                             ,;   ` ;   `,    ;[0m
+[1m                               ,   ;; .     .[0m
+[1m                                ` ;  ;    `[0m
+[37C[1m [0m
+[37C[1m [0m
+,[1myII*[0my, [1;30m....[0m [1;30m.[0m [1;30m...[0m 
+[A[19C[1;30m.[0m  [1;30m..... [0m [31mÀÚÙ[37m  
+[A[34C[1;30m..[0m  [1m ,y$[0m [1;30m.[0m   _[1;30m__
+[A[50C [0m [4C[1;30m°[0m  [1;30m..[0m  [1;30m__[0m[4C
+[A[69C[1;30m_[0m__[1;30m_ [0m  [1;30m...[0m
+' [1;30m,[0m%[1;30my,[0m''[1;30m...[0m .I.[1;30m ..
+[A[18C[0m I[1;30m.[0m [1;30m.....[0m [1;30m:[0;31mÀ¿
+[A[31CÙ[37m: [1;30m.[0m ,[1my[0m$[1m$$$[0m,[1my%I$ý~
+[A[49C~"ýý$ý$$y[0m,[1m,y%$$ý"~"ýý$ý$$y[0m,[1m [30m..[0m
+._[1;30m~ý"[0m__.,yy$$$[1m$[0m.[1;30m .[0m $[1m$[0m, 
+[A[23C[1;30m....[0m:I[1;30m [0;31mÚ[1;30m [0mi.
+[A[34C[1;30m° °°[0m$[30;47m$[1;37;40m±[47m$[0;30;47mº[40m
+[A[43C[1;37;47m$[40m±±[30mº...[0m [1m,ý [30m..[0mI
+[A[57C[30;47m$$[37;40m$[1m$±$[0m:[1m [30m..[0m [1m,
+[A[69Cý [30m..[0mI[1m±±[30mº°[0m 
+$[1m²±[0m$$$$$$I\ý'$$[1m²[0m. I$$[1m$y[30m,...[0mi[1m
+[A[28CI[30m [0;31m¿[1;30m [0m$: [1;30m.[0m [1;30m,
+[A[38C[0m$$[1m$$[0mý$$I$,_[1m,[0mý [1;30m_[0m_,y$$$
+[A[59C[1;30mý$[0m$I$,_[1m,[0mý [1;30m_[0m_,y$$$'
+[A[77C[1;30m..[0m
+`ý$$$Iý'[31m  +[1;30m`[0m$$[1m²[0m,$$Q$$[1mIy[0m,_i$
+[A[29C[1;30m [0;31mÚ[1;30m [0m$$:. ýýýýýý "ýýýý"[1;30m
+[A[50C"~[0m~""ýý'[1;30m'[0m  [1;30m"ý[0mý[1;30mýý""~~
+[A[70C[0m""ýý'[1;30m'[0;31max[37m
+[1;30m$y,._   _.t$,[0;31m+[1;30m`[0m$$[1m$[0m$$ ~"ý$$$
+[A[28C$[1;30m [0;31m.[1;30m [0m$$$[1m$Ii[0mIiiiii:;;;;
+[A[49C;;[26C::
+$$[1;30m$$SS$$$$$,[0;31m+[1;30m`[0m$$$I  [1;30m$y   ~$
+[A[29C [0;31m.[1;30m [0m'^~~~~^'ýIiii:::: [1;30mò[0m>
+[A[54C[1;30m [37mmultiple artists    [0m  ::
+[1;30m$ý~[0m[7C[1;30m+yyy.[0;31m+[1;30m`[0m$$:  
+[A[22C[1;30m$yyyyy$ [0;31m:[1;30m :ii$ýýIy,.[0;31m+.
+[A[44C[37m~ý$ii:: [1;30mò[0m> [1;30mò[0m>[1m [30mò
+[A[59C[0m>[1m  [0m[15C::
+[1;30m'[0m .%I$²°Iy.[1;30m ý$$,[0;31m+[1;30m`[0m$   
+[A[22C[1;30m$Iý"`[0;31m. '[1;30m.:::$[0;31m :[1;30mIS
+[A[40Cý[0;31m .; [37m $Iii[26C::
+ :|³º[30;47m$[1m$$[0;30;47m$[37;40m$'[1;30m_,$$`........
+[A[24C....:::;;;;I....[0m.,,yy#Iý'[26C ::
+
+[1;30m--[0m{[1miNK [0mjoint by [1mdevil angel [0m& [1m
+[A[30Ch7[0m}[1;30m----------------------------------------
+[A[73C------[0m
+
+[24C[1;35m          [0m  [1;36;46m°[0m[22C[1;35m°[0m 
+[A[61C[35m [1;30m  [0m
+[24C[35m:[37m[10C[36m_Û,,,[37m[12C°[6C[1;35m  
+[A[61C[0;35mi,_[37m
+[24C[35ml[37m[5C[1m_[36m,s$[0;36m$[34m$[1;36;46m$[40m
+[A[37C[0;36m$7"`[1;30m`[0m [1;30m'[0m [1;36m.[0m  
+[A[48C[1;36m_[0m [1;36m,_[0m[6C[35m [1m° [0;35ml$
+[A[63C[1m$[0;35m$$i+-        [37m
+[6C[1m [0m [1m [0m  [36m-[37m[12C[35m$[1m,[45m°[40m
+[A[27C[30m`Ù[0m4[1;36m$[37m$[36m$$$[0;36m$[1;46m$[40m
+[A[37C[0;36ml  [37m  [35m   [1m°[0;35m    [36m$[1m$
+[A[52C[37ml[36m [0m [35m   _[1m²i[0;35m$$[1m7[0;35m
+[A[64C`   [37m
+[9C[1;36m.[0m [35m  [37m [1;35m$[37mi[35mggg[0;35mgg
+[A[21Cqp[37m [35m`[1m$[45mi[0m[3C[36m [1m`[0;36m½
+[A[33C[1m$[0;36mSS[1;46m$[0;36mSd[1m¿[0;36m [37m 
+[A[42C[35m$$$[1;45m$[0;35m$[1m$[0;35m$ [36my[1my
+[A[52C[37m·_[36m [0;35m`"4$[1;45m$[40m$[0;35m$k[1m 
+[A[64C[0;35m    [1m°[0m
+[6C[35m [36m,[37m [1;36;46m°[0m  [35m [37m [1;35m`V
+[A[16C[37mS[35m$[0;35m$[1;30m$[0;35mY  [37m  [35m`
+[A[26C[1;45m4[40m$i¿,_[0;36m [1m`[46m$[0;36m$[1;46m$[40m
+[A[37C[0;36m$[1m7[30m'[0;36m [35m.$$$[1;45mg[0;35m$
+[A[47C[1;37m$[35m$[0;35m [36m$[1;46m$[40m$[37m$[36m
+[A[54Cl[0m [35m  [1;45ml$[40m$[0;35m$$[1mk[0;35m,_  
+[A[68C[1m²[0;35m _,[1;30m:[0m [1;30m.[0m
+[7C[1;36m4,[46m°[0m  [35m [37m [1;35m  [0;35m`"ýÈÈÈÈ
+[A[23C[37m [35m,[1my[45m$[40m$$[0;35m"'[36m [1;30m_
+[A[33C[0;36m,$$7[1;30m'[35m _,[0;35m$[1m$[0;35m$$
+[A[45C[1;45m$[0;35m$[1m$[0;35m$ [36m½[1;46mü[40m"" 
+[A[55C[0;35m_,Ú[1;45m$$[40m$[0;35m$$[1m$[0;35m7Ù""
+[A[68C[1;45m`[0;35m`"[1;30m½:[0m [1;30m`[0m [1;30m`[0m
+[8C[1;36m`[46m²[0;36m,[35m  ,ggg[1;45mg[0;35mg[1mggg
+[A[22C[0;35mo_`[1m4[45m$[0;35m$$,[1m°[30m 4$[0;36ml 
+[A[36C[1;35;45m,[40mÖi$[0;35m$$[1m7[0;35mÙ$[1;45m$[40m
+[A[46C$[37m$[35m$[0;35m [36m$[1;46m$[40m$[37m,
+[A[54C[0;35m `[1m$[0;35m$[1;45m$[40m$$[0;35m$[1;30m'[0m[5C
+[A[68C[1;36;46m°[0m
+[1;30m...[0m [1;36m__ _,[46m$[40m$[0;36m$[1m [0;35m :
+[A[15C$$[1;45m$[40m$$[37m$[35;45m$[0;35mP[37m [1m_
+[A[25C[0;35m [1m$[0;35m$[1m$[30mS[35;45mi[40m,
+[A[32C[0;35m  [1;30m`[0m [1;35;45m$[40m$$[0;35m$$ 
+[A[42C[1m [0;35m $[1;45m$[40m$[37m$[35m$[0;35m [36m
+[A[50C$[1;46m$[40m$[37m$[0;35m  [1m$[0;35m$[1;45m$[40m
+[A[59C$$[0;35ml[37m  [36ml[1myy[37m·[36;46m²[37;40m_[0m
+[1;30m:[0m[3C[1;36m$[0;36m$ [1m$f[46ma[0;36m7'[35m  
+[A[14Cq$$[1;45m$[40m$$[37m$[0;35ml [1;36m,$[0;35m [1m
+[A[26C$$$[0;35m$[1;45m$[0;35m$[1m$i, [45m$[40m$[0;35m
+[A[38C$$$y[1my[0;35my$$$[1m$$[0;35m [36m$$[1m7'[0;35m
+[A[54C ,[1m$[0;35m$$[1;45m$[40m$[30m:[0m  [36m$$[1m$
+[A[67C$[37;46m$[40m$i.[0m
+[1;30m:[0m[8C[35m  _,i$$[1m$[45m$[40m$[0;35m$[1m$
+[A[21C[45ml[0;35m [36m`4[35m [1m$$[0;35m$$[1;45m$[40m
+[A[31C[0;35m`Ù$$[1m$$$[0;35m7"`[37m[3C[35m`"4[1m$$
+[A[49C[0;35m_[1m_[45m_[40m_,[0;35mÚ$[1m$[0;35m$$
+[A[59C[1;45m$[40m7[0;35m [37m [36mi[1;30m$[0;36m$
+[A[66C[1m$$[37;46m$[40m$[36m$l[0m
+[1;30m```[0m [35m`[37m [35m````"ü½*[1m4$$[45m$[40m$
+[A[19C[0;35m$[1m$[45m$[40m¿[30m `[0;35m [1m$$[0;35m
+[A[28C$$[1m$[0;35m [1;37m,[0;35m `4$[1m$[0;35m  
+[A[40C[1;37mI[30m.[35mN[30m.[37mK[0;35m  $[1m$
+[A[49C[0;35m$[1m$[45m$[40m$$[0;35m$$[1m$[0;35m7*
+[A[59C[1;45m'[40m [30m.i7½[0;36mü[1m"`[46m`[0;36m_
+[A[70C[1;37m_[0;36m,[1;37m,,y[0;36my[1;30m°+[0m
+[7C[36m`[37m [36m`"[1m4[46m$[40my[0;36m,[35m `
+[A[17C[1;45m½[40m$$$[45m$[40m$$¿[0;35m_[1m`ü[0;35m4$
+[A[30C[1m$[0;35m [1;36m$[0;36m$[1;30m.[0m [35m$[1m$
+[A[38C[0;35mi,[1m_[0m[3C[35m_,i$[1m$[0;35m`[1m"
+[A[51C[45m"[40mÓ*[0;35m$$[1m$[0;35m$$[1;45mi[40m,
+[A[61C[0;35m  [1;30m.,·y[0;36mi[1;46m$[0;36m$[1;37m7
+[A[71C[0;36m"[1;37m` [0m
+[12C[1;36;46ml[40m$$[0;36m$[35m [1m l[0;35m$[1m$[45m[40m
+[A[21C[45m$[40m$[0;35m$$$ix,,[1m°[0;35m [36m7[1;30m'
+[A[34C[0m [35m,$[1m$[0;35m$$[1m7"ü[0;35m"[1;30m$
+[A[45C[0;35m$$$[1m$[0m [36m [1;35m°[0;35m  [37m 
+[A[55C[35m`[1m4[0;35m$$[1;45m$[40m$[0;35m$,[1;30m `4
+[A[66C$[0;36m$[1;46m$[0;36m`[37m
+[9C[1;30m,[0m [36m+[1;46mü[40m"[0;36m`[35m_,[1mi$$$
+[A[21C[45m$[0;35m7Ù"`` _[1m,·[0;35m  ,i$$[1m$[0;35m$'
+[A[40C[1m  °[0m [1;30m$[0;35m$$$[1m$[0;35m_ ___[37m[3C
+[A[57C[35m`$[1;45m$[40m$[0;35m$$[1mi[0m [1;30m $
+[A[67C[0;36m$$,[37m
+[6C[1;30m'[0m[5C[1;36;46m°[0m  [35m`"[1m4$[0;35m$
+[A[20C[1m$[45mk[0;35m   [1m $[0;35m$$[1m$$[0m[3C
+[A[34C[35m`"4[1m$[0;35m$$[1mi,[45m°[0m [1;30m$
+[A[45C[0;35mÙ[1;30m'[0m [1;35m,[0;35m, [1;30m`[0;35m
+[A[52CÙ$[37m[3C[35m l[1;45m$[40m$[0;35m$$[1m$[0;35m:
+[A[65C[37m [1;30m`[0;36m"[1;30m4[0;36m$i[37m
+[12C [3C[35m [1m Y$$[45m$[0;35mk,_[1m,$[0;35m$$[1m$$
+[A[31Ci[0;35mi[1mi[0;35mi, [1m`[0;35m$$[1m$$[45mi[40m
+[A[43C[0;35m [1;30m$[0;35m [1;30m,[0;35m$[1;37m$$
+[A[50C[35m$[0;35m,[37m [1;30m$[0;35m$$[1m$[37m$[35m
+[A[58C$$$[0;35m$$[1m$[0;35ml[1m,[30m,[0;35m [1m°
+[A[69C[0;36m [1;30m"[0;36m4[1;30m,[0m
+[12C°[3C[35m [1m_L[37m$[35m$[45m$$[0;35m$$[1m$7
+[A[27C[0;35m7[1m½½""``[0;35m`[1m`[0;35m`[1m [0;35ml$
+[A[40C[1m$$[45m$[0;35m [1;30m`[0;35m  [1;30m"[0;35mÈ
+[A[49CÈ" [36m [1;30m"[0;35m""üüü[1m½½[0;35m44[1m4
+[A[64C[0;35m$[1m$[0;35m$$[1;45mi[0;35m,  [36m`[1;30m
+[A[73C4,[0m
+[15C[35m_d[1m$7[0;35m½"`` [37m [1;35m_ [0;36m,,i
+[A[30C[1;46m$[40m$[0;36m$[1;30m$7'[0;35m [1m,[0;35m$
+[A[39C$[1m$[0;35m$' [1;30m,[0;36my[1m$i[46mÚ[40m,
+[A[50C[37mÚi[36m$i[37myy¿[36m¿,,,__[0m[3C[1;30m`
+[A[67C[0;35m`[1;45m`[0;35m"Ù[1;30m+[0;35m  [36m`[37m
+[A[75C [1;30m.[0m
+[14C[35mi` [1m  [0;35m      [37m[3C[36m`[1;37mÙ
+[A[30C[36;46m$[40m$[0;36m7[1;30m`[0;35m,Ö$[1m$[0;35m
+[A[38C$$[1m$[0;35m'[37m [1;30m4$[0;36m$[1m$$[46m7[40m
+[A[49Cü[37m``[0m[13C[35m [37m  [1;30m [0m [35m 
+[A[71C[37m  [1;30m'[0m  [1;30m`[0m
+[27C[36m_[37m [1m,[36;46mÙ[40m'[0;35m [37m[4C [35m`
+[A[39C"[1mü[0;35m4,[37m [1;30m`Ù[0;36m4[1m$[46m$[40m
+[A[49C,[37m__[0m[11C[1;30mH7/MIMIC[0m
+[30C[1;36;46m°[0m[12C[35m`[37m[3C[36m [1;46m`[40m`
+[A[50C[37m` [36m'[0m' [1;30m'[0;36m [37m`[1;30m`'
+[A[60C[0m [1;30mD_ANGEL/RMRS[0m
+
+
+[1;30m--[0m{[1mGum Fuck [0mjoint by [1mmrviolent [0m& 
+[A[33C[1mspinsane[0m}[1;30m-----------------------------
+[A[71C--------[0m
+
+[31C[1;32m...[0m [1;32m.Ú*|$$$$$/Ú.[0m
+[28C[1;32m.\$$$7$$$$$$$$$$$$$$.[0m
+[27C[1;32mj$$$$7:7$$$$$$$$$$$$$$l[0m
+[26C[1;32m;$$P"'[33m...[0m [1;32m`ü*$$$$$$$$$$$:[0m 
+[A[52C[1;33m.[0m
+[25C[1;32m.$7[33m.j$$$$$$$$b.[32m'À$$$$$$$:[33m$;$;[0m
+[24C[1;32m.$Y [33m $$"$$$$"`$$$[0m  [1;32m$$$$$$l[33ml$
+[A[52C$$l[0m
+[23C[1;32mj$$l[0;32m:[37m [1;33mY$$$$$$$$$$$`[0m 
+[A[43C[1;32ml$$$$:[33m :$$$l[0m
+[22C[1;32m.$$$$[0;32m:i[37m [1;33m:$$$$$$$$$`[0m   
+[A[44C[1;32m:$$$[33m "$$$$[0;33m$[37m
+[22C[1;32m:$$$$[0m [32m$$,[1;33m`4$,.!$À[37m [0m 
+[A[41C[1;31m.[0m [1;32m`"ü*$$[0m  [1;33m$$$[0;33m;
+[A[55C[37m [36m:Ú._[37m
+[16C[1;32m.[0m    [1;32m $$$$$:i>,[0m  [1;33m`"ü"[0m 
+[A[38C[33m.[37m [1;31md$[0m [1;33m`$SÚ.[0m  [1;33m:$
+[A[52C$$[0m [36m:$$$$Å/Ú._[37m
+[11C[36m.Ú\[37m [1;32mj[0m[5C[1;32m:$$$$$$$$$![31mÚ
+[A[33C[0;33m..Ú!$[1m$b.[31m`$$.[33m`$$$.l$$:[0m [36m$
+[A[56C$$$$$$$$$/Ú.[37m
+[6C[36m.Ú\$$$$[37m  [1;32m$b..,d$$$$$$[0;32m:[1m$$$
+[A[31C[31mj[33m.$$$$$$$$[0m [1;31m:$$$.[33m'4$l$$[0m 
+[A[54C[36mj$$$$$$$$$$$$$$|.[37m
+[36m  [1m.¿\$[0;36m$$$$$$$[37m [1;32m:$$$$$$$$$$$$
+[A[27C[0;32mY$[1m$$.[33m$$$$$$$$P[0m [1;31ml$$$$$k.
+[A[50C[33m`*[31m [0;36m.$$$$$$$$$$$$$$$$$b.[37m
+[1;36m.\$$$$[0;36m$$$$$$$:[37m [1;32m$$$$$$$$$$P'[0m 
+[A[28C[1;31m.l[32m`$bÚ[33ml:$$$P[0m [1;31mj$$$$$$$$$\Ú
+[A[53C.[0m [36m'½$$$$$$$$$$$$$$$$b[37m
+[36m$$[1m$$$$[0;36m$$$$$$$$. [1;32m`'ü*\\*"`[0m  [1;31m
+[A[27Cjjk[0m [1;33m`$$[0m [1;33m:$P[0m [1;31m.Ú$$$$$$$
+[A[48C$$$$$$$: [0m [36m'""""""$$$$$$$$$$\[37m
+[36m$$[1m$$$$[0;36m$$$$$$$$$$$$SS//::i[1;31m,$$$$!/.[33m
+[A[33C`[0m  [1;33m`[31m.q$$$$$$$$$$$$$$$$$[0;31ml[1;36m
+[A[57C [35m:[0;35mgggg[1;30mg[0m [36m$$$$$$$$P`[37m
+[36m$$[1;37;46m$$$$[0;36m$$$$$$$$$$$$$$$$$$i[1;31m$$$$$$$
+[A[32C$$[0;31m\[1m%$$$$$$$$$$$$$$$$$$$[0;31m$$[1;36m 
+[A[58C[35ml[0;35m$$$$$[37m [36ml$$$$$7`[37m [36m.\$/.[37m
+[36m$$[1;37;46m²²²²[0;36m$$$$$$$$$$$$$$:[37m [1;31m::
+[A[24C[0;31m:[1m$$$$$$$$$[0;31m$$[1m$$$$$$$$$$$$$$
+[A[50C[0;31m$$$$$7'[1;35mj$$$$$[0;35m$[1;30m:[0;36m:$$
+[A[68C$$$[37m   [36m$$$$$[37m
+[36m$$[1;37;46m±±±±°°[0;36m$$$$$$\*ü"``[37m [1;35m..[0m
+[A[23C  [1;31m`Y[41m$$[0;31m$$$\*"~[1m`~'*/$$$$$$$$$
+[A[50C[0;31m$$$/'[35m.[1md$$$$$$[0;35m$l[37m [36m$
+[A[67C[34;46m$$$[36;40m$.[37m  [36m`/S\`[37m
+[36m$$[1;37;46m°°[0;36m$l[37m  [1;30m.[0;35m..,,,Ú[1mÚ
+[A[16C\\SS$$$$[0;35ml[37m [1;30m.[0m[5C[35m_.Ú\S[1m!&
+[A[39C%¿.[31m`'ü[0;31m||À"`[1;35m_[0;35m.[1m\$$$$$$$$
+[A[63C[0;35m$$[37m [36ml[34;46m$$$[36;40m$$!Ú.[37m
+[36m$$[1;37;46m°[0;36m$$$1.[1;30m`$[0;35m$$[1m$$$$$$$$
+[A[20C[45m$$$[40m$$[0;35mb.`4$$$$$[1m$$$$$$$$!pÚ,._,Úq
+[A[51C[0;35m![1m$$$$$$$$$$$$[0;35m$:[1m [0;36m$$$$$$$$
+[A[75C$.[37m
+[36m$$$$$$$$k.[35m`ÀQ[1m$$$$$$$$$$$$$[0;35m$b[37m [35mY
+[A[30C$$[1m$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$[0;35mSl[37m 
+[A[67C[36m$$$$$$$$$l[37m
+[36m$$$$$$$$$$!Ú.[35m`[1m4$$$$$$$$$$$[0;35m$p[37m  [35m
+[A[30Cl$[1m$$$$$$$$$$$$$$$$$$$$ü`S$$$$$$$$$$[0;35m$[37m 
+[A[67C[36ml$$$$$$$$'[37m
+[36m$$[1;37;46m°[0;36m$½"`[1;35m_..,Ú[0;35mÚq[37m 
+[A[15C[1;35mY$$$$$$$$$[0;35m7`[37m [36m.[37m [35m:
+[A[31C[1m$$$$5S$$$$$$$$[0;35m$$[1m$$$$`[0m  [1;35m$$$$
+[A[58C$$$$$$$$[0;35m:[36m:$$$$$$7[37m
+[36m$7`[37m [35m.[1mÚ\$$$$$$$[0;35m:[37m [1;35m6$$$$$$
+[A[23C$[0;35ml[37m  [36mi$[37m [35m.[1m$$$$XX$$$$$
+[A[42C[0;35mP[37m   [35m$$[1m$$l[0m  [35m:[1m$$$$
+[A[58C[45m$$$$[40m$$$$l[0;36m $$$$$$[37m
+[36m7[37m [1;35m.\$$$$$Å\*[0;35m½"[37m [36m.[37m 
+[A[17C[1;35m$$$$$$$[0;35m`[37m [36m:ii[37m [1;35m:$$$
+[A[34C$SS$$$$$[0m  [36mi[37m [35mi[1m$$$:[0m  [35m|
+[A[54C[1m$$$$[45m$$$$[40m$$$$$[0m [36mY$$$$$.[37m
+ [35mj[1m$$$$$À`[0m [36m:::iSS[37m [35m:[1m$$$$[0;35m
+[A[22C$$[37m [36ml$$[1;30;46mÛ[0;31m [1;35mi$$$$IS$$$$$
+[A[42C[0m [36m::[37m [35m$[1m$$$[0m [36m.[37m [35m
+[A[53Ci[1m$$$$$$$$$$$$$[0;35m:[37m [36m$$$$$$:[37m
+[35mj[1m$$$$7[0m [35m..,,Ú[1mÚ[0;35m%[1m%S![0;35m:
+[A[18C[1m$$$[0;35m$$l[37m [36m$$[1;30;46m±$[0m 
+[A[30C[1;35ml$$$$[0;35mi[1mI$$$$$[0m [36ml[31m [35m:
+[A[46C$[1m$$l [0m  [35ml[1m$$$$$$$$$$$$$l[0m [36m:$$$$
+[A[74C$l[37m
+[1;35m$$$$l[0m  [35ml$$$[1m$$$$$$[0;35ml[1m$$$$[0;35m$
+[A[23C:[37m [36m$$$'[37m [1;35m$$$$$[0;35m:[1m$$$$$l
+[A[42C[0m [36m$[37m [35m|$[1m$$|[0m [1;30;46m$[0m 
+[A[53C[35m$[1m$$$$$$$$$$$$D[0;35m'[37m [36mj$$$$$[37m
+[1;35m$$$$:[0m  [1;30m$[0;35mS[1m*À$$$$$$[0;35m:[1m$$$
+[A[21C$$$[0m [36m`"[37m  [1;35m:$$$$$[0;35m:[1m$$$$$
+[A[41C[0;35mi[37m [34;46m$$[35;40mi$$[1m$[0;35m:[37m
+[A[50C [36m:[37m [35m$[1m$$$$$$$$$|[0;35mý[1m`[0m 
+[A[67C[36m.d$$$$/[37m
+[1;35m$$$$l[0m[5C[1;35m:$$$$$$[0;35m:$[1m$$$$$b,._,i$$$
+[A[33C$$[0;35m:[1m$$$$$:[0m [34;46m$[37;40m [1;30ml
+[A[46C[0;35mSS[1mS[0m    [35m$[1m$$$$$$$[0;35m9[1m`
+[A[63C[0m [36m.\$$\*ü' [37m  [35m.[37m
+[1;35m$$$$$|p,q|$$$$$[45m$$[40m$[0;35m:$$[1m$$$$$$$$S$$$
+[A[33C$$[0;35mi[1m$$$$$[0;35m.[37m [36m$mmm[31m [36mm
+[A[49C[31m [36m: [35m.$[1m$$$$$[0;35m7`[37m  [1;35m 
+[A[64C[0;35m_..[1m,,Ú[0;35mÚgg@!$[37m
+[1;35m:$$$$$$$$$$$$S\*[0;35mÀü"""À*$$$$Å$iIS[1mSSS[0;35mi
+[A[36C[1m$$$$$[0;35m$_[1m_..,,Úq[0;35m@!$[1m$$$$$$[0m
+[A[59C [35mQ$$$[1m$$$$$$$$$$[0;35m$$[37m
+[35m.[1m`'ü&/S$S\*ü`[0m [35m.,q!$Å[1m$!$$[0;35m$$[37mi
+[A[27C:i:[35mi$$[1m$$SS$$$$$SS$$$SSSS$$$$$[0;35m$$$[1m  
+[A[61C[0;35m~"[1mY$$$$$$$$$$[0;35m$:[37m
+[1;35m$$$!pÚ,.[0;35m.,[1mq\$Å$$$$$$$$[0;35m$$$7[1;30m:::
+[A[29C:[0;35mi$[1m$$$SSS$$$$[0;35mlü"`[1m$l$$$$$$$[45m$[40m
+[A[56C[45m$[0;35m$:[1m    :$$$$$$$$$[0;35mD[37m  
+[A[76C[1;30m °°[0m
+[1;35m$$$[45m$$$[40m$$$$Å$$$$$$$$$$$$[0;35m$l[1m [0m 
+[A[27C[1;30m::[0m [35ml[1m$$$$[0;35mI[1mS$$$$[0;35mS
+[A[42C:[1m  :$$$$$$$$$$$[0;35m$:[1m [30m  [35m [0;35ml
+[A[64C[1m$$$$$$$$[0;35m7[37m    [1;30mmv[0m
+[35ml[1m$$$$$$ü"` $$$$$$$$$$[45m$$$[0;35m:[1m [0m 
+[A[27C[1;30m.[0m  [35m:[1m$$$$[0;35mi[1m$$$$$[0;35mS
+[A[42C[1m   l$$$$$$l$$$$$[0;35ml[1m   [0;35m.[1m$$$$$$
+[A[69C$$[0;35m`[37m[5C[1;30msp[0m
+[35m:$[1m$$$$$ [30m°°[35m $$$$$S:$$$$$$  [0m    [35mi
+[A[31C[1m$$$$[0;35m:[1m$$$$$[0;35mS[1m   [0;35m$[1mS
+[A[47C\\*[0;35m*½[1;30m:[35m$$$$$$[0;35m![1mq4$$$$$$/
+[A[69C[0;35m'[1m [30m°°°°[0m
+[1;35m [0;35m$[1m$$$$[0;35m$[1m   :$$$$$$:$$$$$l  [0m 
+[A[27C[1;30m.°[0m [1;35ml$$[45m$$$$$[40m$$$[0;35mS
+[A[42C[1;30m  [0m[7C[1;35m.q$$$$$$S$$$$S*ü` [30m°°[0m
+[A[71C²²²²²ÛÛÜ
+[1;35m [0;35ml$$[1m$$[0;35ml[1m [30m  [35ml$$$$$$
+[A[17C[0;35ml[1m$$$$$:[30m [0m²Û[1;30m²²°[35m$$$$$$$$
+[A[38C$$$[0;35ml[37mÞÝ[35mSS[1m$$$$$Y$$$$$$$[0;35m.`"QS
+[A[64C[1m$S!%pÚ,..[30mßßßß[47mÜ[0mÛ
+[1;35m [0;35m$$[1m$$$igg YS\*½"~[0;35m:[1mS$$$$$ [0mßÛÛ
+[A[28C[1;30mß[0;35m:[1m$$$$$l$$$$$[0;35mi[37mÞÝ[35ml
+[A[45C[1m$$$$$$:Y$$$$$$:[0mÞ[1mÜ[35m [0;35m$$[1m$$$S$
+[A[70C$$[45m$$$[0;35m!p,[37mÞ
+[35mj$[1m$$$$$[0;35m""[1m [0mÜÜÜÜÜ²[1;47mÛ[0m [1;35m$
+[A[19C$$$$$b,[0;35m.[1m_[0;35m,[1m$$$$$$[0;35m:[1m$$$$
+[A[40C$[0;35m:[37mÞÝ[1;35m:$$$$$$[0;35m$:[1m$$$$$$i[0m
+[A[60CÞ[1m²°[0;35m$[1m$$$$$$$$$$$7`[30mÜ[0mÛ
+[35m$[1m$$$$$$ [0mÛÛ[1;30mÛÛÛÛÛÛÛ[0mÝ[1;35m`$$$$$i$$$$S
+[A[30C$$$$$[30m.[35m$$$$$[0;35m.[37mßß[1;35m S$$$$$
+[A[51C[0;35m$l[1m$$$$$$$[30m [0mÛ[1;35m [0;35m$[1m$$
+[A[66C$$$$$$$[0;35mP[1m`[30mÜÛÛ[0mÛ
+[35m~'[1m"üY$$[0;35m:[37mÞ[1;30mÛÛÛÛÛÛÛÛÛ[0mÜ[1;35m`"Ô
+[A[22C*/S$$Ø$$$$$$[0;35m$[1m [0;35m$[1m$$$$$*SS$$$$$
+[A[50C[0;35m$7:$[1m$$$$$$:[0mÞ[1;35m S$$$$S$$[0;35m/
+[A[72C[1m [30mÜÛÛÛ[0mÛÛ
+[1;30m  .[35m  Y$l[0mÞÛ[1;30mÛÛÛÛÛÛÛÛÛÛÛÛÜÜÜÜÜÜ[0;35m`
+[A[29C[1m"[0;35müÔS$$[1m [0;35ml[1m$$$$$$$SS\*½[0;35m
+[A[49Cü",Q$$[1m$$$$$P[0mÞ[1;35m $$$$$$7[0;35m'[1;30mÜÛÛ
+[A[74CÛÛÛ[0mÛ²
+[1;35mg\$[30m  [35ml$[0;35m$:[37mÞÛ[1;30mÛÛÛÛÛÛ²²²²²ÛÛÛ
+[A[25CÛÛÛ[47mÜÜÜ[0mÜ[1;35m [0;35m'Y[1m [0;35m:$$*ü"
+[A[42C[1m``[30mÜÜÜÜÛÜ[0;35m`ü/S$S\*[1mü`[30mÜÛ[0mÝ
+[A[63C[1;35ml$$$$7 [30mÛßÛÛ[47mß²ß[40mÛÛ[0m
+[35m"$[1m$.,$[45m$$[0;35m$.[37mßÛ[1;30;47m ßß[40mÛÛÛÛÛ
+[A[20CÛÛÛß²ßÛÛÛÛÛ[0m²²Ý[1;30m:[35m [0;35ml$`[1;30mÜÛ²²²
+[A[44C²²[47mÛÛÛ[40mÛÛÜÜÜÜÜÜÜÜÛÛ[0mÛÝ[35m:[1m$$$Y [30mÛ
+[A[70CÝl[0;35m.[1;30mÞÛ[47mÜ[40mÛÛÛ[0m
+[1;35m [0;35m$$[1m$$$[45m$[40m$[0;35m$$b.[37mßÛÛ
+[A[15C[1;30;47mÛÛÛ[40mÛÛÛÛÛÛÜÛÛÛÛÛ²²²Ý:[35m [0;35m:l
+[A[38C[1m [30mÛÛÛÛÛÛÛÛ[47m²²²²[40mÛÛÛÛÛÛÛÛÛÛ[0mÛÝ[35m
+[A[63C.[1m$$$B,[0;35m.,dÎ[1m [0mÛÛÛ[1;30m²[37mÛ[0m
+[1;30m  [0mÜÜÜÜÜÜÜÜÜÜÛÛ[1;30;47mÜÛÛ[40mÛ[47m²²²[40mÛÛÛÛ
+[A[25CÛÛÛÛÛÛÛÛÝ'ÜÜÜÜÛÛÛÛÛ[0mÛÛÛ[1;30;47m°°°[0mÛÛ[1;30mÛÛ
+[A[54CÛÛ[47mßßßß[0m²²Û[1;30m [0;35m'½*S$S\½'[1m [0mßßß
+[A[77C[1mß[0m
+[1;47mÛ[0mÛÛÛÛÛÛÛ[1;30;47mÛÛÛÛÛÛÛÛ²²°°        ßßßßßß[40mÛ
+[A[35CÛÛÛÛÛ[47m°°°°[0mßßßßßßßßßßßßßßßßßßßßßß
+ßß[1;30;47m°°[0mÛÛ[1;30;47m        ßßßß   [40m°°°[0m[16C
+[A[40C[1;30m°°°°[0;30m  [37mg[30m [1;37mu[0;30m 
+[A[50C[1;37mm[0;30;41m f u c k ²[37;40m [1;30m+o[37m 
+[A[65C[0moffset
+  [1;30m°°°[0m[13C[1;30m°°°[0m
+[44Cjoint ascii thing by mrviolent and
+[44Cspinsane, for offset etc.. later.
+
+
+[1;30m--[0m{[1mPharcyde [0mjoint by [1maccess denied[0m
+[A[34C, [1mscour [0m& [1mspinsane}[30m------------------
+[A[71C--------[0m
+
+[34C[1m.[0m
+[34C[1m_[0m
+[24C[1m.[0m[9C[1m_[0m[9C[1m.[0m
+[23C[1m.[0m[9C[1m/ \[0m[9C[1m.[0m
+[22C[1m/[0m[6C[1m.  /   \  .[0m[6C[1m\[0m
+[16C[1m____//[0m[6C[1m_:_/[0m[5C[1m\_:_[0m[6C[1m\\
+[A[49C____[0m
+[13C[1m_  \   /[0m[5C[1m_ _|    !    |_ _[0m[5C[1m\  
+[A[51C /  _[0m
+[13C[1m.   \ /[0m[5C[1m((([0m[6C[1m|[0m[6C[1m)))[0m[5C
+[A[49C[1m\ /   .[0m
+[10C[1m.: .    \ _.\_\ \[0m[7C[1m_[0m[7C[1m/ /_/._ / 
+[A[52C   . :.[0m
+[1m... ... .....:   / \  \    .[0m[13C[1m.    /  / \   :.
+[A[57C.... ... ...[0m
+[1m '.  '.  '.    _/   \_[0m[5C[1m.[0m[6C[1m_[0m[6C
+[A[41C[1m.[0m[5C[1m_/   \_    .'  .'  .'[0m
+[7C[1m'.  '.  \[0m[5C[1m/[0m[5C[1m:[0m[6C[1m_[0m[6C
+[A[41C[1m:[0m[5C[1m\[0m[5C[1m/  .'  .'[0m
+[13C[1m'.[0m[6C[1m/\ ___|[0m[6C[1m/[0m[6C[1m|___ /
+[A[47C\[0m[6C[1m.'[0m
+[12C[1m.` ____ /  \\[0m[8C[1m/ \[0m[8C[1m//  \ ____ `
+[A[56C.[0m
+[8C[1m_:____(   //[0m[12C[1m/   \[0m[12C[1m\\   )____
+[A[59C:_[0m
+[5C[1m_ _)|[0m[6C[1m.[0m[14C[1m/[0m[5C[1m\ __ _  _[0m[6C
+[A[52C[1m.[0m[6C[1m|(_ _[0m
+[9C[1m|[0m[6C[1m:[0m[6C[1m.[0m[6C[1m/.[0m[6C[1m
+[A[38C\\[0m[12C[1m:[0m[6C[1m|[0m
+[9C[1m|[0m[6C[1ml[0m[6C[1m|[0m[5C[1m//[0m[8C[1m
+[A[39C\\_[0m[10C[1ml[0m[6C[1m|[0m
+[9C[1m._____ |[0m[6C[1m|    //[0m[10C[1m\[0m[11C
+[A[52C[1m|[0m[6C[1m|[0m
+[1m  _______|[0m[5C[1m\|[0m[6C[1m|___/___[0m[10C[1m
+[A[41C\________  |[0m[6C[1m|[0m
+[1m .\_[0m[5C[1m._[0m[5C[1m\_[0m[5C[1m._[0m[6C
+[A[31C[1m\_[0m[5C[1m____\___    \_|[0m[6C[1m|[0m
+[1m |[0m[6C[1m_l/[0m[6C[1m/[0m[5C[1m|/[0m[7C[1m/
+[A[33C    _\[0m[5C[1m_/    _/|[0m[6C[1m|_ _[0m
+[1m |[0m[6C[1m\_______/______|[0m[7C[1m/[0m[5C[1m/[0m[6C
+[A[44C[1m\[0m[7C[1m|[0m[6C[1m| \\[0m
+[1m |_[0m[6C[1m|_ _[0m[9C[1m/________\    /_______|\[0m[6C
+[A[52C[1m|[0m[6C[1m|  \\[0m
+[1m  /_______//[0m[9C[1m/[0m[8C[1m.[0m[15C[1m\_____
+[A[52C|[0m[6C[1m|___\\__ _[0m
+[9C[1m.[0m[10C[1m/[0m[26C[1m\    |[0m[6C[1m|[0m
+[9C[1m|[0m[9C[1m/[0m[28C[1m\   |[0m[6C[1m|[0m
+[9C[1m|[0m[8C[1m.[0m[6C[1m.[0m[20C[1m______|_[0m[5C
+[A[59C[1m|_ _[0m
+[9C[1m'  _.,,,,,,$$$$$: .,Ú*Q!    Úg%@%q¿./[0m[6C[1m_/[0m[5C
+[A[59C[1m.//   _.,,,,,,$$$$$$[0m
+[8C[1m.Ú%!$$7""" %$$$$$l%$$$$$l    $$$$$$$|[0m[7C[1m|[0m[6C
+[A[59C[1m|.Ú@!$$$7""" %$$$$$$[0m
+[7C[1ml$$$$$$[0m[5C[1m$$$$$$$$$$$$$l    $$$$$$$|[0m[7C
+[A[52C[1m|[0m[6C[1m|$$$$$$$  °  $$$$$$$[0m
+[6C[1m:$$$$$$$  °  l$$$$$[30;47m$$[37;40m$$$$$:    $$$$$$
+[A[43C$|[0m[7C[1m|[0m[6C[1m|$$[30;47m$$[37;40m$$$[0m[5C
+[A[72C[1m$$$$$$$[0m
+[1m   °° l$$$$$$l[0m[5C[1m:$$$$$$$$$$$$[0m[5C[1m$$$$$$
+[A[43C$|   °°  |[0m[6C[1m|$$$$$$$[0m[5C[1m$$$$$$$[0m
+[6C[1ml$$[30;47m$$[37;40m$$:[0m[5C[1ml[30;47m$[40m
+[A[21C[37m$$$$$$$$$$$:    $$$$$$$|[0m[7C[1ml[0m[6C
+[A[59C[1m|$$$$$$$[0m[5C[1m$$$[30;47m$$[37;40m$$[0m
+[6C[1m:$$$$$$l[0m[5C[1m$$$$$$$$$$$$$l  ° $$$[30;47m$$[40m
+[A[42C[37m$$|[0m[7C[1m![0m[6C[1m|$$$$$$$ _.,d$$$$$$$[0m
+[7C[1mY$$$$$$.   <$$$"" `Y$$$$$$    $$$$$$$|[0m[7C[1m:[0m[6C
+[A[59C[1m|l$$$$$$""""""""""""[0m
+[8C[1m`"üÀ*\SXSs,,,...   `À*/S$baaa$$$$$$$|[0m[7C[1m'___
+[A[56C___| `'üÔ*/S@©,.,,...[0m
+[9C[1m|[0m[27C[1m$$$$$$$|_______([0m[6C[1m.[0m
+[9C[1m|[0m[11C[1m°  .[0m[9C[1m" """""""".[0m[14C
+[A[59C[1m|[0m[5C[1m°°[0m
+[5C[1m_ _ |    __/\__    .[0m[19C[1m.    __/\__    | _ _[0m
+[8C[1m)|____\    /____:[0m[9C[1m\    °°   :____\    /___
+[A[58C_|([0m
+[9C[1m:[0m[14C[1m|[0m[8C[1m/ \[0m[8C[1m|[0m[14C
+[A[59C[1m:[0m
+[10C[1m.:::::.    _ _|_   ___/   \___   _|_ _    .:::::.[0m
+[9C[1m:::`    '[0m[7C[1m/___\   ad!   /___\[0m[7C[1m'
+[A[52C    `:::[0m
+[9C[1m:::[0m[17C[1m/__[0m[5C[1m__\[0m[17C[1m:::[0m
+[10C[1m'::..._____.;'   _    \   /    _   ';._____...::'[0m
+[13C[1m``````::'[0m[5C[1m\ sP  \ /  sC /[0m[6C[1m'::`
+[A[52C`````[0m
+[12C[1m.[0m[5C[1m.'[0m[6C[1m\\ .   _\    . //[0m[7C
+[A[50C[1m'.[0m[5C[1m.[0m
+[5C[1m.'   .'    .'   :[0m[5C[1m)   .  _\ .   ([0m[6C
+[A[48C[1m:   '.    '.  '.[0m
+[1m  ' '''  ''''  '''''':' '   -| _\/|\/_ |-    ' ':''''''  
+[A[57C'''' ''' '[0m
+[21C[1m:[0m[7C[1m+-\  |  /-+[0m[8C[1m:[0m
+[21C[1m'[0m[10C[1m\)!(/[0m[11C[1m'[0m
+[21C[1m'[0m[26C[1m'[0m
+[21C[1m.[0m[26C[1m.[0m
+
+
+[1m--(cut here)---------------------------------------------
+[A[57C----------------------[0m
+[1ma remorse trueschool joint...  for Access D's Pharcyde BB
+[A[57CS![0m
+[1mby access denied, scour, spinsane...[0m
+[1mnow if this isnt fucking true art. then ha. there is no s
+[A[57Ccene.[0m
+[1mREMORSE 2004 ...WE'RE BACK![0m
+
+[1mi stay high on life. i dont need-no-weed[0m
+[1mI spray invisible at night, like the Negro-League.[0m
+
+[1;30m$[37mIy[0m._   .,y$$y. [31m°°[1;30m  [0m       
+[A[29C                            [31m  °[37m [31m°[37m 
+[A[63C.y$$y,.   _.[1myI[30m$"[0mý[1mS±$[0m$#%*ý'
+[A[13C[1;30m''[0m*y$S[1;30my[0my[1;30m,[0m.[1;30m_
+[A[26C[0m [1m _[0m.+[1m+[0m.[1;30m [0m[13C.[1m+
+[A[49C[0m+.[1m_ [0m [1;30m_[0m.[1;30m,[0my[1;30my
+[A[59C[0mS$y*[1;30m''[0m'ý*%#$[1m$±S[0mý[1;30m"*
+[A[C[0mS$$$S*[1;30mý'[0m  [31m°°° [37m 'ý#[1m%SS#
+[A[24C[0my%*[1mý'[30m+.[0m.[1;30m'[0;31m° °°°° [37m 
+[A[41C[31m°°[37m [31m°°[1;37m [30m'[0m.[1;30m.+[37m
+[A[51C'ý[0m*%y[1m#SS%[0m#ý' [31m °°°[37m  [1;30m'ý
+[A[73C[0m*S$$$S[1;30m*[0mSAUCE00ACiD-100 Newschool ANSCII Cluster  Multiple Artists    ACiD Productions    20031231µ) P >                            

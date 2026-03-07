@@ -2,12 +2,14 @@ import XCTest
 
 final class RendererTests: XCTestCase {
 
-    func testRenderProducesImageFromValidANS() {
+    func testRenderProducesImageFromValidANS() throws {
         let fixturePath = fixturesPath().appendingPathComponent("sample.ans").path
-        let image = Renderer.render(ansFileAt: fixturePath)
-        XCTAssertNotNil(image, "Renderer should produce a non-nil NSImage from a valid .ANS file")
-        XCTAssertGreaterThan(image!.size.width, 0)
-        XCTAssertGreaterThan(image!.size.height, 0)
+        XCTAssertTrue(FileManager.default.fileExists(atPath: fixturePath),
+                      "Fixture file should exist at \(fixturePath)")
+        let image = try XCTUnwrap(Renderer.render(ansFileAt: fixturePath),
+                                  "Renderer should produce a non-nil NSImage from a valid .ANS file")
+        XCTAssertGreaterThan(image.size.width, 0)
+        XCTAssertGreaterThan(image.size.height, 0)
     }
 
     func testRenderReturnsNilForMissingFile() {
@@ -25,7 +27,6 @@ final class RendererTests: XCTestCase {
     }
 
     private func fixturesPath() -> URL {
-        // Walk up from the build directory to find the source fixtures
         let srcRoot = URL(fileURLWithPath: #filePath)
             .deletingLastPathComponent()
             .appendingPathComponent("Fixtures")

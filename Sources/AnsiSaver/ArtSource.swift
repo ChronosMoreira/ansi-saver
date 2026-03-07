@@ -49,6 +49,7 @@ class PackSource: ArtSource {
                 return
             }
 
+            let queue = DispatchQueue(label: "com.lardissone.AnsiSaver.packSource")
             var localPaths: [String] = []
             let group = DispatchGroup()
 
@@ -56,14 +57,14 @@ class PackSource: ArtSource {
                 let localPath = Cache.ansPath(forPack: packName, file: filename)
 
                 if Cache.exists(localPath) {
-                    localPaths.append(localPath)
+                    queue.sync { localPaths.append(localPath) }
                     continue
                 }
 
                 group.enter()
                 PackFetcher.downloadFile(packURL: self.packURL, filename: filename, to: localPath) { success in
                     if success {
-                        localPaths.append(localPath)
+                        queue.sync { localPaths.append(localPath) }
                     }
                     group.leave()
                 }
@@ -90,6 +91,7 @@ class URLSource: ArtSource {
     }
 
     func loadArtPaths(completion: @escaping ([String]) -> Void) {
+        let queue = DispatchQueue(label: "com.lardissone.AnsiSaver.urlSource")
         var localPaths: [String] = []
         let group = DispatchGroup()
 
@@ -97,7 +99,7 @@ class URLSource: ArtSource {
             let localPath = Cache.urlCachePath(for: urlString)
 
             if Cache.exists(localPath) {
-                localPaths.append(localPath)
+                queue.sync { localPaths.append(localPath) }
                 continue
             }
 
@@ -107,7 +109,7 @@ class URLSource: ArtSource {
             let task = URLSession.shared.dataTask(with: url) { data, _, error in
                 if let data = data, error == nil {
                     Cache.write(data, to: localPath)
-                    localPaths.append(localPath)
+                    queue.sync { localPaths.append(localPath) }
                 }
                 group.leave()
             }

@@ -2,7 +2,7 @@ import AppKit
 
 enum Renderer {
 
-    static func render(ansFileAt path: String, scaleFactor: UInt8 = 1) -> NSImage? {
+    static func render(ansFileAt path: String, scaleFactor: UInt8 = 0) -> NSImage? {
         var ctx = ansilove_ctx()
         var options = ansilove_options()
 

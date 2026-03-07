@@ -27,7 +27,7 @@ struct Configuration {
 
     var localFolderPath: String? {
         guard let bookmark = localFolderBookmark else { return nil }
-        return Self.resolveBookmark(bookmark)
+        return Self.resolveBookmark(bookmark)?.path
     }
 
     static func load() -> Configuration {
@@ -67,15 +67,18 @@ struct Configuration {
     }
 
     static func debugLog(_ message: String) {
+        #if DEBUG
         let entry = "\(Date()): \(message)\n"
         let path = "/tmp/AnsiSaver-debug.log"
-        if let handle = FileHandle(forWritingAtPath: path) {
+        if let handle = FileHandle(forWritingAtPath: path),
+           let data = entry.data(using: .utf8) {
             handle.seekToEndOfFile()
-            handle.write(entry.data(using: .utf8)!)
+            handle.write(data)
             handle.closeFile()
         } else {
             try? entry.write(toFile: path, atomically: true, encoding: .utf8)
         }
+        #endif
     }
 
     static func createBookmark(for url: URL) -> Data? {
@@ -86,7 +89,7 @@ struct Configuration {
         )
     }
 
-    static func resolveBookmark(_ bookmark: Data) -> String? {
+    static func resolveBookmark(_ bookmark: Data) -> (path: String, url: URL)? {
         var isStale = false
         guard let url = try? URL(
             resolvingBookmarkData: bookmark,
@@ -95,10 +98,8 @@ struct Configuration {
             bookmarkDataIsStale: &isStale
         ) else { return nil }
 
-        if url.startAccessingSecurityScopedResource() {
-            return url.path
-        }
-        return url.path
+        _ = url.startAccessingSecurityScopedResource()
+        return (url.path, url)
     }
 
     private static func screenSaverDefaults() -> UserDefaults {
