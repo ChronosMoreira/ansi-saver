@@ -2,15 +2,6 @@
 
 A macOS screensaver that brings back the art of the BBS era.
 
-```
-┌──────────────────────────────────────────┐
-│  ██▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀██  │
-│  ██  A N S I S A V E R             ▓██  │
-│  ██  Your screen, circa 1994       ▒██  │
-│  ██▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄██  │
-└──────────────────────────────────────────┘
-```
-
 Remember dialing into BBSes at 14.4k, watching ANSI art fill your terminal line by line? The vibrant CP437 characters, the neon color palettes, the logos crafted pixel-by-pixel by scene artists — that whole world lives on at [16colo.rs](https://16colo.rs), the largest ANSI/ASCII art archive on the internet.
 
 AnsiSaver pulls art directly from 16colo.rs packs and scrolls it across your screen, rendered with the same [libansilove](https://www.ansilove.org/) library the archive uses. It's like leaving your terminal connected to a BBS you never logged off from.
