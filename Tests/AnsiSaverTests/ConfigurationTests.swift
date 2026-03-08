@@ -19,7 +19,7 @@ final class ConfigurationTests: XCTestCase {
 
     func testDefaultValues() {
         let config = Configuration.load()
-        XCTAssertTrue(config.packURLs.isEmpty)
+        XCTAssertEqual(config.packURLs, ["https://16colo.rs/pack/blocktronics_acid_trip/"])
         XCTAssertTrue(config.fileURLs.isEmpty)
         XCTAssertNil(config.localFolderBookmark)
         XCTAssertNil(config.localFolderPath)

@@ -40,7 +40,7 @@ struct Configuration {
     static func load() -> Configuration {
         let defaults = screenSaverDefaults()
         let config = Configuration(
-            packURLs: defaults.stringArray(forKey: Key.packURLs) ?? [],
+            packURLs: defaults.stringArray(forKey: Key.packURLs) ?? ["https://16colo.rs/pack/blocktronics_acid_trip/"],
             fileURLs: defaults.stringArray(forKey: Key.fileURLs) ?? [],
             localFolderBookmark: defaults.data(forKey: Key.localFolderBookmark),
             transitionMode: defaults.integer(forKey: Key.transitionMode),
