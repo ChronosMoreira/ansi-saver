@@ -7,6 +7,57 @@ enum TransitionMode: Int {
     case crossfade = 2
 }
 
+struct ModemRevealState {
+    var charPosition: CGFloat = 0
+    var columns: Int = 80
+    var rows: Int = 25
+    var displayCharWidth: CGFloat = 0
+    var displayCharHeight: CGFloat = 0
+    var charsPerFrame: CGFloat = 0
+    var totalChars: Int = 0
+    var maskLayer: CAShapeLayer?
+    var fitHeight: CGFloat = 0
+    var contentCols: [Int] = []
+    /// Prefix-sum of effective char counts; has rows+1 elements.
+    var cumulativeChars: [Int] = []
+    /// Y offset where current image begins in the content stack.
+    var imageStartY: CGFloat = 0
+    /// Cursor blink frame counter.
+    var blinkCounter: Int = 0
+    var cursorVisible: Bool = true
+    /// Frames remaining in current line-noise stall (0 = normal flow).
+    var stallFramesRemaining: Int = 0
+
+    /// Build cumulative char offsets from per-row content widths.
+    /// Each row costs max(contentCols, 1) effective chars — the 1 accounts
+    /// for CR/LF on fully empty rows.
+    mutating func buildCumulativeChars() {
+        cumulativeChars = [Int](repeating: 0, count: rows + 1)
+        for r in 0..<rows {
+            let rowChars = r < contentCols.count ? max(contentCols[r], 1) : columns
+            cumulativeChars[r + 1] = cumulativeChars[r] + rowChars
+        }
+        totalChars = cumulativeChars[rows]
+    }
+
+    /// Map a linear character index to (row, col) using cumulative offsets.
+    func rowAndColumn(forCharIndex charIndex: Int) -> (row: Int, col: Int) {
+        var row = 0
+        for r in 0..<rows {
+            if charIndex < cumulativeChars[r + 1] {
+                row = r
+                break
+            }
+        }
+        let colInRow = charIndex - cumulativeChars[row]
+        // Clamp col to the content width for this row (the extra 1 for CR/LF
+        // shouldn't extend the visible reveal beyond the content)
+        let rowContent = row < contentCols.count ? contentCols[row] : columns
+        let col = min(colInRow, rowContent)
+        return (row, col)
+    }
+}
+
 class Animator {
 
     private weak var containerLayer: CALayer?
@@ -25,6 +76,9 @@ class Animator {
         case displaying(until: CFTimeInterval)
         case endPause(until: CFTimeInterval)
         case continuousScrolling
+        case modemRevealing
+        /// Brief hold after file completes, before the line-feed jump.
+        case modemEndHold(until: CFTimeInterval)
     }
 
     private var phase: Phase = .idle
@@ -37,6 +91,22 @@ class Animator {
     private var viewSize: NSSize = .zero
     private var pendingNextArt = false
 
+    // Modem simulation state
+    private var modemState = ModemRevealState()
+
+    // Modem cursor
+    private var cursorLayer: CALayer?
+    /// IBM PC BIOS default: toggle every 8 timer ticks at 18.2 Hz ≈ 440ms half-cycle.
+    private static let cursorBlinkHalfCycle = 26
+    /// Pre-computed state for the end-hold line-feed jump.
+    private var modemHoldScrollOriginY: CGFloat = 0
+    private var modemHoldContentY: CGFloat = 0
+    private var loadingLayer: CALayer?
+    private var modemScaleFactor: UInt8 = 0
+
+    /// Filename of the next art file (set by the view for the loading message).
+    var nextFileName: String?
+
     var onAnimationComplete: (() -> Void)?
     var onNeedNextArt: ((_ callback: @escaping (NSImage, String) -> Void) -> Void)?
 
@@ -48,7 +118,10 @@ class Animator {
     // MARK: - Standard mode
 
     func display(image: NSImage, transition: TransitionMode, speed: Double, viewSize: NSSize) {
-        guard let container = containerLayer else { return }
+        guard let container = containerLayer else {
+            Configuration.debugLog("display: containerLayer is nil")
+            return
+        }
         self.viewSize = viewSize
 
         let imageSize = image.size
@@ -116,10 +189,271 @@ class Animator {
         }
     }
 
+    // MARK: - Modem simulation mode
+
+    func startModemContinuous(firstImage: NSImage, columns: Int, rows: Int, contentColumnsPerRow: [Int], modemSpeed: ModemSpeed, scaleFactor: UInt8, viewSize: NSSize) {
+        guard let container = containerLayer else {
+            Configuration.debugLog("startModemContinuous: containerLayer is nil")
+            return
+        }
+        self.viewSize = viewSize
+
+        stopAnimations()
+
+        let content = CALayer()
+        content.masksToBounds = false
+        container.addSublayer(content)
+        contentLayer = content
+
+        nextContentY = 0
+        scrollOffset = 0
+        stackedLayers = []
+        pendingNextArt = false
+
+        modemState.charsPerFrame = modemSpeed.charsPerFrame
+        modemScaleFactor = scaleFactor
+
+        let cursor = createCursorLayer()
+        content.addSublayer(cursor)
+        cursorLayer = cursor
+
+        appendModemArt(image: firstImage, columns: columns, rows: rows, contentColumnsPerRow: contentColumnsPerRow)
+        phase = .startPause(until: CACurrentMediaTime() + 1.0)
+    }
+
+    func appendModemArt(image: NSImage, columns: Int, rows: Int, contentColumnsPerRow: [Int]) {
+        guard let content = contentLayer else {
+            Configuration.debugLog("appendModemArt: contentLayer is nil, firing completion")
+            onAnimationComplete?()
+            return
+        }
+
+        // Add blank line gap between consecutive files
+        if nextContentY > 0 {
+            nextContentY += 2.0 * modemState.displayCharHeight
+        }
+
+        let imageSize = image.size
+        let scaleX = viewSize.width / imageSize.width
+        let fitWidth = imageSize.width * scaleX
+        let fitHeight = imageSize.height * scaleX
+
+        let artLayer = CALayer()
+        artLayer.contents = image
+        artLayer.contentsGravity = .resize
+        artLayer.frame = CGRect(
+            x: (viewSize.width - fitWidth) / 2,
+            y: -nextContentY - fitHeight,
+            width: fitWidth,
+            height: fitHeight
+        )
+
+        // Create mask layer (initially empty — nothing visible)
+        let mask = CAShapeLayer()
+        mask.frame = artLayer.bounds
+        artLayer.mask = mask
+
+        content.addSublayer(artLayer)
+
+        modemState.imageStartY = nextContentY
+        let bottomY = nextContentY + fitHeight
+        stackedLayers.append((layer: artLayer, bottomY: bottomY))
+        nextContentY = bottomY
+
+        currentLayer = artLayer
+        modemState.maskLayer = mask
+        modemState.columns = max(columns, 1)
+        modemState.rows = max(rows, 1)
+        modemState.displayCharWidth = fitWidth / CGFloat(modemState.columns)
+        modemState.displayCharHeight = fitHeight / CGFloat(modemState.rows)
+        modemState.charPosition = 0
+        modemState.fitHeight = fitHeight
+        modemState.contentCols = contentColumnsPerRow
+        modemState.buildCumulativeChars()
+
+        pendingNextArt = false
+        // Don't override hold or pause — let them expire naturally
+        switch phase {
+        case .modemEndHold, .endPause:
+            break
+        default:
+            updateCursorPosition(row: 0, col: 0)
+            phase = .modemRevealing
+        }
+    }
+
+    // MARK: - Modem cursor
+
+    private func createCursorLayer() -> CALayer {
+        let cursor = CALayer()
+        // DOS color 7 (light gray): RGB(170, 170, 170)
+        let cursorColor = NSColor(white: 0.667, alpha: 1.0).cgColor
+        cursor.backgroundColor = cursorColor
+        cursor.zPosition = 1000
+        // Subtle CRT phosphor glow
+        cursor.shadowColor = cursorColor
+        cursor.shadowOffset = .zero
+        cursor.shadowRadius = 2.0
+        cursor.shadowOpacity = 0.5
+        return cursor
+    }
+
+    private func updateCursorPosition(row: Int, col: Int) {
+        guard let cursor = cursorLayer else { return }
+        let dcw = modemState.displayCharWidth
+        let dch = modemState.displayCharHeight
+        let artX = currentLayer?.frame.origin.x ?? 0
+        // Bottom 2 scan lines of a 16-line character cell
+        let underscoreHeight = max(dch * 2.0 / 16.0, 1.0)
+
+        CATransaction.begin()
+        CATransaction.setDisableActions(true)
+        cursor.frame = CGRect(
+            x: artX + CGFloat(col) * dcw,
+            y: -modemState.imageStartY - CGFloat(row + 1) * dch,
+            width: dcw,
+            height: underscoreHeight
+        )
+        CATransaction.commit()
+    }
+
+    /// Hide cursor during reveal; blink it during pauses.
+    private func tickCursorBlink() {
+        guard let cursor = cursorLayer else { return }
+
+        switch phase {
+        case .modemRevealing, .modemEndHold:
+            // Hide cursor during reveal and the brief hold after
+            if modemState.cursorVisible {
+                modemState.cursorVisible = false
+                CATransaction.begin()
+                CATransaction.setDisableActions(true)
+                cursor.isHidden = true
+                CATransaction.commit()
+            }
+            modemState.blinkCounter = 0
+            return
+        default:
+            break
+        }
+
+        // Blink during pauses (startPause, endPause, idle)
+        modemState.blinkCounter += 1
+        if modemState.blinkCounter >= Self.cursorBlinkHalfCycle {
+            modemState.blinkCounter = 0
+            modemState.cursorVisible.toggle()
+            CATransaction.begin()
+            CATransaction.setDisableActions(true)
+            cursor.isHidden = !modemState.cursorVisible
+            CATransaction.commit()
+        }
+    }
+
+    private func tickModemReveal() {
+        guard let layer = currentLayer, let mask = modemState.maskLayer else {
+            Configuration.debugLog("tickModemReveal: lost layer or mask reference")
+            phase = .idle
+            onAnimationComplete?()
+            return
+        }
+
+        // Simulate analog line noise: stalls from retransmission and flow control
+        if modemState.stallFramesRemaining > 0 {
+            modemState.stallFramesRemaining -= 1
+            return
+        }
+        let roll = Int.random(in: 0..<1000)
+        if roll < 2 {
+            // ~0.2% per frame: V.42 error-correction retransmit (corrupted frame on a noisy line)
+            modemState.stallFramesRemaining = Int.random(in: 15...40)
+            return
+        } else if roll < 12 {
+            // ~1% per frame: XON/XOFF flow-control pause (receiver buffer pressure)
+            modemState.stallFramesRemaining = Int.random(in: 2...6)
+            return
+        }
+
+        modemState.charPosition += modemState.charsPerFrame
+        let charIndex = min(Int(modemState.charPosition), modemState.totalChars)
+
+        if charIndex >= modemState.totalChars {
+            // Pre-compute cursor, scroll, and content position for the line-feed
+            // jump (before appendModemArt can overwrite modemState with the next image).
+            let cursorRow = modemState.rows
+            updateCursorPosition(row: cursorRow, col: 0)
+            let cursorAbsY = modemState.imageStartY + CGFloat(cursorRow + 1) * modemState.displayCharHeight
+            modemHoldScrollOriginY = -max(viewSize.height, cursorAbsY)
+            modemHoldContentY = modemState.imageStartY + modemState.fitHeight
+            // Fully revealed — remove mask, hold briefly before line-feed jump
+            layer.mask = nil
+            modemState.maskLayer = nil
+            phase = .modemEndHold(until: CACurrentMediaTime() + 1.0)
+            // Prefetch next art during the hold so there's no stall
+            if !pendingNextArt {
+                pendingNextArt = true
+                onAnimationComplete?()
+            }
+            return
+        }
+
+        let (row, col) = modemState.rowAndColumn(forCharIndex: charIndex)
+
+        let dch = modemState.displayCharHeight
+        let dcw = modemState.displayCharWidth
+        let fitHeight = modemState.fitHeight
+        let fitWidth = layer.bounds.width
+
+        // Build reveal mask path
+        let path = CGMutablePath()
+
+        // Fully revealed rows: use full width since trailing empty columns
+        // are black pixels on a black background, making the reveal invisible
+        if row > 0 {
+            path.addRect(CGRect(
+                x: 0,
+                y: fitHeight - CGFloat(row) * dch,
+                width: fitWidth,
+                height: CGFloat(row) * dch
+            ))
+        }
+
+        // Partial current row
+        if col > 0 {
+            path.addRect(CGRect(
+                x: 0,
+                y: fitHeight - CGFloat(row + 1) * dch,
+                width: CGFloat(col) * dcw,
+                height: dch
+            ))
+        }
+
+        CATransaction.begin()
+        CATransaction.setDisableActions(true)
+        mask.path = path
+
+        // Scroll content layer to keep cursor visible
+        if let content = contentLayer {
+            let cursorAbsY = modemState.imageStartY + CGFloat(row + 1) * dch
+            content.bounds.origin.y = -max(viewSize.height, cursorAbsY)
+            scrollOffset = max(0, cursorAbsY - viewSize.height)
+
+            // Remove layers that scrolled off the top
+            while let first = stackedLayers.first, first.bottomY < scrollOffset {
+                first.layer.removeFromSuperlayer()
+                stackedLayers.removeFirst()
+            }
+        }
+
+        CATransaction.commit()
+    }
+
     // MARK: - Continuous scroll mode
 
     func startContinuousScroll(firstImage: NSImage, fileName: String, speed: Double, viewSize: NSSize, showSeparator: Bool) {
-        guard let container = containerLayer else { return }
+        guard let container = containerLayer else {
+            Configuration.debugLog("startContinuousScroll: containerLayer is nil")
+            return
+        }
         self.viewSize = viewSize
         scrollSpeed = CGFloat(max(speed, 1))
 
@@ -222,6 +556,8 @@ class Animator {
     // MARK: - Tick
 
     func tick() {
+        tickCursorBlink()
+
         switch phase {
         case .idle:
             return
@@ -250,7 +586,9 @@ class Animator {
             if CACurrentMediaTime() >= until {
                 oldLayer?.removeFromSuperlayer()
                 oldLayer = nil
-                if contentLayer != nil {
+                if modemState.maskLayer != nil {
+                    phase = .modemRevealing
+                } else if contentLayer != nil {
                     phase = .continuousScrolling
                 } else {
                     phase = .scrolling
@@ -259,7 +597,9 @@ class Animator {
 
         case .scrolling:
             guard let layer = currentLayer else {
+                Configuration.debugLog("tick scrolling: currentLayer is nil")
                 phase = .idle
+                onAnimationComplete?()
                 return
             }
             let step = scrollSpeed / 60.0 * scrollDirection
@@ -282,9 +622,66 @@ class Animator {
             }
             CATransaction.commit()
 
+        case .modemRevealing:
+            tickModemReveal()
+
+        case .modemEndHold(let until):
+            if CACurrentMediaTime() >= until {
+                CATransaction.begin()
+                CATransaction.setDisableActions(true)
+
+                // Render and display "Loading filename..." if we know the next file
+                if let name = nextFileName,
+                   let (loadImage, cursorCol) = Renderer.renderLoadingMessage(
+                       fileName: name, scaleFactor: modemScaleFactor),
+                   let content = contentLayer {
+                    let scaleX = viewSize.width / loadImage.size.width
+                    let fitWidth = loadImage.size.width * scaleX
+                    let fitHeight = loadImage.size.height * scaleX
+
+                    let layer = CALayer()
+                    layer.contents = loadImage
+                    layer.contentsGravity = .resize
+                    layer.frame = CGRect(
+                        x: (viewSize.width - fitWidth) / 2,
+                        y: -modemHoldContentY - fitHeight,
+                        width: fitWidth,
+                        height: fitHeight
+                    )
+                    content.addSublayer(layer)
+                    loadingLayer = layer
+
+                    // Position cursor after the text
+                    let dcw = fitWidth / 80.0
+                    let underscoreHeight = max(fitHeight * 2.0 / 16.0, 1.0)
+                    cursorLayer?.frame = CGRect(
+                        x: (viewSize.width - fitWidth) / 2 + CGFloat(cursorCol) * dcw,
+                        y: -modemHoldContentY - fitHeight,
+                        width: dcw,
+                        height: underscoreHeight
+                    )
+                    nextFileName = nil
+                }
+
+                // Instant line-feed jump using pre-computed scroll
+                modemState.blinkCounter = 0
+                modemState.cursorVisible = true
+                cursorLayer?.isHidden = false
+                if let content = contentLayer {
+                    content.bounds.origin.y = modemHoldScrollOriginY
+                    scrollOffset = max(0, -modemHoldScrollOriginY - viewSize.height)
+                }
+                CATransaction.commit()
+
+                let jitter = Double.random(in: 0...2.0)
+                phase = .endPause(until: CACurrentMediaTime() + 1.0 + jitter)
+            }
+
         case .continuousScrolling:
             guard let content = contentLayer else {
+                Configuration.debugLog("tick continuousScrolling: contentLayer is nil")
                 phase = .idle
+                onAnimationComplete?()
                 return
             }
 
@@ -322,13 +719,26 @@ class Animator {
 
         case .endPause(let until):
             if CACurrentMediaTime() >= until {
-                phase = .idle
-                onAnimationComplete?()
+                loadingLayer?.removeFromSuperlayer()
+                loadingLayer = nil
+                if modemState.maskLayer != nil {
+                    // Next modem art was pre-loaded during the pause
+                    phase = .modemRevealing
+                } else {
+                    phase = .idle
+                    if !pendingNextArt {
+                        onAnimationComplete?()
+                    }
+                }
             }
         }
     }
 
     func stopAnimations() {
+        loadingLayer?.removeFromSuperlayer()
+        loadingLayer = nil
+        cursorLayer?.removeFromSuperlayer()
+        cursorLayer = nil
         currentLayer?.removeFromSuperlayer()
         oldLayer?.removeFromSuperlayer()
         contentLayer?.removeFromSuperlayer()
@@ -337,6 +747,7 @@ class Animator {
         contentLayer = nil
         stackedLayers = []
         pendingNextArt = false
+        modemState = ModemRevealState()
         phase = .idle
     }
 }

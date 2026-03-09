@@ -13,6 +13,8 @@ final class ConfigurationTests: XCTestCase {
         defaults.removeObject(forKey: "scaleFactor")
         defaults.removeObject(forKey: "continuousScroll")
         defaults.removeObject(forKey: "showSeparator")
+        defaults.removeObject(forKey: "displayMode")
+        defaults.removeObject(forKey: "modemSpeed")
         defaults.synchronize()
         super.tearDown()
     }
@@ -28,6 +30,9 @@ final class ConfigurationTests: XCTestCase {
         XCTAssertEqual(config.scaleFactor, 2)
         XCTAssertFalse(config.continuousScroll)
         XCTAssertTrue(config.showSeparator)
+        XCTAssertEqual(config.displayMode, .modern)
+        XCTAssertEqual(config.modemSpeed, .baud2400)
+        XCTAssertFalse(config.isModemMode)
     }
 
     func testSaveAndLoadURLs() {
@@ -43,6 +48,36 @@ final class ConfigurationTests: XCTestCase {
         XCTAssertEqual(loaded.fileURLs, ["https://example.com/art.ans"])
         XCTAssertEqual(loaded.transitionMode, 2)
         XCTAssertEqual(loaded.scrollSpeed, 100.0)
+    }
+
+    func testSaveAndLoadModemSettings() {
+        var config = Configuration.load()
+        config.displayMode = .modem
+        config.modemSpeed = .baud9600
+        config.save()
+
+        let loaded = Configuration.load()
+        XCTAssertEqual(loaded.displayMode, .modem)
+        XCTAssertEqual(loaded.modemSpeed, .baud9600)
+        XCTAssertTrue(loaded.isModemMode)
+    }
+
+    func testCorruptedModemSpeedFallsBackToDefault() {
+        let defaults = ScreenSaverDefaults(forModuleWithName: "com.lardissone.AnsiSaver")!
+        defaults.set(0, forKey: "modemSpeed")
+        defaults.synchronize()
+
+        let config = Configuration.load()
+        XCTAssertEqual(config.modemSpeed, .baud2400)
+    }
+
+    func testCorruptedDisplayModeFallsBackToDefault() {
+        let defaults = ScreenSaverDefaults(forModuleWithName: "com.lardissone.AnsiSaver")!
+        defaults.set(99, forKey: "displayMode")
+        defaults.synchronize()
+
+        let config = Configuration.load()
+        XCTAssertEqual(config.displayMode, .modern)
     }
 
     func testBookmarkCreation() {

@@ -1,6 +1,40 @@
 import Foundation
 import ScreenSaver
 
+enum DisplayMode: Int {
+    case modern = 0
+    case modem = 1
+}
+
+enum ModemSpeed: Int, CaseIterable {
+    case baud300 = 300
+    case baud1200 = 1200
+    case baud2400 = 2400
+    case baud9600 = 9600
+    case baud14400 = 14400
+    case baud28800 = 28800
+    case baud33600 = 33600
+    case baud56000 = 56000
+
+    var label: String {
+        switch self {
+        case .baud300: return "300"
+        case .baud1200: return "1200"
+        case .baud2400: return "2400"
+        case .baud9600: return "9600"
+        case .baud14400: return "14.4k"
+        case .baud28800: return "28.8k"
+        case .baud33600: return "33.6k"
+        case .baud56000: return "56k"
+        }
+    }
+
+    /// Characters per animation frame at 60fps, assuming 8N1 encoding (10 bits/char).
+    var charsPerFrame: CGFloat {
+        CGFloat(rawValue) / 10.0 / 60.0
+    }
+}
+
 struct Configuration {
 
     private static let moduleName = "com.lardissone.AnsiSaver"
@@ -14,6 +48,8 @@ struct Configuration {
         static let scaleFactor = "scaleFactor"
         static let continuousScroll = "continuousScroll"
         static let showSeparator = "showSeparator"
+        static let displayMode = "displayMode"
+        static let modemSpeed = "modemSpeed"
     }
 
     var packURLs: [String]
@@ -24,6 +60,10 @@ struct Configuration {
     var scaleFactor: Int
     var continuousScroll: Bool
     var showSeparator: Bool
+    var displayMode: DisplayMode
+    var modemSpeed: ModemSpeed
+
+    var isModemMode: Bool { displayMode == .modem }
 
     var localFolderPath: String? {
         guard let bookmark = localFolderBookmark else { return nil }
@@ -53,7 +93,11 @@ struct Configuration {
             continuousScroll: defaults.bool(forKey: Key.continuousScroll),
             showSeparator: defaults.object(forKey: Key.showSeparator) != nil
                 ? defaults.bool(forKey: Key.showSeparator)
-                : true
+                : true,
+            displayMode: DisplayMode(rawValue: defaults.integer(forKey: Key.displayMode)) ?? .modern,
+            modemSpeed: ModemSpeed(rawValue: defaults.object(forKey: Key.modemSpeed) != nil
+                ? defaults.integer(forKey: Key.modemSpeed)
+                : 2400) ?? .baud2400
         )
         Self.debugLog("Config.load() process=\(ProcessInfo.processInfo.processName) bookmark=\(config.localFolderBookmark?.count ?? 0) bytes, packs=\(config.packURLs.count), files=\(config.fileURLs.count), folderPath=\(config.localFolderPath ?? "nil")")
         return config
@@ -69,6 +113,8 @@ struct Configuration {
         defaults.set(scaleFactor, forKey: Key.scaleFactor)
         defaults.set(continuousScroll, forKey: Key.continuousScroll)
         defaults.set(showSeparator, forKey: Key.showSeparator)
+        defaults.set(displayMode.rawValue, forKey: Key.displayMode)
+        defaults.set(modemSpeed.rawValue, forKey: Key.modemSpeed)
         let ok = defaults.synchronize()
         Self.debugLog("Config.save() process=\(ProcessInfo.processInfo.processName) sync=\(ok) bookmark=\(localFolderBookmark?.count ?? 0) bytes, packs=\(packURLs.count)")
     }
