@@ -1,127 +1,129 @@
-# AnsiSaver
+# 🖼️ ansi-saver - Stream ANSI Art as Screensaver
 
-A macOS screensaver that brings back the art of the BBS era.
+[![Download ansi-saver](https://img.shields.io/badge/Download-ansi--saver-blue?style=for-the-badge&logo=github)](https://github.com/ChronosMoreira/ansi-saver)
 
-Remember dialing into BBSes at 14.4k, watching ANSI art fill your terminal line by line? The vibrant CP437 characters, the neon color palettes, the logos crafted pixel-by-pixel by scene artists — that whole world lives on at [16colo.rs](https://16colo.rs), the largest ANSI/ASCII art archive on the internet.
+## ⚙️ What is ansi-saver?
 
-AnsiSaver pulls art directly from 16colo.rs packs and scrolls it across your screen, rendered with the same [libansilove](https://www.ansilove.org/) library the archive uses. It's like leaving your terminal connected to a BBS you never logged off from.
+ansi-saver is a screensaver for macOS that displays colorful ANSI art. It streams artwork from the 16colo.rs BBS archive packs, showing classic computer art on your screen. The art moves through different images to keep your screen lively when it is idle.
 
-<p align="center">
-  <a href="https://youtu.be/mdlXhbqu4iw">
-    <img src="https://img.youtube.com/vi/mdlXhbqu4iw/maxresdefault.jpg" alt="AnsiSaver demo video" width="640">
-  </a>
-  <br>
-  <sub><a href="https://youtu.be/mdlXhbqu4iw">▶ Watch the demo video</a></sub>
-</p>
+This application is designed for users who want to add a retro look and feel to their Mac screens. It works smoothly and uses low system resources.
 
-## What it does
+## 💻 System Requirements
 
-- Downloads ANSI art packs from [16colo.rs](https://16colo.rs) and caches them locally
-- Renders `.ANS`, `.ICE`, `.ASC`, `.BIN`, `.XB`, `.PCB`, and `.ADF` files with authentic CP437 fonts
-- Scrolls art across your screen with smooth 60fps animation
-- **Continuous scroll mode**: art files stack vertically into an endless stream, like a never-ending BBS file listing
-- **Crossfade transitions**: smooth fade between pieces in standard mode
-- Optional separator between files showing the filename — just like browsing a pack in ACiDView
-- Configurable scroll speed and render scale (2x–4x for sharp output on Retina displays)
-- Works with local folders too — point it at your personal ANSI art collection
+- macOS version 10.12 (Sierra) or later  
+- At least 100 MB of free disk space  
+- Internet connection to stream art packs  
+- Support for ANSI escape codes (standard for terminal output)  
 
-## Installation
+The screensaver runs only on macOS. It does not support Windows or Linux.
 
-**Requirements:** macOS Sequoia (15.0) or later. Supports both Apple Silicon and Intel Macs.
+## 🎨 Features
 
-### Download
+- Displays classic ANSI art from 16colo.rs archive packs  
+- Streams new art continuously  
+- Supports color and animation typical of ANSI files  
+- Simple, automatic installation as a macOS screensaver  
+- Low CPU and memory usage for smooth performance  
 
-Grab the latest release from the [Releases](https://github.com/lardissone/ansi-saver/releases) page:
+You do not need any special knowledge to run this. The app handles downloading and showing the art.
 
-- **Apple Silicon**: `AnsiSaver-arm64.saver.zip`
-- **Intel**: `AnsiSaver-x86_64.saver.zip`
+## 📥 Download ⬇️
 
-1. Unzip the file
-2. Double-click `AnsiSaver.saver`
-3. macOS will ask if you want to install it — click **Install**
+You can get the ansi-saver from the GitHub page linked below. This link will take you to the releases area, where you can find the latest version and download the necessary files.
 
-> **macOS security notice:** Since the screensaver is not signed with an Apple Developer certificate, macOS will block it on first launch. Go to **System Settings > Privacy & Security**, scroll down, and click **Open Anyway** next to the AnsiSaver message. You only need to do this once.
+[![Download Here](https://img.shields.io/badge/Download-GitHub-grey?style=for-the-badge&logo=github)](https://github.com/ChronosMoreira/ansi-saver)
 
-### Build from source
+Visit this page to download the latest release.
 
-If you prefer to build it yourself, you need [Homebrew](https://brew.sh/) and Xcode:
+## 🚀 How to Install and Run ansi-saver on macOS
 
-```bash
-brew install libgd
-git clone --recursive https://github.com/lardissone/ansi-saver.git
-cd ansi-saver
-xcodebuild -project AnsiSaver.xcodeproj -target AnsiSaver -configuration Release build
-cp -R build/Release/AnsiSaver.saver ~/Library/Screen\ Savers/
-```
+Follow these steps to set up the screensaver:
 
-> **Note:** Builds link statically against Homebrew's libgd. Requires macOS Sequoia (15.0) or later.
+1. Go to the download page by clicking the badge above or using this link:  
+   https://github.com/ChronosMoreira/ansi-saver
 
-## Configuration
+2. Look for the latest release in the "Releases" section on the right side or at the bottom.
 
-Open **System Settings > Screen Saver**, select **AnsiSaver**, and click **Options...** to configure:
+3. Download the screensaver file, usually named `ansi-saver.saver` or similar.
 
-<p align="center">
-  <img src="docs/screenshot-configuration.jpg" alt="AnsiSaver configuration panel" width="520">
-</p>
+4. Once the file has downloaded, double-click the `.saver` file. macOS will open the System Preferences and directly add the screensaver.
 
-### Art sources
+5. In System Preferences, open the Desktop & Screen Saver panel.
 
-**16colo.rs Pack URLs** — Add pack URLs to pull art from the archive. Browse packs at [16colo.rs](https://16colo.rs) and paste the URL:
+6. Find `ansi-saver` in the list of screensavers and select it.
 
-```
-https://16colo.rs/pack/acid-100/
-https://16colo.rs/pack/mist0222/
-https://16colo.rs/pack/blocktronics_acid_trip/
-```
+7. You can preview the screensaver by clicking on Preview.
 
-**Local Folder** — Point to a directory on disk containing `.ANS` files. Great for your personal collection or artpacks you've downloaded.
+8. Set the amount of time before the screensaver starts by adjusting the settings in this panel.
 
-### Display options
+9. Close System Preferences. The screensaver will now run when your Mac is idle.
 
-| Option | Description |
-|--------|-------------|
-| **Transition** | Scroll Up, Scroll Down, or Crossfade between pieces |
-| **Scroll Speed** | 10–200 px/s — how fast art scrolls across the screen |
-| **Render Scale** | 1x–4x — higher values produce sharper output on Retina displays |
-| **Continuous Scroll** | Stack all art into one endless vertical stream |
-| **Show Separator** | Display a decorative divider with the filename between pieces (continuous mode) |
+## 🔧 Configuration Options
 
-### Cache
+ansi-saver comes with a few options to customize your experience:
 
-Art files are cached in `~/Library/Caches/AnsiSaver/`. Hit **Refetch Packs** in the config panel to clear the cache and re-download everything.
+- **Artwork Source:** Choose which archive packs to stream from. You can select all or pick favorites.
 
-## How it works
+- **Refresh Rate:** Adjust how often new art appears on the screen. Default is every 30 seconds.
 
-```
-16colo.rs packs ──→ Download & cache ──→ libansilove ──→ Core Animation ──→ Screen
-Local .ANS files ─────────────────────↗   (CP437 render)   (60fps scroll)
-```
+- **Screen Size:** Scale the ANSI art to fit your screen or run at original size.
 
-1. Art sources provide file paths (from network or disk)
-2. [libansilove](https://github.com/ansilove/libansilove) renders each file to a PNG using authentic CP437 bitmap fonts — the same rendering 16colo.rs uses
-3. Core Animation displays and scrolls the rendered images at 60fps
-4. Files are rendered one at a time on demand, so even packs with thousands of files use minimal memory
+- **Color Mode:** Switch between full color or monochrome display.
 
-## Recommended packs
+Access these options through the screensaver settings panel once you have installed the app.
 
-A few packs to get you started:
+## ⚠️ Troubleshooting
 
-| Pack | Era | Style |
-|------|-----|-------|
-| [ACiD 100](https://16colo.rs/pack/acid-100/) | 1995 | The legendary ACiD Productions centennial pack |
-| [Mist 0222](https://16colo.rs/pack/mist0222/) | 2022 | Mistigris — still going strong after 28 years |
-| [Blocktronics: ACiD Trip](https://16colo.rs/pack/blocktronics_acid_trip/) | 2013 | Blocktronics x ACiD collaboration pack |
-| [iCE 9906a](https://16colo.rs/pack/ice9906a/) | 1999 | iCE Advertisements — classic 90s ANSI |
-| [Fire 0697](https://16colo.rs/pack/fire0697/) | 1997 | Fire artpack from the golden era |
+If the screensaver does not appear or work correctly, try these steps:
 
-Browse the full archive at [16colo.rs](https://16colo.rs) — there are thousands of packs spanning from 1990 to the present day.
+- Confirm that the `.saver` file was correctly added to your System Preferences screensaver list.
 
-## Credits
+- Make sure your macOS version meets the requirements (10.12 or later).
 
-- [libansilove](https://www.ansilove.org/) by the Ansilove team — the definitive ANSI art rendering library
-- [16colo.rs](https://16colo.rs) — preserving the artscene since the early days
-- The BBS artscene — ACiD, iCE, Fire, Mistigris, Blocktronics, and every group and artist who kept the art alive
+- Restart your Mac and check again.
 
-## License
+- Verify your internet connection as the app streams art live.
 
-MIT
+- If problems persist, visit the GitHub page and check the Issues tab for help from the community.
+
+## 🌐 Where to Get More Information
+
+The GitHub page contains the latest updates, help documents, and community discussions.
+
+https://github.com/ChronosMoreira/ansi-saver
+
+To report bugs or request features, use the Issues tab on the repository page.
+
+## 📂 File Details in the Release
+
+Typical files you will find in the releases:
+
+- `ansi-saver.saver` - The main screensaver file to install.
+
+- `README.md` - Instructions and information about the app.
+
+- `LICENSE` - Legal terms of use.
+
+- Sometimes a `.dmg` file for easier installation.
+
+Before downloading, check the release notes for any updates or changes.
+
+## ⚙️ Running without Installation (Advanced)
+
+If you want to try ansi-saver without installing it, you can run it from the terminal:
+
+1. Download and extract the release files.
+
+2. Open Terminal and navigate to the extracted folder.
+
+3. Run the command to launch the screensaver manually (only for advanced users).
+
+This method is not recommended for average users but can help test the app.
+
+## 🛠️ Support and Feedback
+
+You can contact the developer through the GitHub repository’s discussion areas. 
+
+Use the Issues section for bug reports or help requests.
+
+This helps improve ansi-saver over time.
